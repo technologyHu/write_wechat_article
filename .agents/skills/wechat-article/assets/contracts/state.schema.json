@@ -1,0 +1,1239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wechat-article:state:3",
+  "title": "WeChat article authoring state, version 3",
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user",
+            "task_completion",
+            "operation"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "kind",
+        "message",
+        "at"
+      ],
+      "additionalProperties": false
+    },
+    "fileProof": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "file",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "media": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(IMG|VID)-[0-9]{2,}$"
+        },
+        "type": {
+          "enum": [
+            "image",
+            "video"
+          ]
+        },
+        "role": {
+          "enum": [
+            "body",
+            "cover",
+            "publishing"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "section_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "uniqueItems": true
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "file": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https?://"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fileProof"
+          }
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "ready",
+            "approved",
+            "retired"
+          ]
+        },
+        "adoption": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/evidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "filename_verified": {
+          "type": "boolean"
+        },
+        "verified_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "canonical_name": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "role",
+        "title",
+        "section_ids",
+        "revision",
+        "file",
+        "url",
+        "sha256",
+        "source_files",
+        "status",
+        "adoption"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "file": {"type": "null"},
+              "url": {"type": "string"},
+              "status": {"enum": ["ready", "approved"]}
+            },
+            "required": ["file", "url", "status"]
+          },
+          "then": {
+            "required": ["filename_verified", "verified_at", "canonical_name"]
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "mediaProof": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(IMG|VID)-[0-9]{2,}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "file": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https?://"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fileProof"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "revision",
+        "file",
+        "url",
+        "sha256",
+        "source_files"
+      ],
+      "additionalProperties": false
+    },
+    "confirmation": {
+      "type": "object",
+      "properties": {
+        "draft_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confirmed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "user_message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outline_version_at_confirmation": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/mediaProof"
+          }
+        }
+      },
+      "required": [
+        "draft_ref",
+        "confirmed_at",
+        "user_message",
+        "outline_version_at_confirmation",
+        "content_sha256",
+        "media"
+      ],
+      "additionalProperties": false
+    },
+    "mediaUpdate": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "format",
+            "adopt"
+          ]
+        },
+        "before_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "after_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "media": {
+          "$ref": "#/$defs/mediaProof"
+        },
+        "basis": {
+          "$ref": "#/$defs/evidence"
+        },
+        "replacements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/replacement"
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "before_sha256",
+        "after_sha256",
+        "media",
+        "basis",
+        "replacements"
+      ],
+      "additionalProperties": false
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "section_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "drafting",
+            "awaiting_confirmation",
+            "confirmed",
+            "inherited"
+          ]
+        },
+        "draft_ref": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "confirmation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/confirmation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "media_updates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/mediaUpdate"
+          }
+        },
+        "inheritance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/inheritance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outline_revalidation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/outlineRevalidation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "section_id",
+        "title",
+        "status",
+        "draft_ref",
+        "source_refs",
+        "confirmation",
+        "media_updates",
+        "inheritance"
+      ],
+      "additionalProperties": false
+    },
+    "archivedSection": {
+      "type": "object",
+      "properties": {
+        "section_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "drafting",
+            "awaiting_confirmation",
+            "confirmed",
+            "inherited"
+          ]
+        },
+        "draft_ref": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "confirmation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/confirmation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "media_updates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/mediaUpdate"
+          }
+        },
+        "span": {
+          "type": "object",
+          "properties": {
+            "start_line": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "end_line": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "content_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "start_line",
+            "end_line",
+            "content_sha256"
+          ],
+          "additionalProperties": false
+        },
+        "inheritance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/inheritance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outline_revalidation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/outlineRevalidation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "section_id",
+        "title",
+        "status",
+        "draft_ref",
+        "source_refs",
+        "confirmation",
+        "media_updates",
+        "span",
+        "inheritance"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "document",
+            "code"
+          ]
+        },
+        "path": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revision": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "path",
+        "url",
+        "revision",
+        "checked_at",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "pending": {
+      "type": "object",
+      "properties": {
+        "media_id": {
+          "type": "string",
+          "pattern": "^(IMG|VID)-[0-9]{2,}$"
+        },
+        "disposition": {
+          "enum": [
+            "awaiting",
+            "deferred"
+          ]
+        },
+        "allow_in_final": {
+          "type": "boolean"
+        },
+        "basis": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/evidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "media_id",
+        "disposition",
+        "allow_in_final",
+        "basis"
+      ],
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "file",
+        "sha256",
+        "origin"
+      ],
+      "additionalProperties": false
+    },
+    "progress": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 3
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "is_active": {
+          "type": "boolean"
+        },
+        "phase": {
+          "enum": [
+            "drafting",
+            "waiting_section",
+            "waiting_media",
+            "ready_to_archive",
+            "archived",
+            "finalized",
+            "reopened"
+          ]
+        },
+        "outline_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "based_on_article_version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "archived_article_version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "finalized_article_version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completion_basis": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/evidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "working_file": {
+          "const": "article-working.md"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          },
+          "minItems": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          }
+        },
+        "pending_media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pending"
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/candidate"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "session_id",
+        "is_active",
+        "phase",
+        "outline_version",
+        "based_on_article_version",
+        "archived_article_version",
+        "finalized_article_version",
+        "completion_basis",
+        "working_file",
+        "sections",
+        "sources",
+        "media",
+        "pending_media",
+        "candidates"
+      ],
+      "additionalProperties": false
+    },
+    "outlineConfirmation": {
+      "type": "object",
+      "properties": {
+        "draft_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confirmed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "user_message": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "draft_ref",
+        "confirmed_at",
+        "user_message"
+      ],
+      "additionalProperties": false
+    },
+    "outline": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "based_on": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/outlineConfirmation"
+        },
+        "change_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "file",
+        "title",
+        "based_on",
+        "created_at",
+        "confirmation",
+        "change_summary",
+        "content_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "legacyArticle": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outline_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "based_on": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "change_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_schema_version": {
+          "enum": [
+            1,
+            2
+          ]
+        }
+      },
+      "required": [
+        "file",
+        "outline_version",
+        "title",
+        "based_on",
+        "created_at",
+        "change_summary"
+      ],
+      "additionalProperties": true
+    },
+    "article": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outline_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "based_on": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "change_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_schema_version": {
+          "const": 3
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "chapter_confirmations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/archivedSection"
+          },
+          "minItems": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          }
+        },
+        "pending_media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/pending"
+          }
+        }
+      },
+      "required": [
+        "file",
+        "outline_version",
+        "title",
+        "based_on",
+        "created_at",
+        "change_summary",
+        "record_schema_version",
+        "content_sha256",
+        "chapter_confirmations",
+        "sources",
+        "media",
+        "pending_media"
+      ],
+      "additionalProperties": false
+    },
+    "operation": {
+      "type": "object",
+      "properties": {
+        "operation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "batch_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "enum": [
+            "move",
+            "restore",
+            "delete"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "completed",
+            "failed"
+          ]
+        },
+        "article_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "operation_id",
+        "batch_id",
+        "action",
+        "status",
+        "article_version",
+        "at",
+        "source",
+        "target",
+        "sha256",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 3
+        },
+        "scenario": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "latest_outline_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "latest_article_version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^v[0-9]{3,}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outlines": {
+          "type": "object",
+          "patternProperties": {
+            "^v[0-9]{3,}$": {
+              "$ref": "#/$defs/outline"
+            }
+          },
+          "additionalProperties": false,
+          "minProperties": 1
+        },
+        "articles": {
+          "type": "object",
+          "patternProperties": {
+            "^v[0-9]{3,}$": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/article"
+                },
+                {
+                  "$ref": "#/$defs/legacyArticle"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "asset_maintenance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/operation"
+          }
+        },
+        "repairs": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "scenario",
+        "latest_outline_version",
+        "latest_article_version",
+        "outlines",
+        "articles",
+        "asset_maintenance"
+      ],
+      "additionalProperties": false
+    },
+    "inheritance": {
+      "type": "object",
+      "properties": {
+        "article_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "start_line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end_line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "article_version",
+        "start_line",
+        "end_line",
+        "content_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "replacement": {
+      "type": "object",
+      "properties": {
+        "after_start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "before": {
+          "type": "string",
+          "minLength": 1
+        },
+        "after": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "after_start",
+        "before",
+        "after"
+      ],
+      "additionalProperties": false
+    },
+    "outlineRevalidation": {
+      "type": "object",
+      "properties": {
+        "outline_version": {
+          "type": "string",
+          "pattern": "^v[0-9]{3,}$"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "outline_version",
+        "checked_at",
+        "note"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

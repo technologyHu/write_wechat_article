@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "article-20d0c8147ae0021d",
+  "url": "https://mp.weixin.qq.com/s/zJXEhOHHgGlBupSdElbeKw",
+  "final_url": "https://mp.weixin.qq.com/s/zJXEhOHHgGlBupSdElbeKw",
+  "status": "fetched",
+  "title": "openJiuwen 开源 Computer Use：让智能体真正“上手”用电脑",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T07:22:19.819872+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-bfc5fccaf571181f",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomFdhMQVx8xC2WN1ibJBuDVjZAUVnjgTMLmMibTRO6aKocgcEYmnOwYZic4RGBrXHPkhj49t6EmObNCNzAiaUGdFwnljiaNRicSDhaxY/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-bfc5fccaf571181f.png",
+      "sha256": "c927933bbe577dc3952e005ca6503a2fca0f32e741a3fead9d0f47c999be763e"
+    },
+    {
+      "id": "image-d8b74bf089ca7f8b",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6IefF6e2eonz4cD9a8ykTuEibnGUo5O1zlLNicsmaHODGOqGgyKs1kvjMib2WA6cSJZJia5mkCjky8k6ZpiaudUvWV5gNibr8ia489w3r2tyBx8DJM/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-d8b74bf089ca7f8b.jpg",
+      "sha256": "2572410e5fa7a2bca5529fb06e80a61a8d12eda661bed6e13e1a3d1da3ab5bda"
+    },
+    {
+      "id": "image-f15e855e0853b253",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6IefF6e2eonVqx144quB76PnotAjSciaQBCn9qVVHsKfBzU9fDvjibwVjWYZFoC19iapbelyLGMY6FRN1CHXswB8BkwI8ibyNwbhKDJ9zZeAMTM/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-f15e855e0853b253.jpg",
+      "sha256": "91d8e84df8a949016433ea193fc1b441f368853d1d8bf13a325f7644ff77c3bb"
+    },
+    {
+      "id": "image-915dce26deafd68f",
+      "url": "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eolDwYJc8z4s8G7DnAUDwF8exPibqibGO6CmZkjL0Eicg4I57jNwvxP3Fia63jQEPrFHnf23rAozlKmRxddVfQANtOpmD1ibBcGPK6xs/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-915dce26deafd68f.jpg",
+      "sha256": "81fcbb290f1f568d60f6d3e145003b65d8f6f12625cdb259aa51512ec1a9655a"
+    },
+    {
+      "id": "image-035dbc85ee0b0bd9",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eokibB5hJG6gYGqch5bq5HM2iadKqTUlBdnfN1dCZvxbv4q4qXTmhcfERv6LCgK93tAzAJGDQkq7eHBAoaJkGSt7FKRFLkSfNvWzo/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-035dbc85ee0b0bd9.png",
+      "sha256": "bdaa27fc80fff49285141a623f69c0578ebf7d27fe4cb9f580bc6679b26de2dd"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomFdhMQVx8xC2WN1ibJBuDVjZAUVnjgTMLmMibTRO6aKocgcEYmnOwYZic4RGBrXHPkhj49t6EmObNCNzAiaUGdFwnljiaNRicSDhaxY/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6IefF6e2eonz4cD9a8ykTuEibnGUo5O1zlLNicsmaHODGOqGgyKs1kvjMib2WA6cSJZJia5mkCjky8k6ZpiaudUvWV5gNibr8ia489w3r2tyBx8DJM/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6IefF6e2eonVqx144quB76PnotAjSciaQBCn9qVVHsKfBzU9fDvjibwVjWYZFoC19iapbelyLGMY6FRN1CHXswB8BkwI8ibyNwbhKDJ9zZeAMTM/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eolDwYJc8z4s8G7DnAUDwF8exPibqibGO6CmZkjL0Eicg4I57jNwvxP3Fia63jQEPrFHnf23rAozlKmRxddVfQANtOpmD1ibBcGPK6xs/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eokibB5hJG6gYGqch5bq5HM2iadKqTUlBdnfN1dCZvxbv4q4qXTmhcfERv6LCgK93tAzAJGDQkq7eHBAoaJkGSt7FKRFLkSfNvWzo/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "",
+  "method": "http",
+  "content_sha256": "aec8eafcbc803ddfd5afcd1e031ba25d1c53419f1ec8d585e0a40d52bc8fca9e",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T07:44:57.755662+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 5,
+      "downloaded_images": 5,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

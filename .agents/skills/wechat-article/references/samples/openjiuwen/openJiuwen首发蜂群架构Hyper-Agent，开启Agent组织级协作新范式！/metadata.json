@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "article-a9fd525015705902",
+  "url": "https://mp.weixin.qq.com/s/mHQF2gxOaj9VMAebWqVg9g",
+  "final_url": "https://mp.weixin.qq.com/s/mHQF2gxOaj9VMAebWqVg9g",
+  "status": "fetched",
+  "title": "openJiuwen首发蜂群架构Hyper-Agent，开启Agent组织级协作新范式！",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T07:50:30.321894+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-f35082d0126f0ddc",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eokB4EnKAt5xUoDgoQ4RvLyPYQUVHK8p596kyBokybtIlxPyqJjSo6fUWSTbSSHALGP9ia5oAcmEias4kpicczAaOa5lUfwBoL3Z18/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-f35082d0126f0ddc.png",
+      "sha256": "1b977a5013cdf1fdbc0d27c69bd522830554683e96ecd50372f65c56452b74de"
+    },
+    {
+      "id": "image-a17fe9c0874e965e",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eokwunmtQKUJibConCDAtnUA5srK5DQkCsU6bldqO2IyIhNFLAQN4Oeicks7UxCxIeKNOwibPZOSY62jR50c10lOaIklQIQI65lZL8/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-a17fe9c0874e965e.png",
+      "sha256": "cd04bb825d20416bac219b3eec380df769f06ddfa0aebe89e30fd5f7122b22e3"
+    },
+    {
+      "id": "image-b1fe12ba6cfbb32d",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eongia1B2ZV5IdleMGXXZRpooVENMdLeEyiaOeIuP3qfAV2YiabB12vialwlh2aefOTvhLPJWgEJOR31SoLQhsuRwmBlamLy33OD0Kk/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-b1fe12ba6cfbb32d.png",
+      "sha256": "6135e9bcc16590cdc303941ac089a1f29e25c0ac84172bc938da186bfa8196c4"
+    },
+    {
+      "id": "image-765e19e068c0ac31",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eommzG06BnJibiaO4wgQU3Of0YbrwMmHxpGEfBv0hNrlerFVUzGTS7LIZ19d2PhIkh66VkrUsonPGGWic3FRPcdgC6vU2iaMib9UTlJw/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-765e19e068c0ac31.png",
+      "sha256": "ca6bb9d4dfa53765b3609b3b4918f3e92007b6e6ba6e3e7f9e057395719cad3c"
+    },
+    {
+      "id": "image-4b611192153a23b1",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonicXXqazslce34PdiaQviabGEds6nHxR1vRZK80E3JyxpkrkLDc7yReH77gC6Qp86xoNrCb99gmkx9w5DNxRGnnd47kkThjLsQuU/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-4b611192153a23b1.png",
+      "sha256": "b74a3b0de56847943dec9879f36d9b93e168ce5d1e8ca87fa6e4559391c62c1d"
+    },
+    {
+      "id": "image-20cc173262365b7e",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolHHjRiauxdnxm5AWCRgfp2n6RVXfuATtadVbzvGpCNxaMsbh3nuNHCkyvExibYHRhlQBZkqJmNHl8T21KCY2HfO4w4uexsb6wd4/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-20cc173262365b7e.png",
+      "sha256": "7e529292b18ef4742b9ae55590840d09c1d65ef4ebb9d06279996ac9ab448fdc"
+    },
+    {
+      "id": "image-97e1763b5a200d1a",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonxXqCwl3OjrEH93LEBmf1ia6gpaNOdxJBvPIoh3keY8P4brTJqhgulYqqauO51DbVia3eyb00Uj2a2boC5NQffO6PldEsFP4QgU/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-97e1763b5a200d1a.png",
+      "sha256": "18413aefd2f6f1f8c8e57eb6f63718243ea734e01dd9287ca75f3089cdb6576e"
+    },
+    {
+      "id": "image-5962be147aade0e1",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eombX7gk0pkkqhLb9gnlKsQwJicxrrd2NiazjHwu5MbNdDZicUErolt2ZJFb4QEXoicWDec3JOFWb62bJwxuuYxXz80icQYyvOcfjQSQ/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-5962be147aade0e1.png",
+      "sha256": "033818555415d98a4e910260b68f5c015ad442c08f94bb31a75edf2c04c8ef96"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eokB4EnKAt5xUoDgoQ4RvLyPYQUVHK8p596kyBokybtIlxPyqJjSo6fUWSTbSSHALGP9ia5oAcmEias4kpicczAaOa5lUfwBoL3Z18/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eokwunmtQKUJibConCDAtnUA5srK5DQkCsU6bldqO2IyIhNFLAQN4Oeicks7UxCxIeKNOwibPZOSY62jR50c10lOaIklQIQI65lZL8/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eongia1B2ZV5IdleMGXXZRpooVENMdLeEyiaOeIuP3qfAV2YiabB12vialwlh2aefOTvhLPJWgEJOR31SoLQhsuRwmBlamLy33OD0Kk/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eommzG06BnJibiaO4wgQU3Of0YbrwMmHxpGEfBv0hNrlerFVUzGTS7LIZ19d2PhIkh66VkrUsonPGGWic3FRPcdgC6vU2iaMib9UTlJw/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonicXXqazslce34PdiaQviabGEds6nHxR1vRZK80E3JyxpkrkLDc7yReH77gC6Qp86xoNrCb99gmkx9w5DNxRGnnd47kkThjLsQuU/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolHHjRiauxdnxm5AWCRgfp2n6RVXfuATtadVbzvGpCNxaMsbh3nuNHCkyvExibYHRhlQBZkqJmNHl8T21KCY2HfO4w4uexsb6wd4/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonxXqCwl3OjrEH93LEBmf1ia6gpaNOdxJBvPIoh3keY8P4brTJqhgulYqqauO51DbVia3eyb00Uj2a2boC5NQffO6PldEsFP4QgU/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eombX7gk0pkkqhLb9gnlKsQwJicxrrd2NiazjHwu5MbNdDZicUErolt2ZJFb4QEXoicWDec3JOFWb62bJwxuuYxXz80icQYyvOcfjQSQ/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "",
+  "method": "http",
+  "content_sha256": "50f28641f3c1e97b2671a43d56d059c3df6ec4134f2499a426c1677d28337369",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T07:50:51.211042+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 8,
+      "downloaded_images": 8,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

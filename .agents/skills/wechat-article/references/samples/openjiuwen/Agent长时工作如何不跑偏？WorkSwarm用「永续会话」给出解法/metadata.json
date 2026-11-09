@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "article-679d98442f02ca08",
+  "url": "https://mp.weixin.qq.com/s/a3YGJIF6Vi9rHsQPqLGw3A",
+  "final_url": "https://mp.weixin.qq.com/s/a3YGJIF6Vi9rHsQPqLGw3A",
+  "status": "fetched",
+  "title": "Agent长时工作如何不跑偏？WorkSwarm用「永续会话」给出解法",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T08:02:06.195092+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-f562c23e0bff482b",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolvH3JJa8wmYibQj1kwu4V2Zic0f6CFqDuhxgiaedKKCyhnfjjbQhmHdMC7QonVOI2gGAVUgmzpz9tYa0nmicF8M4AaooyhVuwWr7I/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-f562c23e0bff482b.png",
+      "sha256": "ce676a367bf63490c0b2aa6211826ad05c5c098f71570dcd6ad130ae0946523c"
+    },
+    {
+      "id": "image-c9ea94ad0cc97cb9",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomY4NCpicQAia2LxtVSbIArlcBFsyoHhZhtJYBG2Tn00KkVibPiaWm2KTpEs4d1gPDAzuZibJFZ2Szia8Oa6sc7k9zjBdWAEJjDTWR7c/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-c9ea94ad0cc97cb9.png",
+      "sha256": "5f0f6fee756c1aa6821ef49819a9475b5b76def6a0fe9aeee8cada040238b6cd"
+    },
+    {
+      "id": "image-8d35e8259154a58f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eont3W4g7otZ128UyFOsvF5iaOFQKkdZWtQfc8UAGKwqOGHLyBAuxOVt27BsmPDmpvh9bP1rUzYMPploqKTx80lew1ewadBmqMiaY/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-8d35e8259154a58f.png",
+      "sha256": "1fc802603494378cfcbb739f897269f3a27b36e7cd7b98ed43c70980e44869db"
+    },
+    {
+      "id": "image-acfb288b1465f16d",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eokaNv6Bzvl2vJzDytrDoCEuHcDw0KC3Zr0ZPxLmtUoHUyZ9T8xcbmRYTWFIITNiaENUgGeY7dHSiawcibrtWu44KgPeNsgnAbbF68/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-acfb288b1465f16d.png",
+      "sha256": "efeeb887b04144e8e92ec5d8715164a231debb54d2f14e4c19ea790d8ea2e37a"
+    },
+    {
+      "id": "image-1d1971392c6e1dc3",
+      "url": "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eokat0ITuL2F6YMkkbiaDhoW7dv1YlOFJ8O1iafhibMtL9c6kkYEEWsxS4JDoaO51zibgibK9A6rPIMlvOGPXoEyB7dKL4fFBJb8CrjA/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-1d1971392c6e1dc3.jpg",
+      "sha256": "440ca18a884ee94c27db0d066901454e037e88d5b9a4b192c988dfd71b0da8bb"
+    },
+    {
+      "id": "image-6ddbcfae2c9db7de",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6IefF6e2eom2iczUkBmUG5FgHe3U4cScrk37vnlzibibbEFu9eMgMfcykPnNBt9715VLqHDn4vpFR4gd2dhRqDPKgOD7pHlMicowed6QjIvqdsI/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-6ddbcfae2c9db7de.jpg",
+      "sha256": "d9e4ff40b74ceb04e7d13578b31800331d6574ce89540b2baa236f64a2469db8"
+    },
+    {
+      "id": "image-a8a82d9c5e487762",
+      "url": "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eok9SpqichM8aicTlsxRF7xPsyd7EtOVyxm1beoFFtvPia3AcCPgMxaBhFSEbCCToh5L63r4P6OvL2aWA9UWUMTb4m8NhTkibiahKUibk/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-a8a82d9c5e487762.jpg",
+      "sha256": "fad1b7fbd2fcc0ab88dd6d0c01060693428528d2d8352051a3597ae75eaaf85a"
+    },
+    {
+      "id": "image-022604c27a167d4f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-022604c27a167d4f.png",
+      "sha256": "c65c508fe3e9491f3e3813a1dd7201cb24ecf5edbb9f95331d885829e7a1231e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolvH3JJa8wmYibQj1kwu4V2Zic0f6CFqDuhxgiaedKKCyhnfjjbQhmHdMC7QonVOI2gGAVUgmzpz9tYa0nmicF8M4AaooyhVuwWr7I/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomY4NCpicQAia2LxtVSbIArlcBFsyoHhZhtJYBG2Tn00KkVibPiaWm2KTpEs4d1gPDAzuZibJFZ2Szia8Oa6sc7k9zjBdWAEJjDTWR7c/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eont3W4g7otZ128UyFOsvF5iaOFQKkdZWtQfc8UAGKwqOGHLyBAuxOVt27BsmPDmpvh9bP1rUzYMPploqKTx80lew1ewadBmqMiaY/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eokaNv6Bzvl2vJzDytrDoCEuHcDw0KC3Zr0ZPxLmtUoHUyZ9T8xcbmRYTWFIITNiaENUgGeY7dHSiawcibrtWu44KgPeNsgnAbbF68/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eokat0ITuL2F6YMkkbiaDhoW7dv1YlOFJ8O1iafhibMtL9c6kkYEEWsxS4JDoaO51zibgibK9A6rPIMlvOGPXoEyB7dKL4fFBJb8CrjA/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_jpg/6IefF6e2eom2iczUkBmUG5FgHe3U4cScrk37vnlzibibbEFu9eMgMfcykPnNBt9715VLqHDn4vpFR4gd2dhRqDPKgOD7pHlMicowed6QjIvqdsI/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eok9SpqichM8aicTlsxRF7xPsyd7EtOVyxm1beoFFtvPia3AcCPgMxaBhFSEbCCToh5L63r4P6OvL2aWA9UWUMTb4m8NhTkibiahKUibk/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "method": "http",
+  "content_sha256": "b1b1943099d18045eacea99fd1e5bf52e36ce31acac0c3b6ed862addaa28d651",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T08:02:27.456600+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 8,
+      "downloaded_images": 8,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

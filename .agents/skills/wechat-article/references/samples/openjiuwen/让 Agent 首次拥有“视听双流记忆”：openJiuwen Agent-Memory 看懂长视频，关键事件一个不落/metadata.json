@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "article-1c4fc4c8a2560188",
+  "url": "https://mp.weixin.qq.com/s/-egoHzADLLF8Gku5ZIsQ4g",
+  "final_url": "https://mp.weixin.qq.com/s/-egoHzADLLF8Gku5ZIsQ4g",
+  "status": "fetched",
+  "title": "让 Agent 首次拥有“视听双流记忆”：openJiuwen Agent-Memory 看懂长视频，关键事件一个不落",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T07:47:26.974735+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-a8023db3e6e629ab",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonoZAAmhIXvIVf8iaY5v56vUJeJKfHrCGg9564nrvp2s9HLibA4KL9ACMxyibmRQDC4NV21GzjDTHG9029uteqXunccjF86L3DOkk/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-a8023db3e6e629ab.png",
+      "sha256": "e1c2d622063ac9be7a8b7a161848f891c26ae4703f49a07fafd124d1992119c0"
+    },
+    {
+      "id": "image-925b75f73ef3e6a1",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolk8NMEd5QJLo6LlHgjt6njU8OWR4Fc4VG0gCmMThvPDf9hQVs9YcQlAh9yib6icHehkMO69AMPFiavpH4EFdn01NZRicUw205x1J0/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-925b75f73ef3e6a1.png",
+      "sha256": "c9b2d5616f0d88723422d3639bdceb81da0dff4194f12c468c2b4d4a80cd2f4d"
+    },
+    {
+      "id": "image-3832f4dd719d2dac",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolsPibbrqZTprAMpYKs7xgdzj4xZOHibyQguFLPpUpz6wibW1FIQtQKibSCAdZO23hCZI8tD8Ey4CcW41lFYxo12rB8VN9FYWs8iaK8/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-3832f4dd719d2dac.png",
+      "sha256": "20330e28244ac5be745f00e1d6094f140272b20985b281baa52aecb731f20f0a"
+    },
+    {
+      "id": "image-0a63b2d6c05117d3",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolh7eHGVyWDfZAxibhe3hKP7Ef0iaNTpzaHT7xwQLqQlibu5bJibGrY57YzjZMJhoYanKrJ6yt3QBYyvIoRuDmGMpia9dtZd4aMsSpY/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-0a63b2d6c05117d3.png",
+      "sha256": "80e212d5a6f31363bb5f177065b61bdaa0242377b52c9d60dc36826b09396d38"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonoZAAmhIXvIVf8iaY5v56vUJeJKfHrCGg9564nrvp2s9HLibA4KL9ACMxyibmRQDC4NV21GzjDTHG9029uteqXunccjF86L3DOkk/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolk8NMEd5QJLo6LlHgjt6njU8OWR4Fc4VG0gCmMThvPDf9hQVs9YcQlAh9yib6icHehkMO69AMPFiavpH4EFdn01NZRicUw205x1J0/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolsPibbrqZTprAMpYKs7xgdzj4xZOHibyQguFLPpUpz6wibW1FIQtQKibSCAdZO23hCZI8tD8Ey4CcW41lFYxo12rB8VN9FYWs8iaK8/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolh7eHGVyWDfZAxibhe3hKP7Ef0iaNTpzaHT7xwQLqQlibu5bJibGrY57YzjZMJhoYanKrJ6yt3QBYyvIoRuDmGMpia9dtZd4aMsSpY/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "",
+  "method": "http",
+  "content_sha256": "3cca37eec6954a5cef7b84c599cd0589a0ad5c8b39da2733afe24e23cd831947",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T07:47:39.776290+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 4,
+      "downloaded_images": 4,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

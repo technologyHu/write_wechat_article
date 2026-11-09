@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "article-46a0fc8b1ae9de63",
+  "url": "https://mp.weixin.qq.com/s/ViVOhJGLd5azXDujgIIWDg",
+  "final_url": "https://mp.weixin.qq.com/s/ViVOhJGLd5azXDujgIIWDg",
+  "status": "fetched",
+  "title": "告别资料散落，让知识持续积累：openJiuwen 首发个人知识空间，重塑个人办公智能体新体验！",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T07:54:25.924157+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-d95715bd5847806e",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomBL8JcRrbt6PA8Pe9PLQ9IZMhFSiay5wvTsX7y4DmjdwvMjxkpmYa9xCePSrxPzY3dRodib3BQgM1P5Gc38BKWKN4WgPa6ydrZM/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-d95715bd5847806e.png",
+      "sha256": "6f4fad4bf6727203a4c1024854199e0ed3caa2b62e58d1f6d3de147c2c3b007e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomBL8JcRrbt6PA8Pe9PLQ9IZMhFSiay5wvTsX7y4DmjdwvMjxkpmYa9xCePSrxPzY3dRodib3BQgM1P5Gc38BKWKN4WgPa6ydrZM/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "method": "http",
+  "content_sha256": "d478f14c43cb385903fd01518cd3234391202c333c5add0de9bfdb51c29ee3da",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T07:54:32.300824+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 1,
+      "downloaded_images": 1,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

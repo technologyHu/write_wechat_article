@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "article-cb492bba230ef188",
+  "url": "https://mp.weixin.qq.com/s/bxizC5DqNEc2bnW5k49tew",
+  "final_url": "https://mp.weixin.qq.com/s/bxizC5DqNEc2bnW5k49tew",
+  "status": "fetched",
+  "title": "WorkSwarm 引领办公智能体新范式，重塑桌面生产力",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T06:55:38.446319+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-72359a12660108ea",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomakm8OPoyd5ibv9RIT6hxaIFfBBPic5tTC44WkxxrWSWmnFPqhkq5jSV3ic4wf0W9Y8zOjbP2oeEjQhGoiabsU8wK77hFV7iaofzibk/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-72359a12660108ea.png",
+      "sha256": "4a0555f74edc1107748a25da91de5eaeab2881f2d6371b39f4457c9974f19a81"
+    },
+    {
+      "id": "image-0f303ee89ec8f245",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eok3VjgGQRuTXO4LqH83L270zjgdmubhIOiaZQf5cGobAseGDqmkVlxU6hmvTszDdm046aVCupmndib6wq1AreWyVLic3W5ZUicwev4/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-0f303ee89ec8f245.png",
+      "sha256": "7628f8db6c0bb03a6cccdaa441e0c00c16d72e242fd1b0e748abfc75779648c5"
+    },
+    {
+      "id": "image-423656ef8a4cfd93",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eok7XAy4FbSK80qMibo2ibwLEicl23LMPRFicC5FZiaY5YEGUUymc39BqgicR412j1ibHVN68mwfDArEO1bhX4dG86FVhXLO1w6SOuuIfQ/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-423656ef8a4cfd93.png",
+      "sha256": "4e71282ebe17f9bb747e3166e705a1d538370d15961ddfa2da58353c188634f3"
+    },
+    {
+      "id": "image-1755776319f15513",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eok61fHQ8Tdp8WglzibnejbOFMmdUQPRPE3O6ibALMtu7nenN83icxHiaS9YVrvB3oicJIVcubvFKes7rv0VsD63fDrEbhRZOc7jFwBg/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-1755776319f15513.png",
+      "sha256": "bc4250add57c8d0ebbf97b75a2916c3295ef34cf9955ac7189c6c91739134d35"
+    },
+    {
+      "id": "image-8999d22e6885e825",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomxiaZYMcHwwYWZqpgKIrOnE5ibbPjqhOdAkqxMBfuTMV5ISWibRmhk4WaTtqk8x2Y8drEc5XgGDTngbibuZR069dusyV4gSyYuzhw/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-8999d22e6885e825.png",
+      "sha256": "b1ccc537207956768c26a7b273e271c9b34487790430caecfd4dc09e4b130476"
+    },
+    {
+      "id": "image-535d8485ba025913",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonhia09zUTMWVeEywyyyhTdhRq8FTRBYg0xwIH009LpfpdU9PxNziaWoofvTf4kiaBDXyIP5BMIiaggyculSDV7Ste56GZhSgNQu0g/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-535d8485ba025913.png",
+      "sha256": "5f7aaf16e6d4e983b58a5693966994763eae896b512a46914d7920cc8c2c49ba"
+    },
+    {
+      "id": "image-55fe5051eb88e218",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonLScKAOojfcvibSVo6zq4GzqqJZaTCUmCaicgxrzFOt62yxUNYQOVbicfJJK40bpIjBkSkWvbaCibmKSUDU2vqc8ibQSghDjTpS11M/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-55fe5051eb88e218.png",
+      "sha256": "97e722172fb22e980ff9bca0a4c917712532c1d2f57fad52f18a4193e542c344"
+    },
+    {
+      "id": "image-022604c27a167d4f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-022604c27a167d4f.png",
+      "sha256": "c65c508fe3e9491f3e3813a1dd7201cb24ecf5edbb9f95331d885829e7a1231e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomakm8OPoyd5ibv9RIT6hxaIFfBBPic5tTC44WkxxrWSWmnFPqhkq5jSV3ic4wf0W9Y8zOjbP2oeEjQhGoiabsU8wK77hFV7iaofzibk/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eok3VjgGQRuTXO4LqH83L270zjgdmubhIOiaZQf5cGobAseGDqmkVlxU6hmvTszDdm046aVCupmndib6wq1AreWyVLic3W5ZUicwev4/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eok7XAy4FbSK80qMibo2ibwLEicl23LMPRFicC5FZiaY5YEGUUymc39BqgicR412j1ibHVN68mwfDArEO1bhX4dG86FVhXLO1w6SOuuIfQ/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eok61fHQ8Tdp8WglzibnejbOFMmdUQPRPE3O6ibALMtu7nenN83icxHiaS9YVrvB3oicJIVcubvFKes7rv0VsD63fDrEbhRZOc7jFwBg/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomxiaZYMcHwwYWZqpgKIrOnE5ibbPjqhOdAkqxMBfuTMV5ISWibRmhk4WaTtqk8x2Y8drEc5XgGDTngbibuZR069dusyV4gSyYuzhw/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonhia09zUTMWVeEywyyyhTdhRq8FTRBYg0xwIH009LpfpdU9PxNziaWoofvTf4kiaBDXyIP5BMIiaggyculSDV7Ste56GZhSgNQu0g/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonLScKAOojfcvibSVo6zq4GzqqJZaTCUmCaicgxrzFOt62yxUNYQOVbicfJJK40bpIjBkSkWvbaCibmKSUDU2vqc8ibQSghDjTpS11M/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "",
+  "method": "http",
+  "content_sha256": "62bf50021381ebc50d2b6da3369395617da27bbbd9d7a99ce782c43738ba640f",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T07:40:14.040388+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 8,
+      "downloaded_images": 8,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

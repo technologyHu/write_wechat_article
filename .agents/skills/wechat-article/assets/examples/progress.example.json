@@ -1,0 +1,125 @@
+{
+  "schema_version": 3,
+  "session_id": "fixture-session",
+  "is_active": false,
+  "phase": "archived",
+  "outline_version": "v001",
+  "based_on_article_version": null,
+  "archived_article_version": "v001",
+  "finalized_article_version": null,
+  "completion_basis": null,
+  "working_file": "article-working.md",
+  "sections": [
+    {
+      "section_id": "lead",
+      "title": "正文导语",
+      "status": "confirmed",
+      "draft_ref": "lead测试第1轮",
+      "source_refs": [
+        "code-1"
+      ],
+      "confirmation": {
+        "draft_ref": "lead测试第1轮",
+        "confirmed_at": "2026-11-08T18:00:00+08:00",
+        "user_message": "测试确认：此单元通过",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "77bbffac3ea595c8792289dcb46a22c8fe074a648ee44255596c3b9ed0a230ff",
+        "media": []
+      },
+      "media_updates": [],
+      "inheritance": null
+    },
+    {
+      "section_id": "main-01",
+      "title": "整体介绍",
+      "status": "confirmed",
+      "draft_ref": "main-01测试第1轮",
+      "source_refs": [
+        "code-1"
+      ],
+      "confirmation": {
+        "draft_ref": "main-01测试第1轮",
+        "confirmed_at": "2026-11-08T18:00:00+08:00",
+        "user_message": "测试确认：此单元通过",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "972d35626c4726f0fff81e2a898fddbe30fed1dc3ca1eb4710f7f7a155a7529c",
+        "media": [
+          {
+            "id": "IMG-01",
+            "title": "整体架构",
+            "revision": "v001",
+            "file": "assets/IMG-01_整体架构_v001.png",
+            "url": null,
+            "sha256": "beb4ab03d1c924d8f85d2a7430b4f5f577e69f655691e3926356fb26ec19d3cf",
+            "source_files": [
+              {
+                "file": "assets/IMG-01_整体架构_v001.svg",
+                "sha256": "b131556c36b0323b4981999443b5b22f7e35032e604d152b2d6698fc072e88c1"
+              }
+            ]
+          }
+        ]
+      },
+      "media_updates": [],
+      "inheritance": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "code-1",
+      "kind": "code",
+      "path": "refs/source.py",
+      "url": null,
+      "revision": "fixture-commit",
+      "checked_at": "2026-11-08T18:00:00+08:00",
+      "note": "离线测试唯一来源；不是实际技术核查记录"
+    }
+  ],
+  "media": [
+    {
+      "id": "IMG-01",
+      "type": "image",
+      "role": "body",
+      "title": "整体架构",
+      "section_ids": [
+        "main-01"
+      ],
+      "revision": "v001",
+      "file": "assets/IMG-01_整体架构_v001.png",
+      "url": null,
+      "sha256": "beb4ab03d1c924d8f85d2a7430b4f5f577e69f655691e3926356fb26ec19d3cf",
+      "source_files": [
+        {
+          "file": "assets/IMG-01_整体架构_v001.svg",
+          "sha256": "b131556c36b0323b4981999443b5b22f7e35032e604d152b2d6698fc072e88c1"
+        }
+      ],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "测试用户明确确认采用",
+        "at": "2026-11-08T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "IMG-02",
+      "type": "image",
+      "role": "cover",
+      "title": "发布封面",
+      "section_ids": [],
+      "revision": "v001",
+      "file": "assets/IMG-02_发布封面_v001.png",
+      "url": null,
+      "sha256": "beb4ab03d1c924d8f85d2a7430b4f5f577e69f655691e3926356fb26ec19d3cf",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "测试用户明确确认采用",
+        "at": "2026-11-08T18:00:00+08:00"
+      }
+    }
+  ],
+  "pending_media": [],
+  "candidates": []
+}

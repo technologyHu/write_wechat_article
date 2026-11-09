@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "article-c1a9b9508670643b",
+  "url": "https://mp.weixin.qq.com/s/jXZhv7tY2EniQdRs6XxoQA",
+  "final_url": "https://mp.weixin.qq.com/s/jXZhv7tY2EniQdRs6XxoQA",
+  "status": "fetched",
+  "title": "openJiuwen首发双维度RSI框架，AI自修改，落地办公智能体，算力亲和助力又快又省",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T08:00:32.174181+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-d154fb2645d2911d",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolyJaj9ZTgx1KoVJQU6UafFjViavxkKyoYROniaic8pmaBibB9kK78MCeB3vRVntNKCPfNBGUf5zucIeGEoaJ21ISQF5nUkibjK6xo8/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-d154fb2645d2911d.png",
+      "sha256": "220aeb0d99b05002dd0075b2b8bf44d9a0c21ab938ea52644ac4674bee7a0cc7"
+    },
+    {
+      "id": "image-738ea3377ac39d4a",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonldVdHMQWJxmBm93dnrlxHIHoSeS4kGVhJf0uSAT1Uy4QeUpXe8OQrNPRXqu1nx4e9qjZVugnpzCZlyUickY73ic8U4DXBQV44s/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-738ea3377ac39d4a.png",
+      "sha256": "d552b772ee8995a46374267d1663f621833053fecc381743aefbe457a521a28a"
+    },
+    {
+      "id": "image-b3d0abf53c4118e3",
+      "url": "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eolibDoeokhKqonjaXm5gO6DuKbrEu5l2cRe0iaJicDGxzaNVl91xIwR5T5HlQ21jomoMXUv2ryia11gSe7gauSbxwbZHiaialvr6bXMU/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-b3d0abf53c4118e3.jpg",
+      "sha256": "37b76607deee8b9d1cb292a9d364337d1af7eb7313ee46f0adfe7b40989a8030"
+    },
+    {
+      "id": "image-2a1c6b19da01fabf",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolT9WVA2eH7ibT2ml6wovDek6DR1zeNyMMng5ca32qFCZIfOwicClh6evnpQTvQsu3SlickvalknSVaj6nhVZBibj2xG434AgcQrBY/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-2a1c6b19da01fabf.png",
+      "sha256": "929d9629f5e1cc64fec87fd09e69bea4d1dfc44199e3b3619f749134d304a310"
+    },
+    {
+      "id": "image-022604c27a167d4f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-022604c27a167d4f.png",
+      "sha256": "c65c508fe3e9491f3e3813a1dd7201cb24ecf5edbb9f95331d885829e7a1231e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolyJaj9ZTgx1KoVJQU6UafFjViavxkKyoYROniaic8pmaBibB9kK78MCeB3vRVntNKCPfNBGUf5zucIeGEoaJ21ISQF5nUkibjK6xo8/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonldVdHMQWJxmBm93dnrlxHIHoSeS4kGVhJf0uSAT1Uy4QeUpXe8OQrNPRXqu1nx4e9qjZVugnpzCZlyUickY73ic8U4DXBQV44s/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eolibDoeokhKqonjaXm5gO6DuKbrEu5l2cRe0iaJicDGxzaNVl91xIwR5T5HlQ21jomoMXUv2ryia11gSe7gauSbxwbZHiaialvr6bXMU/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolT9WVA2eH7ibT2ml6wovDek6DR1zeNyMMng5ca32qFCZIfOwicClh6evnpQTvQsu3SlickvalknSVaj6nhVZBibj2xG434AgcQrBY/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "method": "http",
+  "content_sha256": "9c7e88d7a1d9ac5d69428dbbf43df9a7e9a5625daf6971ef602eb65633d2e0ad",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T08:00:47.847434+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 5,
+      "downloaded_images": 5,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}
