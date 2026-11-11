@@ -1,0 +1,2 @@
+[lfs]
+	fetchexclude = openjiuwen/**/article/**/assets/videos/*.mp4
