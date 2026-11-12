@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "article-3907064829828c3f",
+  "url": "https://mp.weixin.qq.com/s?__biz=MzY4NzM3MTkxOQ%3D%3D&mid=2247483698&idx=1&sn=b7c8d125ac4fdfad1c4a5daedc73bcb8&poc_token=HLbZ7mqj4a80rpfCLkuZ84qHGCgbI5tAy5I2V6Dc",
+  "final_url": "https://mp.weixin.qq.com/s?__biz=MzY4NzM3MTkxOQ%3D%3D&mid=2247483698&idx=1&sn=b7c8d125ac4fdfad1c4a5daedc73bcb8&poc_token=HLbZ7mqj4a80rpfCLkuZ84qHGCgbI5tAy5I2V6Dc",
+  "status": "fetched",
+  "title": "DeepSeek Harness 开发者预览版：一切皆插件",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T17:00:19.241323+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-a92967e07d7c3f3c",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_gif/1tAz3OsOg5auzkrbphDicqyM5dw8dsGFyjzEBOoa2cicpWleC6ny3jqQ0qwXEDdqFiab0iaSqYtG60sgs03Xsm91dAYrTGibT5AoZU5StTFKUqPo/640?wx_fmt=gif&from=appmsg#imgIndex=0",
+      "status": "downloaded",
+      "path": "assets/images/image-a92967e07d7c3f3c.gif",
+      "sha256": "676c417be130502f44f6ed5bd4f583c6b510812da971f91d7835d8ae8e7d7bc7"
+    },
+    {
+      "id": "image-e37c86cffd641704",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/1tAz3OsOg5Yz1ovcuPp87VydpTP4AWf2k3Jb0BHDd5d9DhBukdfmDUazEDia4d7YjujXb3ibXjHdiahLicfKibcrAlZpsRgUVGEIq6ibI6FhSgf8k/640?wx_fmt=png&from=appmsg#imgIndex=1",
+      "status": "downloaded",
+      "path": "assets/images/image-e37c86cffd641704.png",
+      "sha256": "e88c84df7e3ef0f89e1d844315721addf31e9777a3721f9621d953f90b94bb51"
+    },
+    {
+      "id": "image-a7db654bd59a0a32",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/1tAz3OsOg5aYdKiccHicXUyr4vXwIIZ2ricM6Mqhic5dldZLuBkx21nPibeOiadG61kLyuibm5eTib2mfeXtvbtHaFsK2h8aAQSxfLq88gpwRe1TVoo/640?wx_fmt=png&from=appmsg#imgIndex=2",
+      "status": "downloaded",
+      "path": "assets/images/image-a7db654bd59a0a32.png",
+      "sha256": "ebe544e6f458f09da58ba821d2349e2fab2bb6a1910c2d5d9cf2c917f2fbdcb6"
+    },
+    {
+      "id": "image-e4245bd8c042ac7e",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/1tAz3OsOg5ZETAZOI2CiaPAsScU2rPBwMhxqwU3mePMHNJGPOlIapWkaYicb0iaMg8F1l8JtiaeIicZ4P6Tn9DAuicMollv2ojOUw4PicTcPPlBibhU/640?wx_fmt=png&from=appmsg#imgIndex=3",
+      "status": "downloaded",
+      "path": "assets/images/image-e4245bd8c042ac7e.png",
+      "sha256": "466ec5710d3e6825da8e10085f28690420407b9ac8cd492bc2c52990a04518ac"
+    },
+    {
+      "id": "image-bc8d9dfe8e8a13a3",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/1tAz3OsOg5andx7xkbKWE6MVcQBb5Z4aqlr9eHvACg5xu9C3lJVDpoSczHqVCkaUPZawCAAicnk8Q1vbmiakAM70wEEQ1TPu5NlYZUsSUy5wI/640?wx_fmt=png&from=appmsg#imgIndex=4",
+      "status": "downloaded",
+      "path": "assets/images/image-bc8d9dfe8e8a13a3.png",
+      "sha256": "80877ab19646f0bfc25b6677f9a5aca87cbe6723313f1e08162d95b833cc45ec"
+    },
+    {
+      "id": "image-06afe37e9d260e10",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/1tAz3OsOg5Yof95FvnUDShT1kl5KXhdclprJyELSlISVxGDA48CaXPiarYL6xOwicRclbalITgr6vaf6OoClfR3icPibnmMxgogrBsibAEKySKM4/640?wx_fmt=jpeg&from=appmsg#imgIndex=5",
+      "status": "downloaded",
+      "path": "assets/images/image-06afe37e9d260e10.jpg",
+      "sha256": "a9c7acda6da509ca1e1339ba031a7a1083867c0708ced0bc3e0a23021cb5d68e"
+    }
+  ],
+  "browser_context": {
+    "browser_id": "3",
+    "tab_id": "1185084777"
+  },
+  "extraction_notes": [
+    "Imported #js_content from the same browser tab after user verification; no article HTTP request was made."
+  ],
+  "method": "verified-browser-dom",
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_gif/1tAz3OsOg5auzkrbphDicqyM5dw8dsGFyjzEBOoa2cicpWleC6ny3jqQ0qwXEDdqFiab0iaSqYtG60sgs03Xsm91dAYrTGibT5AoZU5StTFKUqPo/640?wx_fmt=gif&from=appmsg#imgIndex=0",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/1tAz3OsOg5Yz1ovcuPp87VydpTP4AWf2k3Jb0BHDd5d9DhBukdfmDUazEDia4d7YjujXb3ibXjHdiahLicfKibcrAlZpsRgUVGEIq6ibI6FhSgf8k/640?wx_fmt=png&from=appmsg#imgIndex=1",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/1tAz3OsOg5aYdKiccHicXUyr4vXwIIZ2ricM6Mqhic5dldZLuBkx21nPibeOiadG61kLyuibm5eTib2mfeXtvbtHaFsK2h8aAQSxfLq88gpwRe1TVoo/640?wx_fmt=png&from=appmsg#imgIndex=2",
+    "https://mmbiz.qpic.cn/mmbiz_png/1tAz3OsOg5ZETAZOI2CiaPAsScU2rPBwMhxqwU3mePMHNJGPOlIapWkaYicb0iaMg8F1l8JtiaeIicZ4P6Tn9DAuicMollv2ojOUw4PicTcPPlBibhU/640?wx_fmt=png&from=appmsg#imgIndex=3",
+    "https://mmbiz.qpic.cn/mmbiz_png/1tAz3OsOg5andx7xkbKWE6MVcQBb5Z4aqlr9eHvACg5xu9C3lJVDpoSczHqVCkaUPZawCAAicnk8Q1vbmiakAM70wEEQ1TPu5NlYZUsSUy5wI/640?wx_fmt=png&from=appmsg#imgIndex=4",
+    "https://mmbiz.qpic.cn/sz_mmbiz_jpg/1tAz3OsOg5Yof95FvnUDShT1kl5KXhdclprJyELSlISVxGDA48CaXPiarYL6xOwicRclbalITgr6vaf6OoClfR3icPibnmMxgogrBsibAEKySKM4/640?wx_fmt=jpeg&from=appmsg#imgIndex=5"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026年8月13日 20:57",
+  "author": null,
+  "publisher": "DeepSeek Harness 团队",
+  "content_sha256": "9036fd2172fef202c26153be1c488632688be48172d1174abe205aa9c6112812",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T17:00:20.526863+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 6,
+      "downloaded_images": 6,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

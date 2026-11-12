@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "article-feb0769bcbe06ae6",
+  "url": "https://www.geekpark.net/news/372074",
+  "final_url": "https://www.geekpark.net/news/372074",
+  "status": "fetched",
+  "title": "Claude Code 的「乐高」模式，让程序员彻底玩「上头」了",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T15:57:03.995284+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-e319b36b1ab5a041",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/f6/46/f646a7f3b645ee614cfe03d72738b562.png",
+      "status": "downloaded",
+      "path": "assets/images/image-e319b36b1ab5a041.png",
+      "sha256": "1104f522a045e3df654a62678b2215e15257b294bdfe421f5726e631be403b9b"
+    },
+    {
+      "id": "image-dcc721b9846db3f0",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/45/6a/456a57abc3f4505a599abefb1c2165f6.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-dcc721b9846db3f0.gif",
+      "sha256": "e23b1a1cd1d023795b583529871521e1915e24f2ab6b7fde303b1bce9129ef1f"
+    },
+    {
+      "id": "image-f48eb20c57653b9a",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/42/62/4262fd75ff8e458816bede47292adbd9.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-f48eb20c57653b9a.gif",
+      "sha256": "6cb582df8ccdca854719aa6226b7322706172db814b5155ec04e7c45ffb7313b"
+    },
+    {
+      "id": "image-b90726130f69edb0",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/50/ee/50ee943371f9af2961a7007814e59d70.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-b90726130f69edb0.gif",
+      "sha256": "5bbf6b3956c0359680f0974822218a2ba59aa0e0e36f6763b0eeba4748a4b823"
+    },
+    {
+      "id": "image-d34076176251c671",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/22/8b/228b8660aaf1181749a658a573ad7602.png",
+      "status": "downloaded",
+      "path": "assets/images/image-d34076176251c671.png",
+      "sha256": "5992bfdfe1b8bbabe5c700c1c158d51589077c1ab153f7acb43baee6f46f8d7c"
+    },
+    {
+      "id": "image-8e7b7dd51b0cdf85",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/86/68/866894464e89c0620c080ebd497f0eb9.png",
+      "status": "downloaded",
+      "path": "assets/images/image-8e7b7dd51b0cdf85.png",
+      "sha256": "b10a64c92288b3312b4663f5f3cd60fca912519bf4e814326ee712bafa3663b9"
+    },
+    {
+      "id": "image-d84596e6efb781e0",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/28/6a/286a9a17c025a0695716f02ca8acd678.png",
+      "status": "downloaded",
+      "path": "assets/images/image-d84596e6efb781e0.png",
+      "sha256": "4d73f95c77c50534f65839265974a17001083087a82695d5500cbf1f84920943"
+    }
+  ],
+  "image_source_order": [
+    "https://imgslim.geekpark.net/uploads/image/file/f6/46/f646a7f3b645ee614cfe03d72738b562.png",
+    "https://imgslim.geekpark.net/uploads/image/file/45/6a/456a57abc3f4505a599abefb1c2165f6.gif",
+    "https://imgslim.geekpark.net/uploads/image/file/42/62/4262fd75ff8e458816bede47292adbd9.gif",
+    "https://imgslim.geekpark.net/uploads/image/file/50/ee/50ee943371f9af2961a7007814e59d70.gif",
+    "https://imgslim.geekpark.net/uploads/image/file/22/8b/228b8660aaf1181749a658a573ad7602.png",
+    "https://imgslim.geekpark.net/uploads/image/file/86/68/866894464e89c0620c080ebd497f0eb9.png",
+    "https://imgslim.geekpark.net/uploads/image/file/28/6a/286a9a17c025a0695716f02ca8acd678.png"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026-10-04",
+  "author": "Wildcard",
+  "method": "http",
+  "content_sha256": "f3c08dd2686f6bf8e507e56b83503c0e7a7d3d8f604c1a115dfd53e4e6b89277",
+  "extraction_notes": [
+    "Excluded page header, author avatar, tag links and share controls; retained cover, summary, article text, image captions and attribution."
+  ],
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T16:00:06.014976+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 7,
+      "downloaded_images": 7,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "last_verified_at": "2026-11-08T16:15:50.617098+00:00",
+  "verification_notes": "Re-fetched source using direct HTTP; archived Markdown body and source image order exactly match current #article-body."
+}

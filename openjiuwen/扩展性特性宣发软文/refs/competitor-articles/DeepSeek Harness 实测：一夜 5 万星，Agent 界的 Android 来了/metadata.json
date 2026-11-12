@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "id": "article-e2abd5895312a1a9",
+  "url": "https://www.geekpark.net/news/368809",
+  "final_url": "https://www.geekpark.net/news/368809",
+  "status": "fetched",
+  "title": "DeepSeek Harness 实测：一夜 5 万星，Agent 界的 Android 来了",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T17:37:04.031700+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-9924183ecdf48a88",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/54/1a/541a66d521903fa27cb067f5cc84e677.jpg",
+      "status": "downloaded",
+      "path": "assets/images/image-9924183ecdf48a88.jpg",
+      "sha256": "a60eb35d5d021f202b136127893178bf376551153516df8653814dc469dd9cbe"
+    },
+    {
+      "id": "image-d95df797202f7d2d",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/b1/0b/b10ba0b0d1d938ef9548bf4757c0f17c.jpeg",
+      "status": "downloaded",
+      "path": "assets/images/image-d95df797202f7d2d.jpg",
+      "sha256": "9d69df3760dd3164da050513ae36343f0c3f451b73c57701e77c1005737525d7"
+    },
+    {
+      "id": "image-08fe05e7a2fecd6d",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/40/5c/405c6072df35261da2c27e8f7cccc79f.png",
+      "status": "downloaded",
+      "path": "assets/images/image-08fe05e7a2fecd6d.png",
+      "sha256": "cfbaa27c27ba5b31ba7adf08a2df08a814b5d1892bf9577bbfee8cb68ff7b3a2"
+    },
+    {
+      "id": "image-e1d48b715e9c0624",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/d2/6b/d26b94773de489613453b34407a57d74.png",
+      "status": "downloaded",
+      "path": "assets/images/image-e1d48b715e9c0624.png",
+      "sha256": "ac44fd75a6ed10c29d27e5b2f845ef7f7fba5cf5f9b6f75266a92470621bbbd8"
+    },
+    {
+      "id": "image-56485061b0a2a19e",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/59/06/590684f6cd70f03a1664433e2ced1fa1.png",
+      "status": "downloaded",
+      "path": "assets/images/image-56485061b0a2a19e.png",
+      "sha256": "9bdc65f410fd881511eb158b7134ac5a8324024e1b8b9c0fccdf1af7b925b6c3"
+    },
+    {
+      "id": "image-528362e5a14c2976",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/8b/10/8b10db71c9939261c9038470048c4ed3.png",
+      "status": "downloaded",
+      "path": "assets/images/image-528362e5a14c2976.png",
+      "sha256": "ee0427ed19958955c217ba97a462c8a09469e997d3f92a064b220cd79e684382"
+    },
+    {
+      "id": "image-e271e2784f3fdd0f",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/6e/83/6e83d7520a19a0bcea3d4b47713cfba6.png",
+      "status": "downloaded",
+      "path": "assets/images/image-e271e2784f3fdd0f.png",
+      "sha256": "d391659e2992c77c5511ccdffa700d5ee725d9587a393afea8651eb7239d3bd6"
+    },
+    {
+      "id": "image-d138b8a2a02c3652",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/3a/d2/3ad2c046456542491e045612ded8e664.png",
+      "status": "downloaded",
+      "path": "assets/images/image-d138b8a2a02c3652.png",
+      "sha256": "18efe3a5c2dc5b35c877e6d5e6b864138a3f81f7a04969d650c958269e3337eb"
+    },
+    {
+      "id": "image-1ed5bbb3f9aaca47",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/08/73/0873e7a808a507cdc24f402257442e16.png",
+      "status": "downloaded",
+      "path": "assets/images/image-1ed5bbb3f9aaca47.png",
+      "sha256": "f144b970a78e9003b4d4246600a1a585cb920b7b66d3cd72374d826bde66456f"
+    },
+    {
+      "id": "image-23d35487897effcf",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/b4/37/b437935e38929e1d7cb347230cbfdc7f.jpeg",
+      "status": "downloaded",
+      "path": "assets/images/image-23d35487897effcf.jpg",
+      "sha256": "20472f192a19d8994a4096f57adb8556d7d6a174634766e211c34525e44b2edd"
+    },
+    {
+      "id": "image-fe0fb38e04883ba8",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/d1/f1/d1f1ac1fa818237cff2d985ec443009e.png",
+      "status": "downloaded",
+      "path": "assets/images/image-fe0fb38e04883ba8.png",
+      "sha256": "e54533bf709a6ef7d6e202a21b9ae1243a2a739474adaf1839f2286518f6d239"
+    },
+    {
+      "id": "image-3feb785e6d806345",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/29/7b/297b13773900d7b7de582e594171ad88.png",
+      "status": "downloaded",
+      "path": "assets/images/image-3feb785e6d806345.png",
+      "sha256": "29a6b3d18cffca7c1559f6f117a540bde799b490afb805c13b3ae3cf1ec25d8c"
+    },
+    {
+      "id": "image-344eaa6f3fdb72ad",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/22/21/2221e35760fd9b18c1adae3d47c64d30.png",
+      "status": "downloaded",
+      "path": "assets/images/image-344eaa6f3fdb72ad.png",
+      "sha256": "8c8963e690af8db50b0e0afa56625b9bdb62546ffa83d18937e3720e01b93c43"
+    },
+    {
+      "id": "image-4cbb4d24c32da1c2",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/a9/c4/a9c4418d3d9f954324fe206b6c9338f1.png",
+      "status": "downloaded",
+      "path": "assets/images/image-4cbb4d24c32da1c2.png",
+      "sha256": "dc40af50812d3be2dbfa4c6829f0ab7db7ed3b353b2d6a08463978b66d89b440"
+    },
+    {
+      "id": "image-f4ca60e54f2c6f38",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/01/e3/01e3a3335c1c88d421e65919fb402c8d.png",
+      "status": "downloaded",
+      "path": "assets/images/image-f4ca60e54f2c6f38.png",
+      "sha256": "c27b2e8ae30ce5ee884b5a03da8836b5623aa2d6b28d8980b9d51dd9bc24d1df"
+    },
+    {
+      "id": "image-13d3e9c70f9c584c",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/dc/56/dc56fd1f34014d481b8ac1fe2731f0ca.png",
+      "status": "downloaded",
+      "path": "assets/images/image-13d3e9c70f9c584c.png",
+      "sha256": "868fb5840531e2b3cda3a5d6f6ad3068031dc5dfce49b2f33e2f51c8b6b20a22"
+    },
+    {
+      "id": "image-c19e478071e71b71",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/42/7e/427e129634de9f0ae777ef7c83f9e47e.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-c19e478071e71b71.gif",
+      "sha256": "4f95b61421a94f56cf500d28728d7839c9a5f02ff992624d2fdf55e03f0daba5"
+    },
+    {
+      "id": "image-1e788098eabab11d",
+      "url": "https://imgslim.geekpark.net/uploads/image/file/54/45/5445fa4865bdc111b432eb4e0696785c.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-1e788098eabab11d.gif",
+      "sha256": "947f2a32d9443b26c2a0df4e289c53ef75bdd4f279b51ab2f264e31dbf0db2de"
+    }
+  ],
+  "method": "http-article-body",
+  "image_source_order": [
+    "https://imgslim.geekpark.net/uploads/image/file/54/1a/541a66d521903fa27cb067f5cc84e677.jpg",
+    "https://imgslim.geekpark.net/uploads/image/file/b1/0b/b10ba0b0d1d938ef9548bf4757c0f17c.jpeg",
+    "https://imgslim.geekpark.net/uploads/image/file/40/5c/405c6072df35261da2c27e8f7cccc79f.png",
+    "https://imgslim.geekpark.net/uploads/image/file/d2/6b/d26b94773de489613453b34407a57d74.png",
+    "https://imgslim.geekpark.net/uploads/image/file/59/06/590684f6cd70f03a1664433e2ced1fa1.png",
+    "https://imgslim.geekpark.net/uploads/image/file/8b/10/8b10db71c9939261c9038470048c4ed3.png",
+    "https://imgslim.geekpark.net/uploads/image/file/6e/83/6e83d7520a19a0bcea3d4b47713cfba6.png",
+    "https://imgslim.geekpark.net/uploads/image/file/3a/d2/3ad2c046456542491e045612ded8e664.png",
+    "https://imgslim.geekpark.net/uploads/image/file/08/73/0873e7a808a507cdc24f402257442e16.png",
+    "https://imgslim.geekpark.net/uploads/image/file/b4/37/b437935e38929e1d7cb347230cbfdc7f.jpeg",
+    "https://imgslim.geekpark.net/uploads/image/file/d1/f1/d1f1ac1fa818237cff2d985ec443009e.png",
+    "https://imgslim.geekpark.net/uploads/image/file/29/7b/297b13773900d7b7de582e594171ad88.png",
+    "https://imgslim.geekpark.net/uploads/image/file/22/21/2221e35760fd9b18c1adae3d47c64d30.png",
+    "https://imgslim.geekpark.net/uploads/image/file/a9/c4/a9c4418d3d9f954324fe206b6c9338f1.png",
+    "https://imgslim.geekpark.net/uploads/image/file/01/e3/01e3a3335c1c88d421e65919fb402c8d.png",
+    "https://imgslim.geekpark.net/uploads/image/file/dc/56/dc56fd1f34014d481b8ac1fe2731f0ca.png",
+    "https://imgslim.geekpark.net/uploads/image/file/42/7e/427e129634de9f0ae777ef7c83f9e47e.gif",
+    "https://imgslim.geekpark.net/uploads/image/file/54/45/5445fa4865bdc111b432eb4e0696785c.gif"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026-08-14",
+  "author": "张勇毅",
+  "content_sha256": "4bdca3d9f256bc88123f641cb4350227001d3262c2346fa68246da14029a0ef4",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T17:37:09.872805+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 18,
+      "downloaded_images": 18,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "extraction_notes": [
+    "Extracted #article-body using lxml to handle malformed imported img elements; retained all article text, cover, summary, captions and image order.",
+    "Omitted category, author avatar, repeated title, tags and share controls.",
+    "Used GeekPark-hosted image src URLs instead of stale imported WeChat data-src URLs which returned hotlink-denial placeholders.",
+    "Resolved two shared footer graphics using verified GeekPark copies associated with the identical original WeChat image resources in article 369003."
+  ],
+  "image_source_mapping": [
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/54/1a/541a66d521903fa27cb067f5cc84e677.jpg",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/54/1a/541a66d521903fa27cb067f5cc84e677.jpg",
+      "original_imported_url": null
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/b1/0b/b10ba0b0d1d938ef9548bf4757c0f17c.jpeg",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/b1/0b/b10ba0b0d1d938ef9548bf4757c0f17c.jpeg",
+      "original_imported_url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/z6JAVpoB67QY2xjwJia4xIo9kgX99H5FZJOsUyrIq3tic6kTwTic0epPH4pLKGka5SKbKzHjY1VuLe3cncCbDq71ozvv3S88MNrXWUlmD6YK7c/640?wx_fmt=jpeg&from=appmsg#imgIndex=0"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/40/5c/405c6072df35261da2c27e8f7cccc79f.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/40/5c/405c6072df35261da2c27e8f7cccc79f.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67TM1jMJQ4Qkr0LYPWm1D9ia6xVicKjBNNqAiam7L6iaFmwEWKNcOWfDlf2aq6JiaqkhxzuRSRgKYUgm4orXCj7g782Pza4W78SeylMY/640?from=appmsg#imgIndex=1"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/d2/6b/d26b94773de489613453b34407a57d74.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/d2/6b/d26b94773de489613453b34407a57d74.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/z6JAVpoB67RRiadPXWiaiaIYkSweFMm4TBlMAKicyuf4Bic3RrcQIwHLdVEUytXPxklnjpP8vhTRsnM0GCLDR4G39Xx9mCXeibicu9XibHw4ayzIEDk/640?from=appmsg#imgIndex=2"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/59/06/590684f6cd70f03a1664433e2ced1fa1.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/59/06/590684f6cd70f03a1664433e2ced1fa1.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67RPGYRPGic6AqYDuUicias7yXVib8LXKGDgHphFHwKukxlUARqD8ytVqNcg2T83zYNc823NgCoHAyZcvQInGULTqo5V7ApZbgiaWSfk/640?from=appmsg#imgIndex=3"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/8b/10/8b10db71c9939261c9038470048c4ed3.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/8b/10/8b10db71c9939261c9038470048c4ed3.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/z6JAVpoB67Sa7otwDsBJV9gokqMm8yTYNicfP3vicHyyD2o7pNbHOWCye9WflyDQ0vxgicpBN0MN4xdOnkrhNff6KB8tArczicBJSheznM0pmpk/640?from=appmsg#imgIndex=4"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/6e/83/6e83d7520a19a0bcea3d4b47713cfba6.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/6e/83/6e83d7520a19a0bcea3d4b47713cfba6.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/z6JAVpoB67R5P4bHbJm8BZicNoO54b1R5IPC5pUY1o291EQwdPJ1Fx4iaibiaEbib1Bic1dticbeM2nhMJ54lRN2dUgNLBWySZREp2IEjyRQ9Zibn00/640?from=appmsg#imgIndex=5"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/3a/d2/3ad2c046456542491e045612ded8e664.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/3a/d2/3ad2c046456542491e045612ded8e664.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67TEbFOXFNXXck82AibVo7eadjv1yica7B1n6vsTVjUmJuMTEm7W9tibl75ZSEodc2stVPEnJfddA6VQKogfaS6RgjRTAKXO1uwfOA/640?from=appmsg#imgIndex=6"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/08/73/0873e7a808a507cdc24f402257442e16.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/08/73/0873e7a808a507cdc24f402257442e16.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67T5e9PGKqIHfrVgicTt5YNh06RgU4CWvyBibeaECxQTm6gFMQeaiaH1ic0cTCAd0Wiawlic16GeTovcOXtAYA24YRyV9dA54V7TQzCeY/640?from=appmsg#imgIndex=7"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/b4/37/b437935e38929e1d7cb347230cbfdc7f.jpeg",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/b4/37/b437935e38929e1d7cb347230cbfdc7f.jpeg",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_jpg/z6JAVpoB67TYuia2frBpmSq27OAkrhBJzpKLhSJxjSQJPwcEicrVMeD1fiaFGDy2liaHIeyBHW4niaNuT7NJJjY3qsQduh74GWxEJjllHuLib0vdI/640?from=appmsg#imgIndex=8"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/d1/f1/d1f1ac1fa818237cff2d985ec443009e.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/d1/f1/d1f1ac1fa818237cff2d985ec443009e.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67RjyGUej5qr6KibWZb0wIT7tLicudcxO8loia63oEo265CqozicppclSdMweGY4XsqmSBZtmUicicc5dhaa3061iaczDoOUI0eibjKumpc/640?from=appmsg#imgIndex=9"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/29/7b/297b13773900d7b7de582e594171ad88.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/29/7b/297b13773900d7b7de582e594171ad88.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67T5r9y0AXQTheGmj2qW8FdmwtNkQqxoXVupIP97nCZ8NYWKQ05Pkz29icXic7mBOxsoRKfAotw8yUHULFK0A1ZgJVcFyIRcIesm8/640?from=appmsg#imgIndex=10"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/22/21/2221e35760fd9b18c1adae3d47c64d30.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/22/21/2221e35760fd9b18c1adae3d47c64d30.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/z6JAVpoB67QAzlmSkCY9a1sUVl5PHmm233TXMNSKhzy7IbJrYzqH0aHEhXJMrTI5NnKHib6wgo9SuvUlV5z0u8GpFXwFBw13icjXLm0pY1icG4/640?from=appmsg#imgIndex=11"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/a9/c4/a9c4418d3d9f954324fe206b6c9338f1.png",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/a9/c4/a9c4418d3d9f954324fe206b6c9338f1.png",
+      "original_imported_url": "https://mmbiz.qpic.cn/sz_mmbiz_png/z6JAVpoB67QaeANPBoW6iaHPDd3tSROkmPrZh619P1LxoS3AAlXapedqoAMoCkvibIy3ugqt5hjRJpOJLuyIAsRaibBo1pDUraL5K8ArJIs24o/640?from=appmsg#imgIndex=12"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/01/e3/01e3a3335c1c88d421e65919fb402c8d.png",
+      "page_src": "https://mmbiz.qpic.cn/mmbiz_png/8cu01Kavc5YTxYGib55rtMHhP1YJ44FLtVGp8Keyg6D2X3AUhgNicT1ibKKh0fE1eiaGqkSXnTlW0ib96ib3HDAIrnVA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=13",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/8cu01Kavc5YTxYGib55rtMHhP1YJ44FLtVGp8Keyg6D2X3AUhgNicT1ibKKh0fE1eiaGqkSXnTlW0ib96ib3HDAIrnVA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=13"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/dc/56/dc56fd1f34014d481b8ac1fe2731f0ca.png",
+      "page_src": "https://mmbiz.qpic.cn/mmbiz_png/8cu01Kavc5aj8nbzjKDqiaGoPwPShZlicMg4bBpz0WFUoNvOZJN6rAv3f9tibELucQUsKlspKaXybW62GpYwOV71w/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=14",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_png/8cu01Kavc5aj8nbzjKDqiaGoPwPShZlicMg4bBpz0WFUoNvOZJN6rAv3f9tibELucQUsKlspKaXybW62GpYwOV71w/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=14"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/42/7e/427e129634de9f0ae777ef7c83f9e47e.gif",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/42/7e/427e129634de9f0ae777ef7c83f9e47e.gif",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_gif/8cu01Kavc5ZENt3gIiatQKstoLiatpXoWBUwkB6tO2b9y2Hoj5HpcnXc5zRJEX6MhbyXJ3q0gjTrrBIUF7boJGDA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=15"
+    },
+    {
+      "url": "https://imgslim.geekpark.net/uploads/image/file/54/45/5445fa4865bdc111b432eb4e0696785c.gif",
+      "page_src": "https://imgslim.geekpark.net/uploads/image/file/54/45/5445fa4865bdc111b432eb4e0696785c.gif",
+      "original_imported_url": "https://mmbiz.qpic.cn/mmbiz_gif/8cu01Kavc5YR1a8dIHV2UrCdNIhialnevdQkialrf9oMibXZhuHeD0nPUHuFlYzYB4WYzwnTbhSyAvj9ibZb7ibewPw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=16"
+    }
+  ],
+  "capture_verification": {
+    "normalized_text_sha256": "81235291adff5bcc98c7f510f466249b91acd8308dbb13c3a137bbdcb0d442ad",
+    "text_matches_source": true
+  }
+}

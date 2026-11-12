@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "id": "article-b3b56f734f99466b",
+  "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw%3D%3D&mid=2651050272&idx=1&sn=c83846265c4885622b18d0e201d4df39&poc_token=HIqx8GqjfDO5eJ8pHo7WYs8U-_raJQZmdfJnRt6E",
+  "final_url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw%3D%3D&mid=2651050272&idx=1&sn=c83846265c4885622b18d0e201d4df39&poc_token=HIqx8GqjfDO5eJ8pHo7WYs8U-_raJQZmdfJnRt6E",
+  "status": "fetched",
+  "title": "刚刚，DeepSeek Harness震撼开源：一切皆插件",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T17:34:42.125219+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-baa672bfd328256b",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/KmXPKA19gW889cR13aBX42evqQIRibKlicoCrHPEpT0tQiceNphESCa2eJTqstP8G0yqMTkeMFrOGue6kOyCKdTkA/640?wx_fmt=png&from=appmsg#imgIndex=0",
+      "status": "downloaded",
+      "path": "assets/images/image-baa672bfd328256b.png",
+      "sha256": "07a6b3c6c51d530cc1cbb11bb4877bb82e5004812f2c680bb170a3173441712d"
+    },
+    {
+      "id": "image-196f2eb51a271e1f",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFC7xV4j4m52AiclCenIyuicq2jzfn1KuPKmibX2243ZJBm3qmzbj458fpYnyBWF0fvNvesrc7cPeWBlsr2q5apBOzlkNib0RPDSys/640?wx_fmt=png&from=appmsg#imgIndex=1",
+      "status": "downloaded",
+      "path": "assets/images/image-196f2eb51a271e1f.png",
+      "sha256": "55c727c121ad99da0df27ba81ebca0fc73c2ae5ed294dcd714a15527c04b18e8"
+    },
+    {
+      "id": "image-d5f534e53b6c64b7",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqGOD78uNmiawTAX2otBWyfF5icrlZMpUS51xTGWsiaP9dqaumZJlQyUZFAhicemn5JHVzamlDsNic4QrUYMjuewuHXiaOicgzOVWrZqG8/640?wx_fmt=png&from=appmsg#imgIndex=2",
+      "status": "downloaded",
+      "path": "assets/images/image-d5f534e53b6c64b7.png",
+      "sha256": "2612b27623b0fbcb8a0b0c87db722abfbde34e2e35caef0f8c618c5297da3fb5"
+    },
+    {
+      "id": "image-d1f01be6549b293e",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFq0FicCkciamDMAgK0ctaDMTCu6I21Gzia56zRlMxGzVrqXp2ibMy8dql4MstbW15y9ySMakyKbVqLOYhyuVcvntdLXXxSyOCWiaNQ/640?wx_fmt=png&from=appmsg#imgIndex=3",
+      "status": "downloaded",
+      "path": "assets/images/image-d1f01be6549b293e.png",
+      "sha256": "8abf9ea025ed940534f90e8e28a45768d07c8989173f27006b461c972742ac49"
+    },
+    {
+      "id": "image-f8f3391e86989204",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqFQicgPUIKPmoM5dl9hyXSsLQkXnSNNN6Gus7xLxN7BMq6e2u24sN9nRX8RlCK6vQRqvBUObflhx9uOh7rWicHGdJN80HbLnJnEU/640?wx_fmt=png&from=appmsg#imgIndex=4",
+      "status": "downloaded",
+      "path": "assets/images/image-f8f3391e86989204.png",
+      "sha256": "4fc731ff79e74c9aaa61c3faa171f778c1c45d18fd57a802c4d219c1f438d973"
+    },
+    {
+      "id": "image-7d572ee5ac3b60f9",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqHapexn3yYtRyiaTS2bLibDjG09iaKbohQV7ZF6KDT3WlKuWSyIeKYELlsy5dnuzrbDBMFjqYMEB3pEJ2ewQU9NFy1VVpCUavt2a0/640?wx_fmt=png&from=appmsg#imgIndex=5",
+      "status": "downloaded",
+      "path": "assets/images/image-7d572ee5ac3b60f9.png",
+      "sha256": "370bc2fa8e1fd43e2bcf5678ab6ff1c0b9702c98bf9721f3fd3a526ef27e3166"
+    },
+    {
+      "id": "image-0fc28146c1b3da58",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHP6mbxmibRTU5iaUvOt7a9KOP8ib6Bhg69K4xlzLREjG9ZiaGXAyGbqiaMKQt9eXgHqWiaIsajAGHvLq3rV1qzXdtUytDqeEbYMVvTw/640?wx_fmt=png&from=appmsg#imgIndex=6",
+      "status": "downloaded",
+      "path": "assets/images/image-0fc28146c1b3da58.png",
+      "sha256": "4165f563e49ed439afc263146e6319c4104901d551de5917430899f1ea508c71"
+    },
+    {
+      "id": "image-fb3d115ef42f43d8",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqEFeg4WDEJWk5nngZGLA2I2Pawfk7nqU5JxDviafEUT4fCbudQeIF54325x3Y3P5zT9kLhDvW97CuI1qAY5uAkx5bnVkBroYEjw/640?wx_fmt=png&from=appmsg#imgIndex=7",
+      "status": "downloaded",
+      "path": "assets/images/image-fb3d115ef42f43d8.png",
+      "sha256": "2c6058ecf8899fc3d8df7bc28da504ee5ece7733649786af65144c512b9e958c"
+    },
+    {
+      "id": "image-05b15bf7c68b6817",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqEkLRRALpXHSb8vdYtB8n2g9JCg2Kp90d0bSJpxMiaQhWInjpnIfQKTiaRSsvCRXSC5AMzibic10YLnibONNdiaoOygKGianjtiaT9jkFE/640?wx_fmt=png&from=appmsg#imgIndex=8",
+      "status": "downloaded",
+      "path": "assets/images/image-05b15bf7c68b6817.png",
+      "sha256": "3ba02e62f280caf472d1007865110da9c436377541bbe57c35be15f2de4f306d"
+    },
+    {
+      "id": "image-adc21bbc6bca2ff8",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqH4ibiakOibGBSK6DVMSCiaGIFV6ycUQ7X5Zmh9EFsdhKznG6msBfxPMaYAaFbv4Op4LFan4VicKk6l8Px27n0xKum5ywa5sYLMMR74/640?wx_fmt=png&from=appmsg#imgIndex=9",
+      "status": "downloaded",
+      "path": "assets/images/image-adc21bbc6bca2ff8.png",
+      "sha256": "bcbf536ef70a94a79508e1002e804b5ff3afc5da5f2946e00040ded364003a90"
+    },
+    {
+      "id": "image-0fe67cd015585798",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHLwDvFn0f8OicSONXawD2g4UFhEIkqEzov5mfWiasvZ24ollyvIA7PYI211kzctrFxzxBlSUniaxfBhJbKcAJgnBCtbnnniaWvDs0/640?wx_fmt=png&from=appmsg#imgIndex=10",
+      "status": "downloaded",
+      "path": "assets/images/image-0fe67cd015585798.png",
+      "sha256": "52c33dac3d92831ea5c8bfd8456b8158a7b3ced14e83f5d4d33e48b891793ae3"
+    },
+    {
+      "id": "image-b68e608e45f974bc",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqGhCN57yXa0kia8iciaDtB108o5kS0HX94UvbPGHRpibaXfsV1ibJy2biakGZDJqPzumBePjPlmGsrib0DolRR3KhtGE6Dwia4bHBAyFCI/640?wx_fmt=png&from=appmsg#imgIndex=11",
+      "status": "downloaded",
+      "path": "assets/images/image-b68e608e45f974bc.png",
+      "sha256": "90f5ce449c069f95e6ea0a848c4a89b0b9e05737259546d283efd49aba0f2e41"
+    },
+    {
+      "id": "image-d4754f3dfaee6738",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHC28N1VfJtetofge3GtClO62ibzX4S2qtsSVEia8Uv2tnveicibAAcoicwfwKP958qAl7mzkxKXF7IjrqddRpmVLZABiafrTCiagRhT0/640?wx_fmt=png&from=appmsg#imgIndex=12",
+      "status": "downloaded",
+      "path": "assets/images/image-d4754f3dfaee6738.png",
+      "sha256": "d216ea2d2dfbf03e8f99a75bead31aed5586910d674dacd21fe9e353b52887a8"
+    },
+    {
+      "id": "image-de177a18581d8cb9",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqGrForfoEKWUIO3GTZSCHPYgibZ4mJ5F97eqwz6m1O5GITQc3zeuqQdjn6A70VL1fiaAQtlr5WMsuo2QR0dZ09O7ibBaiaEKiaMXzXM/640?wx_fmt=png&from=appmsg#imgIndex=13",
+      "status": "downloaded",
+      "path": "assets/images/image-de177a18581d8cb9.png",
+      "sha256": "820e87305966a714c94917b37888fd0c91196d88cf2c553e39c9d1dfa192636a"
+    },
+    {
+      "id": "image-e65e3317dcbb6148",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFj7MXENeAK5Xxl38qGJic8icfleBMGkhX0AHUNon42ptZssphOhvTLiaibleJbZwbQ6tlibDbibicH6KjVETDHicMeOeDATQUoWLXt6ia0/640?wx_fmt=png&from=appmsg#imgIndex=14",
+      "status": "downloaded",
+      "path": "assets/images/image-e65e3317dcbb6148.png",
+      "sha256": "b0f424a46826d547b0b7b5a40d8d139376547f06cd5ab52b63b89b72e8fe1204"
+    },
+    {
+      "id": "image-4c06c2db6f252e54",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqGZT4iaaXfUETZnv1gnMVXXibRIC5LUctNSqp28icjxW7ciaG9PBFlrZiaDDQmZtpwUxINWQ1hibSmsia1rPPfjDJUrwLP0LrNrib6ibgPw/640?wx_fmt=png&from=appmsg#imgIndex=15",
+      "status": "downloaded",
+      "path": "assets/images/image-4c06c2db6f252e54.png",
+      "sha256": "214b36d5c2320b0a2b9913589eb5de8afd5eb604f51420a8731227daf3eea79b"
+    },
+    {
+      "id": "image-222224b1be96a519",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqEYPMEOJ2mmYZaibV2InWNZrbVIfFhSXna1DtEnbJsv0q1ovlBfySl1BNcaxFicjQTwZzvmwE8t9icc5XjYxQtsQ9O9XAYp1aLslg/640?wx_fmt=png&from=appmsg#imgIndex=16",
+      "status": "downloaded",
+      "path": "assets/images/image-222224b1be96a519.png",
+      "sha256": "ccc491825f7d044a8cd6a62225fbe4b6d5b2c6398b4354fdcd391b8348cf9287"
+    },
+    {
+      "id": "image-332c643c845a163b",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHn4mg5OXUtYnmUq5Av5o78rwTmG29b86RQT4hiczC6guHhssBTtNQba2pkK2mAWjicHaIKufOoSAkicdibBkYc6xvg8yEbOnxvcd0/640?wx_fmt=png&from=appmsg#imgIndex=17",
+      "status": "downloaded",
+      "path": "assets/images/image-332c643c845a163b.png",
+      "sha256": "5cf4c0d5d713e99ae476e579a1575c73ae838229b6314209ac0df1fcf997da37"
+    }
+  ],
+  "browser_context": {
+    "browser_id": "3",
+    "tab_id": "1185084830"
+  },
+  "extraction_notes": [
+    "Imported #js_content from the same browser tab after user verification; no article HTTP request was made.",
+    "Replaced five embedded video player interfaces with the original stable video-player links at their original positions; videos were not downloaded.",
+    "Removed empty video-player avatar images; preserved all 18 article images and their source order."
+  ],
+  "method": "verified-browser-dom",
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/KmXPKA19gW889cR13aBX42evqQIRibKlicoCrHPEpT0tQiceNphESCa2eJTqstP8G0yqMTkeMFrOGue6kOyCKdTkA/640?wx_fmt=png&from=appmsg#imgIndex=0",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFC7xV4j4m52AiclCenIyuicq2jzfn1KuPKmibX2243ZJBm3qmzbj458fpYnyBWF0fvNvesrc7cPeWBlsr2q5apBOzlkNib0RPDSys/640?wx_fmt=png&from=appmsg#imgIndex=1",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqGOD78uNmiawTAX2otBWyfF5icrlZMpUS51xTGWsiaP9dqaumZJlQyUZFAhicemn5JHVzamlDsNic4QrUYMjuewuHXiaOicgzOVWrZqG8/640?wx_fmt=png&from=appmsg#imgIndex=2",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFq0FicCkciamDMAgK0ctaDMTCu6I21Gzia56zRlMxGzVrqXp2ibMy8dql4MstbW15y9ySMakyKbVqLOYhyuVcvntdLXXxSyOCWiaNQ/640?wx_fmt=png&from=appmsg#imgIndex=3",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqFQicgPUIKPmoM5dl9hyXSsLQkXnSNNN6Gus7xLxN7BMq6e2u24sN9nRX8RlCK6vQRqvBUObflhx9uOh7rWicHGdJN80HbLnJnEU/640?wx_fmt=png&from=appmsg#imgIndex=4",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqHapexn3yYtRyiaTS2bLibDjG09iaKbohQV7ZF6KDT3WlKuWSyIeKYELlsy5dnuzrbDBMFjqYMEB3pEJ2ewQU9NFy1VVpCUavt2a0/640?wx_fmt=png&from=appmsg#imgIndex=5",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHP6mbxmibRTU5iaUvOt7a9KOP8ib6Bhg69K4xlzLREjG9ZiaGXAyGbqiaMKQt9eXgHqWiaIsajAGHvLq3rV1qzXdtUytDqeEbYMVvTw/640?wx_fmt=png&from=appmsg#imgIndex=6",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqEFeg4WDEJWk5nngZGLA2I2Pawfk7nqU5JxDviafEUT4fCbudQeIF54325x3Y3P5zT9kLhDvW97CuI1qAY5uAkx5bnVkBroYEjw/640?wx_fmt=png&from=appmsg#imgIndex=7",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqEkLRRALpXHSb8vdYtB8n2g9JCg2Kp90d0bSJpxMiaQhWInjpnIfQKTiaRSsvCRXSC5AMzibic10YLnibONNdiaoOygKGianjtiaT9jkFE/640?wx_fmt=png&from=appmsg#imgIndex=8",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqH4ibiakOibGBSK6DVMSCiaGIFV6ycUQ7X5Zmh9EFsdhKznG6msBfxPMaYAaFbv4Op4LFan4VicKk6l8Px27n0xKum5ywa5sYLMMR74/640?wx_fmt=png&from=appmsg#imgIndex=9",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHLwDvFn0f8OicSONXawD2g4UFhEIkqEzov5mfWiasvZ24ollyvIA7PYI211kzctrFxzxBlSUniaxfBhJbKcAJgnBCtbnnniaWvDs0/640?wx_fmt=png&from=appmsg#imgIndex=10",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqGhCN57yXa0kia8iciaDtB108o5kS0HX94UvbPGHRpibaXfsV1ibJy2biakGZDJqPzumBePjPlmGsrib0DolRR3KhtGE6Dwia4bHBAyFCI/640?wx_fmt=png&from=appmsg#imgIndex=11",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHC28N1VfJtetofge3GtClO62ibzX4S2qtsSVEia8Uv2tnveicibAAcoicwfwKP958qAl7mzkxKXF7IjrqddRpmVLZABiafrTCiagRhT0/640?wx_fmt=png&from=appmsg#imgIndex=12",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqGrForfoEKWUIO3GTZSCHPYgibZ4mJ5F97eqwz6m1O5GITQc3zeuqQdjn6A70VL1fiaAQtlr5WMsuo2QR0dZ09O7ibBaiaEKiaMXzXM/640?wx_fmt=png&from=appmsg#imgIndex=13",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFj7MXENeAK5Xxl38qGJic8icfleBMGkhX0AHUNon42ptZssphOhvTLiaibleJbZwbQ6tlibDbibicH6KjVETDHicMeOeDATQUoWLXt6ia0/640?wx_fmt=png&from=appmsg#imgIndex=14",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqGZT4iaaXfUETZnv1gnMVXXibRIC5LUctNSqp28icjxW7ciaG9PBFlrZiaDDQmZtpwUxINWQ1hibSmsia1rPPfjDJUrwLP0LrNrib6ibgPw/640?wx_fmt=png&from=appmsg#imgIndex=15",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqEYPMEOJ2mmYZaibV2InWNZrbVIfFhSXna1DtEnbJsv0q1ovlBfySl1BNcaxFicjQTwZzvmwE8t9icc5XjYxQtsQ9O9XAYp1aLslg/640?wx_fmt=png&from=appmsg#imgIndex=16",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHn4mg5OXUtYnmUq5Av5o78rwTmG29b86RQT4hiczC6guHhssBTtNQba2pkK2mAWjicHaIKufOoSAkicdibBkYc6xvg8yEbOnxvcd0/640?wx_fmt=png&from=appmsg#imgIndex=17"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026年8月13日 20:58",
+  "author": null,
+  "publisher": "机器之心",
+  "content_sha256": "ee4475b91d7f9617c83e9b886c6d038f96705da73676ba8c5e5f8b8c329caf2d",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T17:34:45.000528+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 18,
+      "downloaded_images": 18,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "videos": [
+    {
+      "id": "wxv_4647216658162221056",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid=wxv_4647216658162221056",
+      "duration": "02:31",
+      "status": "remote"
+    },
+    {
+      "id": "wxv_4647215817506521097",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid=wxv_4647215817506521097",
+      "duration": "02:07",
+      "status": "remote"
+    },
+    {
+      "id": "wxv_4647215410961235984",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid=wxv_4647215410961235984",
+      "duration": "02:20",
+      "status": "remote"
+    },
+    {
+      "id": "wxv_4647214759216644096",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid=wxv_4647214759216644096",
+      "duration": "01:59",
+      "status": "remote"
+    },
+    {
+      "id": "wxv_4647599842645704706",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid=wxv_4647599842645704706",
+      "duration": "00:25",
+      "status": "remote"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "article-cc563061a6682756",
+  "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw%3D%3D&mid=2651057018&idx=2&sn=14a3c85a952a76aae17c0d48c3475023&poc_token=HJ7X7mqjXuCK-veLIviZ9T9YgnuWH1WNh8MKgwD7",
+  "final_url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw%3D%3D&mid=2651057018&idx=2&sn=14a3c85a952a76aae17c0d48c3475023&poc_token=HLak8GqjUK_hf0n_ewcenBpl6JL1MuZ6ea-wD5ow",
+  "status": "fetched",
+  "title": "Claude Mods陆续上线，社区用插件「魔改」Claude Code",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T16:40:33.444710+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-baa672bfd328256b",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/KmXPKA19gW889cR13aBX42evqQIRibKlicoCrHPEpT0tQiceNphESCa2eJTqstP8G0yqMTkeMFrOGue6kOyCKdTkA/640?wx_fmt=png&from=appmsg#imgIndex=0",
+      "status": "downloaded",
+      "path": "assets/images/image-baa672bfd328256b.png",
+      "sha256": "07a6b3c6c51d530cc1cbb11bb4877bb82e5004812f2c680bb170a3173441712d"
+    },
+    {
+      "id": "image-5dca2e784e1f22b7",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqEiaKoIumzc9qiaAvLuoxcospHzDCZWUoyHTcJian16XueACXldODpoQYT9tI57207tLuiajdzc2B1A22BcArXUrGm5wXiaoXdCv9Dk/640?wx_fmt=png&from=appmsg#imgIndex=1",
+      "status": "downloaded",
+      "path": "assets/images/image-5dca2e784e1f22b7.png",
+      "sha256": "ad56cc64dc10f1f90b68244cd173ef811c96f7083bdc5793301a5762c35553c7"
+    },
+    {
+      "id": "image-262e7c534b540c80",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFib8Cu8o79p7nPCj9K7u5d4tOM96XAbjkicEWvTA5aM16JulhdM8KQXZa78bbHXTNNGC30LOoAwtLhYn5Tb5SQqRiaHAOGXWLTx0/640?wx_fmt=png&from=appmsg#imgIndex=2",
+      "status": "downloaded",
+      "path": "assets/images/image-262e7c534b540c80.png",
+      "sha256": "5a26c4d5569076a4f13d1d12958cf57006491c64e2edf66ec88fd9ed783a705e"
+    },
+    {
+      "id": "image-a3483314052e526d",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHjyA8AjLl4qCN2E5SBXrgv741Sq7vouTVFmN2kfccRMkAgBvksDsJa6icYw07zfejhHEwFJpPVMWaia78KtNPl6y9h6HzCaATf4/640?wx_fmt=png&from=appmsg#imgIndex=3",
+      "status": "downloaded",
+      "path": "assets/images/image-a3483314052e526d.png",
+      "sha256": "8d890e804318c88a3ecfd1f9cabcfe7a5af55e59a8da1368d29b065c3822dddc"
+    },
+    {
+      "id": "image-c8b8f658681ffdca",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqGpP7jH9swvt54Z1KNckBVxVssbGofzDbj4eY7gCMySMTBFibdXB6SU1kL93l5GXoy7vUn0O1JrWwfqmrjnwFuuJwnaBhsks9qM/640?wx_fmt=png&from=appmsg#imgIndex=4",
+      "status": "downloaded",
+      "path": "assets/images/image-c8b8f658681ffdca.png",
+      "sha256": "5d8ce3a7131181b10f49d6a0d773db96606d67934589fc0afa54f4cf549aa52e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/KmXPKA19gW889cR13aBX42evqQIRibKlicoCrHPEpT0tQiceNphESCa2eJTqstP8G0yqMTkeMFrOGue6kOyCKdTkA/640?wx_fmt=png&from=appmsg#imgIndex=0",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqEiaKoIumzc9qiaAvLuoxcospHzDCZWUoyHTcJian16XueACXldODpoQYT9tI57207tLuiajdzc2B1A22BcArXUrGm5wXiaoXdCv9Dk/640?wx_fmt=png&from=appmsg#imgIndex=1",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFib8Cu8o79p7nPCj9K7u5d4tOM96XAbjkicEWvTA5aM16JulhdM8KQXZa78bbHXTNNGC30LOoAwtLhYn5Tb5SQqRiaHAOGXWLTx0/640?wx_fmt=png&from=appmsg#imgIndex=2",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHjyA8AjLl4qCN2E5SBXrgv741Sq7vouTVFmN2kfccRMkAgBvksDsJa6icYw07zfejhHEwFJpPVMWaia78KtNPl6y9h6HzCaATf4/640?wx_fmt=png&from=appmsg#imgIndex=3",
+    "https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqGpP7jH9swvt54Z1KNckBVxVssbGofzDbj4eY7gCMySMTBFibdXB6SU1kL93l5GXoy7vUn0O1JrWwfqmrjnwFuuJwnaBhsks9qM/640?wx_fmt=png&from=appmsg#imgIndex=4"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026-09-15T07:03:00+08:00",
+  "modified_at": "2026-09-16",
+  "author": "机器之心编辑部",
+  "publisher": "机器之心",
+  "method": "verified-browser-dom",
+  "content_sha256": "c55045e900d4018ab2687d8daedf5565c408079c07be9fb81acf96db8c66376d",
+  "extraction_notes": [
+    "Read #js_content from the same in-app browser tab after the user manually completed verification.",
+    "Retained all article text, five images in source order, reference URLs and attribution; excluded page controls.",
+    "Normalized article text and image URL order were fingerprint-checked against the browser extraction. Images downloaded using direct HTTP without environment proxies."
+  ],
+  "source_text_verification": {
+    "normalization": "Remove whitespace; omit Markdown image syntax and list markers from archived body.",
+    "characters": 3065,
+    "fnv1a32": 707298023,
+    "image_order_fnv1a32": 4138725487
+  },
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T16:40:33.446300+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 5,
+      "downloaded_images": 5,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

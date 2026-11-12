@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "id": "article-73fd09b92a1e0e40",
+  "url": "https://developer.cloud.tencent.com/article/2774827",
+  "final_url": "https://developer.cloud.tencent.com/article/2774827",
+  "status": "fetched",
+  "title": "DeepSeek Harness创造模式：让AI给自己加功能、换界面",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T17:43:50.455250+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-575278f6f4445ad1",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/84064cbf6c9429e914dc6398f2011076.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-575278f6f4445ad1.gif",
+      "sha256": "701d50018bc2e450bc7ec49cf765dece486f378efe363476b1d8dc7e45ac93bd"
+    },
+    {
+      "id": "image-d7d03001fd98219e",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/9c28787944055207b2a9610be15f1cd1.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-d7d03001fd98219e.gif",
+      "sha256": "3c979a789a0ae2e13607baa380ed301cc245d6862526be42df2af77d4a931151"
+    },
+    {
+      "id": "image-f49fa86ac46b56c7",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/2553257dc3a8a36713437cd47a897fcd.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-f49fa86ac46b56c7.gif",
+      "sha256": "0aebe4d956d7d88f93e923c2d04a57f2f4e615e12d5fe04ed931866902eae28a"
+    },
+    {
+      "id": "image-efb667c42daf5f4a",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/db4dc5d8f7d4a08508730771b1092b34.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-efb667c42daf5f4a.gif",
+      "sha256": "81b678b7317c597126b781405156f4041ea0e1aa6d370a274081654a8ed16f2f"
+    },
+    {
+      "id": "image-53dbf386b515b120",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/f5a94d6e4ab54298be9ae267ac34036c.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-53dbf386b515b120.gif",
+      "sha256": "019cbb0951a72d293bed3c43a77a931d841ae624216dedd012c23720ab9c9160"
+    },
+    {
+      "id": "image-b739f15130fd2006",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/9dc39e152917796f526016d011f346ff.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-b739f15130fd2006.gif",
+      "sha256": "6d98a4d05ff0abd5bd19d6d0fb1d54d4bafc47b00863a89cc8d605f07167e979"
+    },
+    {
+      "id": "image-d3f117af16a71b85",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/f0a1f3193cec3cf841b939f15e632536.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-d3f117af16a71b85.gif",
+      "sha256": "0e422d2404b160649a2fcdc10a591b9ebd78511f9624f81b692deee22c643db0"
+    },
+    {
+      "id": "image-4698e66010c57c1d",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/1d7343a7c123cc835e88ebb28ad3fcb1.png",
+      "status": "downloaded",
+      "path": "assets/images/image-4698e66010c57c1d.png",
+      "sha256": "1b7580f994099c89eea8548b24e98d330f60b3fccb960b72b84828e20d6e3c90"
+    },
+    {
+      "id": "image-fbdb77b821e19c51",
+      "url": "https://developer.qcloudimg.com/http-save/audit-4447475/a2c35352c7cfc64131b797caa47ca53c.gif",
+      "status": "downloaded",
+      "path": "assets/images/image-fbdb77b821e19c51.gif",
+      "sha256": "8cc0daa876b79613d3ba58e18847f9b22a13e5caedbbbb3f89c3105c89c95d29"
+    }
+  ],
+  "method": "browser-dom",
+  "image_source_order": [
+    "https://developer.qcloudimg.com/http-save/audit-4447475/84064cbf6c9429e914dc6398f2011076.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/9c28787944055207b2a9610be15f1cd1.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/2553257dc3a8a36713437cd47a897fcd.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/db4dc5d8f7d4a08508730771b1092b34.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/f5a94d6e4ab54298be9ae267ac34036c.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/9dc39e152917796f526016d011f346ff.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/f0a1f3193cec3cf841b939f15e632536.gif",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/1d7343a7c123cc835e88ebb28ad3fcb1.png",
+    "https://developer.qcloudimg.com/http-save/audit-4447475/a2c35352c7cfc64131b797caa47ca53c.gif"
+  ],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026-11-03T11:54:01+08:00",
+  "author": "用户4447475",
+  "content_sha256": "a6db190a0ee40b422634eb405685e0b82f416c8a7bd16d767e24f71216b5c533",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T17:43:55.270328+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 9,
+      "downloaded_images": 9,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "browser_context": {
+    "browser_id": "3",
+    "tab_id": "1185084873"
+  },
+  "extraction_notes": [
+    "HTTP response contained an empty article body. Imported the complete dynamically rendered .mod-content__markdown from the existing browser tab.",
+    "Excluded navigation, author avatar, site-generated overview, recommendations, comments and footer graphics. Preserved original article text, headings, prompts, captions, reference links and image positions."
+  ],
+  "capture_verification": {
+    "normalized_text_sha256": "f80ab3714f20a8c015bf6df5fdab478578f83ab39fc611506ad2c861d2a15f4c",
+    "text_matches_browser": true
+  }
+}

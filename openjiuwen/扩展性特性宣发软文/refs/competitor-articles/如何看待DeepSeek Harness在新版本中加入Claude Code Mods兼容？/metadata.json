@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "article-0cf42dc96d8ba519",
+  "url": "https://www.zhihu.com/question/2089740005770008568/answer/2090104616759325588",
+  "final_url": "https://www.zhihu.com/question/2089740005770008568/answer/2090104616759325588",
+  "status": "fetched",
+  "title": "如何看待DeepSeek Harness在新版本中加入Claude Code Mods兼容？",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T17:06:23.873102+00:00",
+  "article_path": "article.md",
+  "images": [],
+  "method": "browser-dom",
+  "image_source_order": [],
+  "image_policy": "all",
+  "directory_name": null,
+  "quality": "article-selector",
+  "published_at": "2026-10-04T15:42:00+08:00",
+  "author": "崔添翼",
+  "content_sha256": "bb9240ad0925e5fc53c8436d6544f9af17f9d40f2182717067de4f1dfb8bf374",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-08T17:06:23.903644+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 0,
+      "downloaded_images": 0,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "browser_context": {
+    "browser_id": "3",
+    "tab_id": "1185084808"
+  },
+  "extraction_notes": [
+    "Direct HTTP returned 403. Imported only #content from the existing browser tab; excluded page controls, advertisements, sidebar and comments.",
+    "Removed decorative SVG icons and presentation attributes; preserved body text, paragraph order and all hyperlinks.",
+    "Browser-to-file HTML fingerprint and normalized body text fingerprint matched; source answer contains no images."
+  ],
+  "capture_verification": {
+    "normalized_text_length": 2437,
+    "normalized_text_fnv1a32": 777792171,
+    "body_html_fnv1a32": 3884281176,
+    "body_html_sha256": "f2c7651ad368c43ed762b5de8ab20ce42f0e9fb62d152245487a462e6d4765c0",
+    "image_source_order": []
+  }
+}
