@@ -1,1 +1,4 @@
 .idea/
+__pycache__/
+/openjiuwen/扩展性特性宣发软文/exports/*.zip
+/openjiuwen/扩展性特性宣发软文/tmp/
