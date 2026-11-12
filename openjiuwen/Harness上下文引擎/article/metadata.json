@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "id": "article-78f0989377af946b",
+  "url": "https://mp.weixin.qq.com/s/_-9qI7v1CV8FL_3iTRiqAw",
+  "final_url": "https://mp.weixin.qq.com/s/_-9qI7v1CV8FL_3iTRiqAw",
+  "status": "fetched",
+  "title": "技术博客 | openJiuwen Harness 上下文引擎如何让 JiuwenClaw 实现“更强、更快、更省”",
+  "accessed_at": "2026-11-11",
+  "fetched_at": "2026-11-11T03:20:43.517714+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-cae426749b5a5067",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolibibGWSyq7tFcBkZI8gupFcQyV6IMiaKdQ0qnufgFbxriadsrTQiblnXUyA5QqJAFEQZ0mFN1FgCCU4q2Yiaf6gxVVwDvqTPzpEhbE/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-cae426749b5a5067.png",
+      "sha256": "4ab3d24180e4ecc2e2b852fcb07b5d876ac99fdb4e6cef47efd80155f1ca1a9e"
+    },
+    {
+      "id": "image-2d129079ad696990",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonaKcToXQyWkKN0REtUL1XoaXNWe1BVJB4jHa2E9Q9eCCTibLhZNLep2fJgessfcNWD809A3SSDdnwSWNYjFqzlYNLHLPPqgRTM/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-2d129079ad696990.png",
+      "sha256": "97aa12046b400198cbc9368f18e912734a607500e5258ff0caca83640552ab78"
+    },
+    {
+      "id": "image-b01a6a148c9b7517",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eokv0ctUpicqre8WTW51rOs0mdSHlkiag5H5ch1Yrxd5UkhJhtRKC5PQC7w6GK01iaSvnBfibfQcyjkYUjlUueqdP2vaqyQK2GVJsbo/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-b01a6a148c9b7517.png",
+      "sha256": "b9f11ac360a2eb837bff921dec037da58c3b58e2bb1f4f83f210507895853bec"
+    },
+    {
+      "id": "image-956b523e1199a5ad",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolZ5ftpXVjqEEPF6qZg9iaaiaXxsz1Kac48fLPvOx4helcZWfuOVaS2Ne0CzC9j9J30HrZyflJJGxtr8HiaV6QlezRRzHns6cqgPY/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-956b523e1199a5ad.png",
+      "sha256": "f35e179090514bade8080d82d3797e5e2e2192e0deb10db6abfb24cc16ddadd5"
+    },
+    {
+      "id": "image-a5a94d5308a27b08",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomI7MpRz1kick6LKlysY0jDwVSGgeZg0z9K2wUIpVPr9WnrBLwfdk59iauOAavgKsWa6mpW631kIuITcWgXibDGXns4SPF6Z9VshQ/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-a5a94d5308a27b08.png",
+      "sha256": "51e9346bc6b6c23bcbd43de53544dffd5339bf8624324a7d4399f544ab45c4a1"
+    },
+    {
+      "id": "image-62fc329203b6377a",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonT43XdBuBpxAtibqVWaibxCoQfRUWXuiacUmlvib9ay1nyQP4n3fljIIxMn30ibyYia9jWBU1vIvrHvxOdBYWMwMs5xMt0peqRj6fWQ/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-62fc329203b6377a.png",
+      "sha256": "535ce2fdaa52726166a9192af0cc3e50f128e01b2b6958d7f7b20e3bee3eddae"
+    },
+    {
+      "id": "image-88d0c721b0dcfb84",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomdMolGX5Cg7MGyp5HhzIvBbiaUEP4vq6qNQqicm80Gibf6n6Egibiaicnqic2ApGpFzMKDpJzhFUvmMwjexV7cTichxFPmpgRwAr6nIgg/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-88d0c721b0dcfb84.png",
+      "sha256": "41b56d446978ea550230c69e3c6242e4e70e9beb4616feacce48139d04495555"
+    },
+    {
+      "id": "image-9e7fe184a79ccc3d",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonCawnPtjBzBrh0gpcNnHQtDfiaLPIupj813ZDJ8iajxNuRHwe9EDVA1B1Q5y5nrcSdQIAbnJGibKN5QEuUlmOajEcN7mcic8QjhxI/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-9e7fe184a79ccc3d.png",
+      "sha256": "d9b2bfd77ae807bd9e8c72fb3c117a03d78b687c2570f27c6036f38682e41189"
+    },
+    {
+      "id": "image-022604c27a167d4f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-022604c27a167d4f.png",
+      "sha256": "c65c508fe3e9491f3e3813a1dd7201cb24ecf5edbb9f95331d885829e7a1231e"
+    }
+  ],
+  "method": "http",
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolibibGWSyq7tFcBkZI8gupFcQyV6IMiaKdQ0qnufgFbxriadsrTQiblnXUyA5QqJAFEQZ0mFN1FgCCU4q2Yiaf6gxVVwDvqTPzpEhbE/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonaKcToXQyWkKN0REtUL1XoaXNWe1BVJB4jHa2E9Q9eCCTibLhZNLep2fJgessfcNWD809A3SSDdnwSWNYjFqzlYNLHLPPqgRTM/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eokv0ctUpicqre8WTW51rOs0mdSHlkiag5H5ch1Yrxd5UkhJhtRKC5PQC7w6GK01iaSvnBfibfQcyjkYUjlUueqdP2vaqyQK2GVJsbo/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolZ5ftpXVjqEEPF6qZg9iaaiaXxsz1Kac48fLPvOx4helcZWfuOVaS2Ne0CzC9j9J30HrZyflJJGxtr8HiaV6QlezRRzHns6cqgPY/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomI7MpRz1kick6LKlysY0jDwVSGgeZg0z9K2wUIpVPr9WnrBLwfdk59iauOAavgKsWa6mpW631kIuITcWgXibDGXns4SPF6Z9VshQ/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonT43XdBuBpxAtibqVWaibxCoQfRUWXuiacUmlvib9ay1nyQP4n3fljIIxMn30ibyYia9jWBU1vIvrHvxOdBYWMwMs5xMt0peqRj6fWQ/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomdMolGX5Cg7MGyp5HhzIvBbiaUEP4vq6qNQqicm80Gibf6n6Egibiaicnqic2ApGpFzMKDpJzhFUvmMwjexV7cTichxFPmpgRwAr6nIgg/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eonCawnPtjBzBrh0gpcNnHQtDfiaLPIupj813ZDJ8iajxNuRHwe9EDVA1B1Q5y5nrcSdQIAbnJGibKN5QEuUlmOajEcN7mcic8QjhxI/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": "article",
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "content_sha256": "b573cd80cd67ae0aea524be88ed7a3a7efd8f511df23b3e4957c9b56db902f20",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-11T03:20:50.436842+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 9,
+      "downloaded_images": 9,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  }
+}

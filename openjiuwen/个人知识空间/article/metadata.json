@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "article-46a0fc8b1ae9de63",
+  "url": "https://mp.weixin.qq.com/s/ViVOhJGLd5azXDujgIIWDg",
+  "final_url": "https://mp.weixin.qq.com/s/ViVOhJGLd5azXDujgIIWDg",
+  "status": "fetched",
+  "title": "告别资料散落，让知识持续积累：openJiuwen 首发个人知识空间，重塑个人办公智能体新体验！",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T07:54:25.924157+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-d95715bd5847806e",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomBL8JcRrbt6PA8Pe9PLQ9IZMhFSiay5wvTsX7y4DmjdwvMjxkpmYa9xCePSrxPzY3dRodib3BQgM1P5Gc38BKWKN4WgPa6ydrZM/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-d95715bd5847806e.png",
+      "sha256": "6f4fad4bf6727203a4c1024854199e0ed3caa2b62e58d1f6d3de147c2c3b007e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eomBL8JcRrbt6PA8Pe9PLQ9IZMhFSiay5wvTsX7y4DmjdwvMjxkpmYa9xCePSrxPzY3dRodib3BQgM1P5Gc38BKWKN4WgPa6ydrZM/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": "article",
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "method": "http",
+  "content_sha256": "c10ae031ac63993b2197fa0764c48fa8a8beb133e95d18262d1fbf0683775a31",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-11T02:03:07.818187+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 1,
+      "downloaded_images": 1,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "videos": [
+    {
+      "id": "wxv_4734597292216025095",
+      "title": "添加今日头条来源并手动采集",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4734597292216025095",
+      "duration_seconds": 39,
+      "width": 1990,
+      "height": 1080,
+      "bytes": 1930675,
+      "path": "assets/videos/video-01.mp4",
+      "status": "downloaded",
+      "sha256": "913f228a292eb6557eb4932a17be537eb78ba41e1c9b6a28608b652d178739ed"
+    },
+    {
+      "id": "wxv_4734611633665409029",
+      "title": "搜索并查看 Jev 知识",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4734611633665409029",
+      "duration_seconds": 18,
+      "width": 1992,
+      "height": 1080,
+      "bytes": 1670064,
+      "path": "assets/videos/video-02.mp4",
+      "status": "downloaded",
+      "sha256": "9c36ad32eaf73324292e85f8843e0a49e4d30ff0695cab481c7d9f2c447a1c3f"
+    },
+    {
+      "id": "wxv_4734614593971732480",
+      "title": "用个人知识空间介绍 Jev",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4734614593971732480",
+      "duration_seconds": 44,
+      "width": 1988,
+      "height": 1080,
+      "bytes": 1782034,
+      "path": "assets/videos/video-03.mp4",
+      "status": "downloaded",
+      "sha256": "221fe13172382c12f0a082c3b4893a296d25f48ef29520bc586678b92e776903"
+    },
+    {
+      "id": "wxv_4734615575103307781",
+      "title": "效果对比 1",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4734615575103307781",
+      "duration_seconds": 146,
+      "width": 1860,
+      "height": 1080,
+      "bytes": 8068869,
+      "path": "assets/videos/video-04.mp4",
+      "status": "downloaded",
+      "sha256": "1bcf33f9545a86558f9a9c0760bd6fcc41f4070cfbdffac7f8a69d58c47c0bc1"
+    },
+    {
+      "id": "wxv_4734615773242228737",
+      "title": "效果对比 2",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4734615773242228737",
+      "duration_seconds": 247,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 10844802,
+      "path": "assets/videos/video-05.mp4",
+      "status": "downloaded",
+      "sha256": "8a80d2ebfa20c62609ffd77860196523af952f8df1804ef4d160766f47cae847"
+    }
+  ]
+}

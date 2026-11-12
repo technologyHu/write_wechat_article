@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "article-b5c74b699f23c5db",
+  "url": "https://mp.weixin.qq.com/s/KVRzaA5YrB2TGdeR0gLIVg",
+  "final_url": "https://mp.weixin.qq.com/s/KVRzaA5YrB2TGdeR0gLIVg",
+  "status": "fetched",
+  "title": "业界首个\"Auto Harness\"工程化落地：JiuwenSwarm 给 Harness 装上「后训练」，人人都能 DIY",
+  "accessed_at": "2026-11-11",
+  "fetched_at": "2026-11-11T02:36:38.380664+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-2cc7d902f2a22233",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eoliczUttdUn7XT81nL3tbUK650jnTh0XADXrDIUtibzcsVEMKwm3Uq5LCoYN2lSo7HciczvTXiatVV7ZzBJItiaD5bvxt5E3ZgJhDqk/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-2cc7d902f2a22233.png",
+      "sha256": "0116b4f301660d0124dbc779623a5ef86cf53ac20e948ad03a68b99ed949e12b"
+    },
+    {
+      "id": "image-b180d4184dbaa488",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonCmsprIgHJPE36hmoeAQib2ian9Z9BfK1stYRmleCEvE1OgBP1xNVzsmvtE077ia14qiafibUxtr6B61H6oMPoRGqyjic9niaawpcibNE/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-b180d4184dbaa488.png",
+      "sha256": "5a828646a473de5688372b939500955347ab305a79380b54bf87cf435b1cbc27"
+    },
+    {
+      "id": "image-51408d437fcd2605",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomSbMwyTNeb2k0fPiakhIOFKNSAuQD7EqnkquPJ4FsB2rBa6bhFyS4Icjd4ytSDVHT9RI93gwwAyCRGJNOCWa52PARE48V7SAiaE/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-51408d437fcd2605.png",
+      "sha256": "532e8375be43082eed4d37f4115b0fc11472c094d0cfa9693568e6faa457fc31"
+    },
+    {
+      "id": "image-022604c27a167d4f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-022604c27a167d4f.png",
+      "sha256": "c65c508fe3e9491f3e3813a1dd7201cb24ecf5edbb9f95331d885829e7a1231e"
+    }
+  ],
+  "method": "http",
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eoliczUttdUn7XT81nL3tbUK650jnTh0XADXrDIUtibzcsVEMKwm3Uq5LCoYN2lSo7HciczvTXiatVV7ZzBJItiaD5bvxt5E3ZgJhDqk/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonCmsprIgHJPE36hmoeAQib2ian9Z9BfK1stYRmleCEvE1OgBP1xNVzsmvtE077ia14qiafibUxtr6B61H6oMPoRGqyjic9niaawpcibNE/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eomSbMwyTNeb2k0fPiakhIOFKNSAuQD7EqnkquPJ4FsB2rBa6bhFyS4Icjd4ytSDVHT9RI93gwwAyCRGJNOCWa52PARE48V7SAiaE/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": "article",
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "content_sha256": "62567443f168331cfd0447719c7efe3daf65228e76355447c43170fc80e36fd6",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-11T02:36:48.402296+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 4,
+      "downloaded_images": 4,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "videos": [
+    {
+      "id": "wxv_4531945719548706818",
+      "title": "Expert Harness 优化",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4531945719548706818",
+      "status": "downloaded",
+      "path": "assets/videos/video-01.mp4",
+      "bytes": 8765286,
+      "sha256": "df65a72779b3938ca8a7b5f21a4b97483c1641e7855ab423d609c2e6d3698247",
+      "duration_seconds": 133,
+      "width": 1726,
+      "height": 1080
+    },
+    {
+      "id": "wxv_4531946755390619649",
+      "title": "Meta Harness 优化",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4531946755390619649",
+      "status": "downloaded",
+      "path": "assets/videos/video-02.mp4",
+      "bytes": 4832538,
+      "sha256": "33689791076951d071317fe85bd6721c403d9a707d2b540d25c71d386af6baa8",
+      "duration_seconds": 74,
+      "width": 1726,
+      "height": 1080
+    },
+    {
+      "id": "wxv_4531947278538080265",
+      "title": "Meta Harness 定时优化",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4531947278538080265",
+      "status": "downloaded",
+      "path": "assets/videos/video-03.mp4",
+      "bytes": 6938597,
+      "sha256": "41651155c99cd8eb620e166491b297e5f8b5ab7fa821919263a6df18a5108d06",
+      "duration_seconds": 95,
+      "width": 1726,
+      "height": 1080
+    }
+  ]
+}

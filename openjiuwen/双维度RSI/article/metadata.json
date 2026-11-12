@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "id": "article-c1a9b9508670643b",
+  "url": "https://mp.weixin.qq.com/s/jXZhv7tY2EniQdRs6XxoQA",
+  "final_url": "https://mp.weixin.qq.com/s/jXZhv7tY2EniQdRs6XxoQA",
+  "status": "fetched",
+  "title": "openJiuwen首发双维度RSI框架，AI自修改，落地办公智能体，算力亲和助力又快又省",
+  "accessed_at": "2026-11-08",
+  "fetched_at": "2026-11-08T08:00:32.174181+00:00",
+  "article_path": "article.md",
+  "images": [
+    {
+      "id": "image-d154fb2645d2911d",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolyJaj9ZTgx1KoVJQU6UafFjViavxkKyoYROniaic8pmaBibB9kK78MCeB3vRVntNKCPfNBGUf5zucIeGEoaJ21ISQF5nUkibjK6xo8/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-d154fb2645d2911d.png",
+      "sha256": "220aeb0d99b05002dd0075b2b8bf44d9a0c21ab938ea52644ac4674bee7a0cc7"
+    },
+    {
+      "id": "image-738ea3377ac39d4a",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonldVdHMQWJxmBm93dnrlxHIHoSeS4kGVhJf0uSAT1Uy4QeUpXe8OQrNPRXqu1nx4e9qjZVugnpzCZlyUickY73ic8U4DXBQV44s/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-738ea3377ac39d4a.png",
+      "sha256": "d552b772ee8995a46374267d1663f621833053fecc381743aefbe457a521a28a"
+    },
+    {
+      "id": "image-b3d0abf53c4118e3",
+      "url": "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eolibDoeokhKqonjaXm5gO6DuKbrEu5l2cRe0iaJicDGxzaNVl91xIwR5T5HlQ21jomoMXUv2ryia11gSe7gauSbxwbZHiaialvr6bXMU/640?wx_fmt=jpeg&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-b3d0abf53c4118e3.jpg",
+      "sha256": "37b76607deee8b9d1cb292a9d364337d1af7eb7313ee46f0adfe7b40989a8030"
+    },
+    {
+      "id": "image-2a1c6b19da01fabf",
+      "url": "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolT9WVA2eH7ibT2ml6wovDek6DR1zeNyMMng5ca32qFCZIfOwicClh6evnpQTvQsu3SlickvalknSVaj6nhVZBibj2xG434AgcQrBY/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-2a1c6b19da01fabf.png",
+      "sha256": "929d9629f5e1cc64fec87fd09e69bea4d1dfc44199e3b3619f749134d304a310"
+    },
+    {
+      "id": "image-022604c27a167d4f",
+      "url": "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg",
+      "status": "downloaded",
+      "path": "assets/images/image-022604c27a167d4f.png",
+      "sha256": "c65c508fe3e9491f3e3813a1dd7201cb24ecf5edbb9f95331d885829e7a1231e"
+    }
+  ],
+  "image_source_order": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eolyJaj9ZTgx1KoVJQU6UafFjViavxkKyoYROniaic8pmaBibB9kK78MCeB3vRVntNKCPfNBGUf5zucIeGEoaJ21ISQF5nUkibjK6xo8/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eonldVdHMQWJxmBm93dnrlxHIHoSeS4kGVhJf0uSAT1Uy4QeUpXe8OQrNPRXqu1nx4e9qjZVugnpzCZlyUickY73ic8U4DXBQV44s/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_jpg/6IefF6e2eolibDoeokhKqonjaXm5gO6DuKbrEu5l2cRe0iaJicDGxzaNVl91xIwR5T5HlQ21jomoMXUv2ryia11gSe7gauSbxwbZHiaialvr6bXMU/640?wx_fmt=jpeg&from=appmsg",
+    "https://mmbiz.qpic.cn/mmbiz_png/6IefF6e2eolT9WVA2eH7ibT2ml6wovDek6DR1zeNyMMng5ca32qFCZIfOwicClh6evnpQTvQsu3SlickvalknSVaj6nhVZBibj2xG434AgcQrBY/640?wx_fmt=png&from=appmsg",
+    "https://mmbiz.qpic.cn/sz_mmbiz_png/6IefF6e2eona9ibF0M1uStnyMsqqXpyBtgEWIjFBkLAbUdIXIjUtqo7j0s4ic6ECIJJaDWknGYD2VWQkh3maNsI3mxGgXPJ1taib3lVYpbmZqs/640?wx_fmt=png&from=appmsg"
+  ],
+  "image_policy": "all",
+  "directory_name": "article",
+  "quality": "article-selector",
+  "published_at": null,
+  "author": "openJiuwen",
+  "method": "http",
+  "content_sha256": "0b68f4a560918429958f5c744c14a0fef984f4d925a85bd4e57df51b2a16ea88",
+  "validation": {
+    "status": "passed",
+    "checked_at": "2026-11-11T02:25:41.084636+00:00",
+    "checks": {
+      "directory_name": {
+        "status": "passed",
+        "errors": []
+      },
+      "image_references": {
+        "status": "passed",
+        "errors": []
+      },
+      "assets_layout": {
+        "status": "passed",
+        "errors": []
+      },
+      "metadata_consistency": {
+        "status": "passed",
+        "errors": []
+      }
+    },
+    "warnings": [],
+    "counts": {
+      "image_references": 5,
+      "downloaded_images": 5,
+      "failed_images": 0,
+      "remote_images": 0
+    },
+    "requires_review": false
+  },
+  "videos": [
+    {
+      "id": "wxv_4688458932187774976",
+      "title": "Harness 优化与安装",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4688458932187774976",
+      "status": "downloaded",
+      "path": "assets/videos/video-01.mp4",
+      "bytes": 3382196,
+      "sha256": "83efaf4b340ec232e3a21ebee5e9b652bba002a77fdf0911084132b78d8df14b",
+      "duration_seconds": 72,
+      "width": 1698,
+      "height": 1080
+    },
+    {
+      "id": "wxv_4689667677182017539",
+      "title": "论文产物优化",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4689667677182017539",
+      "status": "downloaded",
+      "path": "assets/videos/video-02.mp4",
+      "bytes": 13958448,
+      "sha256": "d2c966a25685b11914c506c56b852ac3dba7f045bb0e800bd701de99cd0c745a",
+      "duration_seconds": 137,
+      "width": 1658,
+      "height": 1080
+    },
+    {
+      "id": "wxv_4689668888731877377",
+      "title": "科研算法程序产物优化",
+      "url": "https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=wxv_4689668888731877377",
+      "status": "downloaded",
+      "path": "assets/videos/video-03.mp4",
+      "bytes": 8430424,
+      "sha256": "c7256e08b1b83e4dbc537a0b445d141cc464fd5148a881cae273bc3e4fb56529",
+      "duration_seconds": 130,
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}
