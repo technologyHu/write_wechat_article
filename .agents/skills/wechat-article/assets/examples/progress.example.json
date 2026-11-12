@@ -8,7 +8,7 @@
   "archived_article_version": "v001",
   "finalized_article_version": null,
   "completion_basis": null,
-  "working_file": "article-working.md",
+  "working_file": "v001/article-working.md",
   "sections": [
     {
       "section_id": "lead",
@@ -48,12 +48,12 @@
             "id": "IMG-01",
             "title": "整体架构",
             "revision": "v001",
-            "file": "assets/IMG-01_整体架构_v001.png",
+            "file": "v001/assets/images/IMG-01_整体架构_v001.png",
             "url": null,
             "sha256": "beb4ab03d1c924d8f85d2a7430b4f5f577e69f655691e3926356fb26ec19d3cf",
             "source_files": [
               {
-                "file": "assets/IMG-01_整体架构_v001.svg",
+                "file": "v001/assets/images/IMG-01_整体架构_v001.svg",
                 "sha256": "b131556c36b0323b4981999443b5b22f7e35032e604d152b2d6698fc072e88c1"
               }
             ]
@@ -85,12 +85,12 @@
         "main-01"
       ],
       "revision": "v001",
-      "file": "assets/IMG-01_整体架构_v001.png",
+      "file": "v001/assets/images/IMG-01_整体架构_v001.png",
       "url": null,
       "sha256": "beb4ab03d1c924d8f85d2a7430b4f5f577e69f655691e3926356fb26ec19d3cf",
       "source_files": [
         {
-          "file": "assets/IMG-01_整体架构_v001.svg",
+          "file": "v001/assets/images/IMG-01_整体架构_v001.svg",
           "sha256": "b131556c36b0323b4981999443b5b22f7e35032e604d152b2d6698fc072e88c1"
         }
       ],
@@ -108,7 +108,7 @@
       "title": "发布封面",
       "section_ids": [],
       "revision": "v001",
-      "file": "assets/IMG-02_发布封面_v001.png",
+      "file": "v001/assets/images/IMG-02_发布封面_v001.png",
       "url": null,
       "sha256": "beb4ab03d1c924d8f85d2a7430b4f5f577e69f655691e3926356fb26ec19d3cf",
       "source_files": [],

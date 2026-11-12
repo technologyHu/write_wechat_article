@@ -55,7 +55,7 @@ node <skill-dir>/scripts/preflight.mjs --target <project> --backend gitnexus --p
 
 用文件路径、符号和行号串联已使用的证据，各后端产物保留原格式。重要结论回查当前源码，分别标记源码事实、静态关系、模型推断和运行验证。后端结论不一致时，核对 checkout、未提交变化和索引覆盖，再阅读争议源码。动态分派、反射等静态分析缺口保留为不确定性。
 
-由 research-deep 调用时，按原问题／field_id 返回结论、源码位置、适用版本、推断／运行条件与缺口，由 research-deep 统一写入当前 light/full 记录并判断完成度。由 wechat-article 调用时，交付同样的事实和证据，由文章技能负责素材归档与候选表述。
+由 research-deep 调用时，按原问题／field_id 返回结论、源码位置、适用版本、推断／运行条件与缺口，由 research-deep 统一写入当前 light/full 记录并判断完成度。由 wechat-article 调用时，按[技术文章交接](references/explanation.md#给技术文章交接)返回逐主张的证据和可公开表述范围。
 
 按照用户问题组织回答。典型功能讲解包含入口、主要步骤、数据流、关键分支和源码位置；项目导览包含模块职责、业务路径和推荐阅读顺序。按需读取 [讲解与证据约定](references/explanation.md)。
 

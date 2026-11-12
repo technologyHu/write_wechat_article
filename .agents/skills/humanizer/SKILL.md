@@ -44,6 +44,12 @@ If the user gives a writing sample, read it first and match its sentence length,
 
 Without a sample, take the voice from the kind of text. Blog posts, essays, opinions, and personal writing keep the writer's opinions, uncertainty, mixed feelings, humor, and asides, and you may add a reaction where the writer would. Reference, technical, legal, and factual text stays neutral and plain. Removing tells is half the job; the result must still sound like a person.
 
+### 中文技术文章
+
+- 收到「只润色」「逻辑和主要内容没问题」时，保留论证顺序、段落职责、术语、限定条件和用户指定原话。用户指定的术语逐字保留，包括大小写、空格和引号。优先调整句间承接、动词和口语节奏，在选定范围内改写。
+- 收到「精简但信息不要丢」时，先记下该段每项独立事实和条件。合并近义句，删除重复解释，逐项核对结果。操作步骤、先后关系和生效条件各自保留。
+- 收到「更有宣发吸引力」时，从读者的具体问题、技术带来的变化或可观察的结果入手。参考用户给的样文，保留其表达力度和行文方式，事实仍以本篇材料为准。能力标题可概括读者收益，具体案例可以放到正文。只用于内部取证或借鉴写法的来源名按原稿的使用范围处理。
+
 ### What to return
 
 **Pasted text (default).** Return the draft, a short list of remaining patterns, and the final rewrite.

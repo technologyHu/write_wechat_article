@@ -1,0 +1,825 @@
+<section id="outline-review-__REVIEW_ID__" aria-label="大纲确认向导">
+  <aside class="review-rail">
+    <div class="review-brand">
+      <span class="review-mark" aria-hidden="true">稿</span>
+      <span>写作工作台<small>公众号文章</small></span>
+    </div>
+    <p class="text-small text-muted" data-stage></p>
+    <nav aria-label="本阶段分组" data-groups></nav>
+    <details data-title-outline hidden>
+      <summary data-outline-heading>标题目录</summary>
+      <nav aria-label="文章标题层级" data-outline-tree></nav>
+    </details>
+  </aside>
+  <aside class="review-feedback-rail" aria-label="完整大纲反馈" data-final-feedback hidden>
+    <div class="review-final-fields" data-final-fields></div>
+  </aside>
+  <div class="review-main">
+    <header>
+      <p class="text-small" data-position></p>
+      <h2 data-heading tabindex="-1"></h2>
+      <p class="text-muted" data-intro></p>
+    </header>
+    <div data-items></div>
+    <footer class="review-footer">
+      <div class="review-progress" data-progress-box>
+        <progress value="0" aria-label="本轮已反馈条目"></progress>
+        <p class="text-small text-muted" data-progress aria-live="polite"></p>
+      </div>
+      <div class="review-actions">
+        <div class="viz-row" data-navigation>
+          <button type="button" class="btn" data-back>上一步</button>
+          <button type="button" class="btn" data-next>下一步</button>
+          <button type="button" class="btn btn-ghost" data-recommended>采用本组推荐</button>
+        </div>
+        <div class="viz-row">
+          <button type="button" class="btn" data-copy-draft hidden>复制反馈</button>
+          <button type="button" class="btn" data-revise>提交修改意见</button>
+          <button type="button" class="btn btn-primary" data-submit></button>
+        </div>
+      </div>
+      <p class="text-small text-muted" data-send-mode></p>
+      <p class="text-small" data-delivery-status role="status" hidden></p>
+      <button type="button" class="btn" data-refresh-review hidden>刷新到最新一轮</button>
+    </footer>
+    <section aria-label="回传反馈" data-fallback hidden>
+      <h3 data-fallback-heading>把反馈发回原对话</h3>
+      <p class="text-small text-muted">复制后粘贴到原对话，或下载 JSON 作为附件发送。</p>
+      <div class="viz-row">
+        <button type="button" class="btn btn-primary" data-copy>复制反馈</button>
+        <a class="btn" data-download>下载反馈 JSON</a>
+        <span class="text-small" data-copy-status aria-live="polite"></span>
+      </div>
+      <details data-json>
+        <summary>查看反馈 JSON</summary>
+        <label>
+          <span class="sr-only" data-copy-label>本轮反馈 JSON</span>
+          <textarea class="form-control" rows="5" readonly></textarea>
+        </label>
+      </details>
+    </section>
+  </div>
+  <script type="application/json" data-review>__REVIEW_DATA__</script>
+</section>
+<style>
+  #outline-review-__REVIEW_ID__ {
+    display: grid;
+    gap: calc(var(--font-size-base, 14px) * 0.75);
+    overflow-wrap: anywhere;
+  }
+  #outline-review-__REVIEW_ID__ [hidden] { display: none !important; }
+  #outline-review-__REVIEW_ID__[data-review-stage="final"] {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "rail" "feedback" "main";
+  }
+  #outline-review-__REVIEW_ID__[data-review-stage="final"] .review-rail { grid-area: rail; }
+  #outline-review-__REVIEW_ID__[data-review-stage="final"] .review-main { grid-area: main; }
+  #outline-review-__REVIEW_ID__ .review-feedback-rail {
+    display: grid;
+    grid-area: feedback;
+    align-self: start;
+    min-inline-size: 0;
+    border: 1px solid var(--line, var(--border, currentColor));
+    border-radius: 1rem;
+    background: var(--sheet, Canvas);
+  }
+  #outline-review-__REVIEW_ID__ .review-feedback-rail :is(.review-final-fields, .review-footer, [data-fallback]) {
+    padding: 1rem;
+  }
+  #outline-review-__REVIEW_ID__ .review-feedback-rail .review-footer {
+    position: static;
+    border-radius: 0;
+  }
+  #outline-review-__REVIEW_ID__ .review-final-fields .form-label { font-size: 1rem; }
+  @media (min-width: 1050px) {
+    #outline-review-__REVIEW_ID__[data-review-stage="final"] {
+      grid-template-columns: clamp(17rem, 28vw, 24rem) minmax(0, 1fr) minmax(16rem, 20rem);
+      grid-template-areas: "rail main feedback";
+    }
+    #outline-review-__REVIEW_ID__[data-review-stage="final"] :is(.review-rail, .review-feedback-rail) {
+      position: sticky;
+      inset-block-start: 1.25rem;
+      align-self: start;
+      max-block-size: calc(100dvh - 2.5rem);
+      overflow-y: auto;
+    }
+  }
+  #outline-review-__REVIEW_ID__ :is(.review-rail, .review-main, .review-footer, header, [data-items], [data-fallback], fieldset, .review-options, .review-fields) {
+    display: grid;
+    gap: calc(var(--font-size-base, 14px) * 0.45);
+  }
+  #outline-review-__REVIEW_ID__ fieldset {
+    margin: 0;
+    padding: calc(var(--font-size-base, 14px) * 0.5) 0 0;
+    min-inline-size: 0;
+    border: 0;
+  }
+  #outline-review-__REVIEW_ID__ legend { padding: 0; }
+  #outline-review-__REVIEW_ID__ :is(.candidate-note, .candidate-title, .review-brand small) { display: block; }
+  #outline-review-__REVIEW_ID__ .review-text { white-space: pre-wrap; }
+  #outline-review-__REVIEW_ID__ .review-anchor { scroll-margin-block-start: 1.25rem; }
+  #outline-review-__REVIEW_ID__ .review-anchor:target { background: var(--tint, Mark); }
+  #outline-review-__REVIEW_ID__ .final-outline-link {
+    display: block;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.55rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  #outline-review-__REVIEW_ID__ .final-outline-link:hover { background: var(--tint, ButtonFace); }
+  #outline-review-__REVIEW_ID__ .final-outline-link:focus-visible {
+    outline: 2px solid var(--accent, currentColor);
+    outline-offset: -2px;
+  }
+  #outline-review-__REVIEW_ID__ .form-check { align-items: start; }
+  #outline-review-__REVIEW_ID__ .review-brand { display: none; }
+  #outline-review-__REVIEW_ID__ :is([data-groups], .review-actions, .review-progress, .title-fields-caption) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(var(--font-size-base, 14px) * 0.6);
+  }
+  #outline-review-__REVIEW_ID__ .candidate-badge { margin-inline-start: calc(var(--font-size-base, 14px) * 0.45); }
+  #outline-review-__REVIEW_ID__ .review-actions { justify-content: space-between; }
+  #outline-review-__REVIEW_ID__ .review-fields { margin-block-start: calc(var(--font-size-base, 14px) * 0.6); }
+  #outline-review-__REVIEW_ID__ .title-fields-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(var(--font-size-base, 14px) * 0.4);
+  }
+  #outline-review-__REVIEW_ID__ .title-fields-grid {
+    display: grid;
+    gap: calc(var(--font-size-base, 14px) * 0.75);
+  }
+  #outline-review-__REVIEW_ID__ .outline-level {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #outline-review-__REVIEW_ID__ .outline-level .outline-level {
+    margin-inline-start: calc(var(--font-size-base, 14px) * 0.55);
+    padding-inline-start: calc(var(--font-size-base, 14px) * 0.55);
+    border-inline-start: 1px solid var(--line, var(--border, currentColor));
+  }
+  #outline-review-__REVIEW_ID__ .outline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: calc(var(--font-size-base, 14px) * 0.35);
+  }
+  #outline-review-__REVIEW_ID__ button.outline-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    inline-size: 100%;
+    white-space: normal;
+    text-align: start;
+  }
+</style>
+<script>
+(() => {
+  const root = document.getElementById("outline-review-__REVIEW_ID__");
+  const get = (name) => root.querySelector(`[data-${name}]`);
+  const review = JSON.parse(get("review").textContent);
+  const { stage, review_id: reviewId, groups, title_step: titleStep, title_outline: titleOutline } = review;
+  root.dataset.reviewStage = stage;
+  const individual = review.section_mode === "individual";
+  const headings = {
+    titles: ["01 / 03 · 选择标题", "提交标题反馈", "从候选中选一个，也可以在下方填入自己的标题或修改方向。"],
+    sections: ["02 / 03 · 核对内容", "提交内容反馈", "点击「确认」采用当前组。填写修改意见后，请单独提交反馈。"],
+    final: ["03 / 03 · 确认大纲", "确认这版完整大纲", "核对汇总后的版本。你仍可以提出修改意见。"],
+  };
+  const panel = get("items");
+  const submit = get("submit");
+  const revise = get("revise");
+  const copyDraft = get("copy-draft");
+  const allItems = groups?.flatMap(({ items }) => items) ?? [];
+  const answers = new Map(allItems.map(({ id }) => [id, { choice: null, title: "", note: "", chapterIntro: null }]));
+  const sectionItems = new Map(stage === "sections"
+    ? groups.flatMap(({ items }, index) => items.map((item) => [item.id, { item, index }])) : []);
+  const chapterIntros = new Map(individual
+    ? allItems.filter((item) => item.chapter_intro_for).map((item) => [item.chapter_intro_for, item]) : []);
+  const outlineIds = new Set(titleOutline ? [titleOutline.id, ...(titleOutline.children ?? [])
+    .flatMap((chapter) => [chapter.id, ...(chapter.children ?? []).map(({ id }) => id)])] : []);
+  const sectionOutline = stage === "sections" && allItems.every(
+    ({ id, chapter_intro_for }) => outlineIds.has(chapter_intro_for ?? id));
+  const pendingGroup = stage === "sections" ? groups.findIndex(({ items }) => items.some((item) => !item.confirmed)) : -1;
+  let page = Math.max(0, pendingGroup);
+  let sectionId = stage === "sections" ? defaultSection(page) : null;
+  let structureNote = "";
+  let chapterFeedback = "";
+  let finalNote = "";
+  let sending = false;
+  let queued = false;
+  let localOnline = true;
+  let downloadUrl;
+  const draftKey = `wechat-outline:${location.pathname}:${reviewId}`;
+
+  try {
+    const draft = JSON.parse(sessionStorage.getItem(draftKey));
+    if (draft) {
+      for (const [id, answer] of draft.answers) if (answers.has(id)) answers.set(id, answer);
+      structureNote = draft.structureNote;
+      chapterFeedback = draft.chapterFeedback;
+      finalNote = draft.finalNote;
+      if (stage === "sections" && sectionItems.has(draft.sectionId)) {
+        sectionId = draft.sectionId;
+        page = sectionItems.get(sectionId).index;
+      }
+    }
+  } catch { /* Draft storage may be unavailable in a host preview. */ }
+
+  function hasDraft() {
+    return Boolean(structureNote.trim() || chapterFeedback.trim() || finalNote.trim()
+      || allItems.some(({ id }) => {
+        const answer = answers.get(id);
+        return answer.choice !== null || answer.title.trim() || answer.note.trim() || answer.chapterIntro !== null;
+      }));
+  }
+
+  function persistDraft() {
+    try {
+      if (queued || !hasDraft()) sessionStorage.removeItem(draftKey);
+      else sessionStorage.setItem(draftKey, JSON.stringify({
+        answers: [...answers], sectionId, structureNote, chapterFeedback, finalNote,
+      }));
+    } catch { /* Keep the current page and copy controls usable. */ }
+  }
+
+  const element = (tag, className, content) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (content !== undefined) node.textContent = content;
+    return node;
+  };
+
+  function defaultSection(index) {
+    const items = groups[index].items;
+    return (items.find((item) => !item.confirmed) ?? items[0]).id;
+  }
+
+  function visibleItems() {
+    return individual ? [sectionItems.get(sectionId).item] : groups[page].items;
+  }
+
+  function sectionNotes() {
+    return (individual ? visibleItems() : allItems).filter(hasFeedback);
+  }
+
+  function sectionGateMessage() {
+    if (!individual) return "";
+    const chapter = groups[page].items[0];
+    if (chapter.id === sectionId) return "";
+    if (chapter.chapter_intro === null) return "请先在本章标题页确认是否添加章导语。";
+    const intro = chapterIntros.get(chapter.id);
+    return intro && intro.id !== sectionId && !intro.confirmed ? "请先确认本章导语的内容概述。" : "";
+  }
+
+  function markCurrentSection() {
+    for (const entry of get("outline-tree").querySelectorAll("[data-section-link]")) {
+      if (entry.dataset.sectionLink === sectionId) entry.setAttribute("aria-current", "location");
+      else entry.removeAttribute("aria-current");
+    }
+  }
+
+  function showTitleOutline() {
+    if (!titleOutline || (stage === "sections" && !sectionOutline)) return;
+    const currentId = titleStep ? allItems[0].id : null;
+
+    function buildLevel(nodes) {
+      const list = element("ol", "outline-level");
+      for (const node of nodes) {
+        const item = element("li");
+        const content = sectionOutline ? sectionItems.get(node.id) : null;
+        const entry = element(content ? "button" : "div", content ? "btn outline-entry" : "outline-entry");
+        const current = node.id === currentId;
+        const confirmed = content ? content.item.confirmed : node.confirmed;
+        const status = current ? "当前确认" : confirmed ? "已确认" : "待确认";
+        if (current) entry.setAttribute("aria-current", "step");
+        if (content) {
+          entry.type = "button";
+          entry.dataset.sectionLink = node.id;
+          entry.addEventListener("click", () => goTo(content.index, node.id));
+        }
+        entry.dataset.outlineStatus = current ? "current" : confirmed ? "confirmed" : "pending";
+        const meta = element("div", "outline-meta text-small");
+        meta.append(element("span", "outline-label", node.label));
+        if (content || !sectionOutline) meta.append(element("span", "outline-status", status));
+        entry.append(meta);
+        if (node.title) entry.append(element("span", "outline-title", node.title));
+        item.append(entry);
+        const intro = chapterIntros.get(node.id);
+        const children = node.children ?? [];
+        if (intro) item.append(buildLevel([intro, ...children]));
+        else if (children.length) item.append(buildLevel(children));
+        list.append(item);
+      }
+      return list;
+    }
+
+    const tree = get("outline-tree");
+    if (sectionOutline) {
+      get("outline-heading").textContent = "大纲目录";
+      tree.setAttribute("aria-label", "大纲内容层级");
+      tree.append(element("p", "outline-article-title", titleOutline.title));
+      const lead = sectionItems.get(titleOutline.id);
+      const entries = lead ? [{ id: titleOutline.id, label: lead.item.label }] : [];
+      tree.append(buildLevel([...entries, ...(titleOutline.children ?? [])]));
+      markCurrentSection();
+    } else {
+      tree.append(buildLevel([titleOutline]));
+    }
+    revealOutline("(min-width: 850px)");
+  }
+
+  function revealOutline(breakpoint) {
+    const section = get("title-outline");
+    section.hidden = false;
+    const desktop = matchMedia(breakpoint);
+    section.open = desktop.matches;
+    desktop.addEventListener("change", ({ matches }) => { section.open = matches; });
+    const activeEntry = section.querySelector("[aria-current]");
+    if (desktop.matches && activeEntry) {
+      const rail = section.closest("aside");
+      const overflow = activeEntry.getBoundingClientRect().bottom - rail.getBoundingClientRect().bottom;
+      if (overflow > 0) rail.scrollTop += overflow;
+    }
+  }
+
+  function showFinalOutline() {
+    const preview = element("div", "review-text");
+    const directory = element("ol", "outline-level");
+    let chapter = null;
+    let chapterList = null;
+    let afterArticleTitle = false;
+    let fence = "";
+
+    for (const [index, line] of review.markdown.split("\n").entries()) {
+      if (index) preview.append("\n");
+      const marker = /^ {0,3}(`{3,}|~{3,})(.*)$/.exec(line);
+      if (marker) {
+        const [, run, tail] = marker;
+        if (!fence) fence = run;
+        else if (run[0] === fence[0] && run.length >= fence.length && !tail.trim()) fence = "";
+      }
+      const heading = !fence && !marker ? /^(#{1,3})[ \t]+(.+?)\s*$/.exec(line) : null;
+      const level = heading?.[1].length;
+      const chapterIntro = !fence && /^\*\*(?:章|章节)导语(?:概述)?\*\*/.test(line);
+      const hasText = Boolean(line.trim());
+      const lead = afterArticleTitle && !heading && !marker && hasText;
+      const label = heading?.[2] ?? (chapterIntro ? "章节导语" : lead ? "导语" : "");
+      if (hasText) afterArticleTitle = level === 1;
+      if (!label) {
+        preview.append(line);
+        continue;
+      }
+
+      const target = element("span", "review-anchor", line);
+      target.id = `${root.id}-line-${index + 1}`;
+      target.tabIndex = -1;
+      preview.append(target);
+      const item = element("li");
+      const link = element("a", "final-outline-link", label);
+      link.href = `#${target.id}`;
+      if (level === 1) link.classList.add("outline-article-title");
+      item.append(link);
+      if (chapter && (level === 3 || chapterIntro)) {
+        if (!chapterList) {
+          chapterList = element("ol", "outline-level");
+          chapter.append(chapterList);
+        }
+        chapterList.append(item);
+      } else {
+        directory.append(item);
+      }
+      if (level === 1 || level === 2) {
+        chapter = level === 2 ? item : null;
+        chapterList = null;
+      }
+    }
+
+    panel.append(preview);
+    if (directory.childElementCount) {
+      get("outline-heading").textContent = "大纲目录";
+      const tree = get("outline-tree");
+      tree.setAttribute("aria-label", "完整大纲目录");
+      tree.replaceChildren(directory);
+      revealOutline("(min-width: 1050px)");
+    }
+  }
+
+  function field(label, value, onInput, rows, placeholder = "") {
+    const wrapper = element("label");
+    const input = element(rows ? "textarea" : "input", "form-control");
+    if (rows) input.rows = rows;
+    else input.type = "text";
+    input.value = value;
+    if (placeholder) input.placeholder = placeholder;
+    input.addEventListener("input", () => {
+      onInput(input.value);
+      updateActions();
+    });
+    wrapper.append(element("span", "form-label text-small", label), input);
+    return wrapper;
+  }
+
+  function choice(label, checked, onChange, { note, name, index } = {}) {
+    const wrapper = element("label", "form-check");
+    const control = element("input", "form-check-input");
+    control.type = name ? "radio" : "checkbox";
+    if (name) control.name = name;
+    control.checked = checked;
+    control.addEventListener("change", () => {
+      onChange(control.checked);
+      updateActions();
+    });
+    const text = element("span", "form-check-label");
+    const title = element("span", "candidate-title", label);
+    if (index === 0) title.append(element("span", "candidate-badge viz-badge", "推荐"));
+    text.append(title);
+    if (note) text.append(element("span", "candidate-note text-small text-muted", note));
+    wrapper.append(control);
+    if (index !== undefined) {
+      const indexLabel = element("span", "candidate-index", "ABC"[index]);
+      indexLabel.setAttribute("aria-hidden", "true");
+      wrapper.classList.add("review-candidate");
+      wrapper.append(indexLabel);
+    }
+    wrapper.append(text);
+    return wrapper;
+  }
+
+  function disclosure(label, open, ...fields) {
+    const detail = element("details", "review-disclosure");
+    const content = element("div", "review-fields");
+    detail.open = open;
+    content.append(...fields);
+    detail.append(element("summary", "", label), content);
+    return detail;
+  }
+
+  function hasFeedback({ id }) {
+    const { choice, title, note } = answers.get(id);
+    return choice !== null || title.trim() || note.trim();
+  }
+
+  function canSendToChat() {
+    return (localOnline && typeof window.sendOutlineReview === "function")
+      || typeof window.openai?.sendFollowUpMessage === "function";
+  }
+
+  function showSendMode() {
+    const direct = canSendToChat();
+    if (stage === "final") {
+      submit.textContent = direct ? "确认并提交" : "确认并生成反馈";
+    } else if (stage === "sections") {
+      submit.textContent = "确认";
+    } else {
+      submit.textContent = direct ? "提交反馈" : "生成反馈";
+    }
+    revise.textContent = direct
+      ? (stage === "sections" ? "提交反馈" : "提交修改意见")
+      : "生成修改反馈";
+    copyDraft.hidden = false;
+    get("send-mode").textContent = stage === "sections"
+      ? (direct ? "确认结果和修改意见分别回传到原对话。" : "请将确认结果或修改意见复制到原对话。")
+      : (direct ? "提交后由当前对话处理，也可以复制反馈。" : "生成后，请复制反馈到原对话。");
+  }
+
+  function updateActions() {
+    persistDraft();
+    get("fallback").hidden = true;
+    if (stage === "final") {
+      submit.disabled = sending || queued || finalNote.trim().length > 0;
+      revise.disabled = sending || queued || !finalNote.trim();
+      copyDraft.disabled = sending;
+      return;
+    }
+    if (stage === "sections") {
+      const items = visibleItems();
+      const hasNotes = sectionNotes().length > 0;
+      const hasPending = items.some((item) => !item.confirmed);
+      const missingChoice = items[0].chapter_intro === null && answers.get(items[0].id).chapterIntro === null;
+      const canConfirm = hasPending && !hasNotes && !missingChoice && !sectionGateMessage();
+      submit.textContent = hasPending ? "确认" : "已确认";
+      submit.disabled = sending || queued || !canConfirm;
+      revise.disabled = sending || queued || !hasNotes;
+      copyDraft.disabled = sending || (!hasNotes && !canConfirm);
+      copyDraft.textContent = hasNotes ? "复制反馈" : "复制确认结果";
+      return;
+    }
+    const answered = allItems.filter(hasFeedback).length;
+    const hasInput = answered || structureNote.trim() || chapterFeedback.trim();
+    const progress = root.querySelector("progress");
+    if (titleStep) {
+      get("progress").textContent = hasInput ? "反馈已填写，可提交" : "请为当前标题选择候选或填写意见";
+      progress.setAttribute("aria-label", "标题确认进度");
+      progress.max = titleStep.total;
+      progress.value = titleStep.index - 1;
+    } else {
+      get("progress").textContent = `已反馈 ${answered} / ${allItems.length} 项 · 可分次提交`;
+      progress.max = allItems.length;
+      progress.value = answered;
+    }
+    get("groups").querySelectorAll(".review-group-count").forEach((count, index) => {
+      const items = groups[index].items;
+      count.textContent = `${items.filter(hasFeedback).length}/${items.length}`;
+    });
+    panel.querySelectorAll("[data-clear-item]").forEach((button) => {
+      button.hidden = !hasFeedback({ id: button.dataset.clearItem });
+    });
+    submit.disabled = sending || queued || !hasInput;
+    copyDraft.disabled = sending || !hasInput;
+    get("recommended").disabled = sending || groups[page].items.every(hasFeedback);
+  }
+
+  function show() {
+    panel.replaceChildren();
+    get("stage").textContent = headings[stage][0];
+    get("intro").textContent = individual
+      ? "每次核对一项。点击「确认」采用当前内容，修改意见可单独提交。"
+      : headings[stage][2];
+    get("navigation").hidden = stage !== "titles" || Boolean(titleStep);
+    get("back").hidden = page === 0;
+    get("next").hidden = stage === "final" || page === groups.length - 1;
+    get("recommended").hidden = stage !== "titles" || Boolean(titleStep);
+    revise.hidden = stage === "titles";
+    get("progress-box").hidden = stage !== "titles";
+    get("groups").hidden = stage === "final" || Boolean(titleStep) || sectionOutline;
+    showSendMode();
+    if (stage === "final") {
+      get("heading").textContent = "完整大纲";
+      get("position").textContent = "最终预览";
+      showFinalOutline();
+      get("final-fields").replaceChildren(
+        field("我想再调整一下", finalNote, (value) => { finalNote = value; }, 6,
+          "可修改文章标题、章节标题或大纲内容。请注明要改哪一处，再写新标题或修改方向。"),
+      );
+      const feedbackRail = get("final-feedback");
+      feedbackRail.append(root.querySelector(".review-footer"), get("fallback"));
+      feedbackRail.hidden = false;
+      updateActions();
+      return;
+    }
+
+    const group = groups[page];
+    const items = visibleItems();
+    get("position").textContent = titleStep
+      ? `标题 ${titleStep.index} / ${titleStep.total}`
+      : individual ? `内容 ${allItems.indexOf(items[0]) + 1} / ${allItems.length}`
+        : `第 ${page + 1} 组 / 共 ${groups.length} 组`;
+    const heading = individual || sectionOutline ? items[0].label : group.label;
+    get("heading").textContent = heading;
+    if (!get("groups").hidden) {
+      const links = individual
+        ? [...sectionItems.values()].map(({ item, index }) => ({ id: item.id, label: item.label, index }))
+        : groups.map(({ label }, index) => ({ label, index }));
+      get("groups").replaceChildren(...links.map(({ id, label, index }) => {
+        const button = element("button", "btn review-group");
+        button.type = "button";
+        if (individual ? id === sectionId : page === index) {
+          button.setAttribute("aria-current", "step");
+          button.classList.add("is-selected");
+        }
+        button.append(element("span", "review-group-label", label));
+        if (stage === "titles") button.append(element("span", "review-group-count"));
+        button.addEventListener("click", () => goTo(index, id));
+        return button;
+      }));
+    }
+    for (const [position, item] of items.entries()) {
+      const answer = answers.get(item.id);
+      const box = element("fieldset");
+      box.append(element("legend", item.label === heading ? "sr-only" : "", item.label));
+      if (stage === "titles") {
+        const options = element("div", "review-options");
+        item.options.forEach((option, index) => {
+          options.append(choice(option.title, answer.choice === index, () => {
+            answer.choice = index;
+          }, { note: option.note, name: `${reviewId}-${item.id}`, index }));
+        });
+        const clear = element("button", "btn btn-ghost", "清空本项反馈");
+        clear.type = "button";
+        clear.dataset.clearItem = item.id;
+        const feedback = element("div", "review-fields review-title-fields");
+        const header = element("div", "title-fields-header");
+        const caption = element("div", "title-fields-caption");
+        caption.append(element("span", "title-fields-heading", "其他写法"),
+          element("span", "text-small text-muted", "选填"));
+        header.append(caption, clear);
+        const fields = element("div", "title-fields-grid");
+        const custom = field("自拟标题", answer.title, (value) => { answer.title = value; },
+          0, "输入你想用的标题");
+        custom.classList.add("title-custom");
+        const reviseTitle = field("请我重拟", answer.note, (value) => { answer.note = value; },
+          4, "写下希望保留或调整的内容");
+        reviseTitle.classList.add("title-revise");
+        fields.append(custom, reviseTitle);
+        feedback.append(header, fields);
+        clear.addEventListener("click", () => {
+          answers.set(item.id, { choice: null, title: "", note: "" });
+          show();
+          panel.querySelectorAll("fieldset")[position].querySelector("input[type=radio]").focus();
+        });
+        box.append(options, feedback);
+      } else {
+        box.dataset.sectionId = item.id;
+        box.tabIndex = -1;
+        const meta = element("div", "outline-meta text-small");
+        meta.dataset.outlineStatus = item.confirmed ? "confirmed" : "pending";
+        meta.append(element("span", "outline-label", "内容概述"),
+          element("span", "outline-status", item.confirmed ? "已确认" : "待确认"));
+        box.append(meta, element("p", "review-text", item.body));
+        if (item.chapter_intro === null) {
+          const intro = element("fieldset");
+          intro.append(element("legend", "outline-label", "本章是否需要章导语？"));
+          for (const [value, label] of [[true, "添加章导语"], [false, "不添加章导语"]]) {
+            intro.append(choice(label, answer.chapterIntro === value, () => { answer.chapterIntro = value; },
+              { name: `${reviewId}-${item.id}-chapter-intro` }));
+          }
+          box.append(intro);
+        } else if (typeof item.chapter_intro === "boolean") {
+          box.append(element("p", "text-small", item.chapter_intro ? "本章将添加章导语。" : "本章直接进入子章节。"));
+        } else if (sectionGateMessage()) {
+          box.append(element("p", "text-small text-muted", sectionGateMessage()));
+        }
+        box.append(field("修改意见", answer.note, (value) => { answer.note = value; },
+          3, "写下希望调整的内容"));
+      }
+      panel.append(box);
+    }
+    if (stage === "titles" && page === groups.length - 1) {
+      panel.append(disclosure("调整章节顺序或层级", Boolean(structureNote),
+        field("结构调整建议", structureNote, (value) => { structureNote = value; }, 2)));
+      if (titleOutline?.children?.length) {
+        panel.append(disclosure("批量反馈章节标题", Boolean(chapterFeedback),
+          field("批量修改意见", chapterFeedback, (value) => { chapterFeedback = value; }, 4,
+            "可按章或节编号分行填写，也可以给多个标题同一条意见")));
+      }
+    }
+    updateActions();
+  }
+
+  function goTo(index, id) {
+    if (index === page && stage !== "sections") return;
+    const nextSection = stage === "sections" ? id ?? defaultSection(index) : null;
+    const changed = index !== page || (individual && nextSection !== sectionId);
+    sectionId = nextSection;
+    page = index;
+    if (changed) show();
+    markCurrentSection();
+    const card = [...panel.children].find((item) => item.dataset.sectionId === sectionId);
+    const destination = card ?? get("heading");
+    destination.focus({ preventScroll: true });
+    destination.scrollIntoView({ block: "nearest" });
+  }
+
+  function feedbackMessage(action) {
+    let decisions;
+    if (stage === "final") {
+      decisions = [action === "revise"
+          ? { id: "outline", decision: "revise", value: finalNote.trim() }
+          : { id: "outline", decision: "confirm" }];
+    } else if (stage === "sections") {
+      decisions = action === "revise"
+        ? sectionNotes().map(({ id }) => ({ id, decision: "revise", value: answers.get(id).note.trim() }))
+        : visibleItems().filter((item) => !item.confirmed).map((item) => {
+          const accepted = { id: item.id, decision: "accept" };
+          if (item.chapter_intro === null) accepted.chapter_intro = answers.get(item.id).chapterIntro;
+          return accepted;
+        });
+    } else {
+      decisions = allItems.filter(hasFeedback).map(({ id, options }) => {
+        const answer = answers.get(id);
+        if (answer.note.trim()) return { id, decision: "revise", value: answer.note.trim() };
+        if (answer.title.trim()) return { id, decision: "custom", value: answer.title.trim() };
+        return { id, decision: "select", value: options[answer.choice].title };
+      });
+    }
+    const feedback = { format: "wechat-article-outline-feedback/v1", review_id: reviewId, stage, decisions };
+    if (stage === "titles" && structureNote.trim()) {
+      feedback.structure_note = structureNote.trim();
+    }
+    if (stage === "titles" && chapterFeedback.trim()) {
+      feedback.chapter_feedback = chapterFeedback.trim();
+    }
+    return JSON.stringify(feedback, null, 2);
+  }
+
+  function revealCopy(message, confirming) {
+    const fallback = get("fallback");
+    const label = confirming ? "确认结果" : "反馈";
+    fallback.setAttribute("aria-label", `回传${label}`);
+    get("fallback-heading").textContent = `把${label}发回原对话`;
+    get("copy").textContent = `复制${label}`;
+    get("json").querySelector("summary").textContent = `查看${label} JSON`;
+    get("copy-label").textContent = `本轮${label} JSON`;
+    fallback.hidden = false;
+    fallback.querySelector("textarea").value = message;
+    if (downloadUrl) URL.revokeObjectURL(downloadUrl);
+    downloadUrl = URL.createObjectURL(new Blob([message + "\n"], { type: "application/json" }));
+    const download = get("download");
+    download.href = downloadUrl;
+    download.textContent = `下载${label} JSON`;
+    download.download = `${reviewId}-${confirming ? "confirmation" : "feedback"}.json`;
+    get("copy-status").textContent = "";
+  }
+
+  function showDeliveryStatus(message) {
+    const status = get("delivery-status");
+    status.textContent = message;
+    status.hidden = !message;
+  }
+
+  async function send(action) {
+    if (sending || queued) return;
+    const confirming = stage === "sections" && action === "submit";
+    const scope = individual ? "本项" : "本组";
+    const title = confirming ? `确认${scope}大纲内容`
+      : stage === "final" && action === "revise" ? "发送完整大纲修改意见" : headings[stage][1];
+    const message = feedbackMessage(action);
+    const local = localOnline && typeof window.sendOutlineReview === "function";
+    const direct = canSendToChat();
+    const showStatus = direct;
+    sending = true;
+    updateActions();
+    if (showStatus) showDeliveryStatus(confirming ? `正在确认${scope}大纲内容…` : "正在发送反馈…");
+    let copyManually = false;
+    try {
+      if (local) {
+        await window.sendOutlineReview(message);
+      } else if (direct) {
+        await window.openai.sendFollowUpMessage({ prompt: message, title });
+      } else {
+        copyManually = true;
+      }
+      if (showStatus) {
+        queued = true;
+        showDeliveryStatus(confirming ? "确认结果已提交，等待当前对话处理。" : "反馈已提交，等待当前对话处理。");
+      }
+    } catch (error) {
+      if (confirming) {
+        showDeliveryStatus(local ? `确认结果回传遇到问题。${error.message}` : "确认结果回传状态待核对，请先查看原对话。");
+      } else if (local) {
+        showDeliveryStatus(error.message);
+      }
+      copyManually = true;
+    } finally {
+      sending = false;
+      updateActions();
+    }
+    if (copyManually) {
+      revealCopy(message, confirming);
+      get("copy").focus();
+    }
+  }
+
+  get("back").addEventListener("click", () => goTo(page - 1));
+  get("recommended").addEventListener("click", () => {
+    for (const item of groups[page].items) {
+      if (!hasFeedback(item)) answers.get(item.id).choice = 0;
+    }
+    show();
+    (get("next").hidden ? submit : get("next")).focus();
+  });
+  get("next").addEventListener("click", () => goTo(page + 1));
+  submit.addEventListener("click", () => { void send("submit"); });
+  async function copyFeedback() {
+    const output = get("fallback").querySelector("textarea");
+    try {
+      await navigator.clipboard.writeText(output.value);
+      get("copy-status").textContent = "已复制，请粘贴到原对话。";
+    } catch {
+      get("json").open = true;
+      output.focus();
+      output.select();
+      get("copy-status").textContent = "已选中文本，请手动复制。";
+    }
+  }
+  get("copy").addEventListener("click", () => { void copyFeedback(); });
+  copyDraft.addEventListener("click", () => {
+    const hasNotes = stage === "final" ? finalNote.trim() : stage === "sections" && sectionNotes().length > 0;
+    const action = hasNotes ? "revise" : "submit";
+    revealCopy(feedbackMessage(action), stage === "sections" && action === "submit");
+    void copyFeedback();
+  });
+  revise.addEventListener("click", () => { void send("revise"); });
+  document.addEventListener("outline-review:connection", (event) => {
+    localOnline = event.detail;
+    showSendMode();
+    if (!localOnline) showDeliveryStatus("本机反馈服务已断开。可先复制当前内容，也可以等待服务恢复。");
+    else if (!queued && get("refresh-review").hidden) showDeliveryStatus("本机反馈服务已连接。");
+  });
+  document.addEventListener("outline-review:next-round", (event) => {
+    if (queued || (!hasDraft() && !sending)) return;
+    event.preventDefault();
+    get("refresh-review").hidden = false;
+    showDeliveryStatus("有新一轮待查看。请先复制本轮未提交内容，再刷新到最新一轮。");
+  });
+  get("refresh-review").addEventListener("click", () => location.reload());
+  window.addEventListener("openai:set_globals", showSendMode);
+  show();
+  if (stage !== "final") showTitleOutline();
+})();
+</script>

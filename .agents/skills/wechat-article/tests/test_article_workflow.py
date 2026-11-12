@@ -12,6 +12,8 @@ import unittest
 import uuid
 import zlib
 from pathlib import Path
+from unittest.mock import patch
+from zipfile import ZipFile
 
 sys.dont_write_bytecode = True
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -99,17 +101,17 @@ def make_article(root):
 def save(root, metadata, progress, units):
     write_json(root / "article/metadata.json", metadata)
     write_json(root / "article/progress.json", progress)
-    (root / "article/article-working.md").write_text(render(units), encoding="utf-8")
+    (root / "article" / progress["working_file"]).write_text(render(units), encoding="utf-8")
 
 
 def archive(root, metadata, progress, units):
     number = max((int(v[1:]) for v in metadata["articles"]), default=0) + 1
     version = f"v{number:03d}"
     body, spans = state.assemble(render(units))
-    path = root / f"article/article-{version}.md"
+    path = (root / "article" / progress["working_file"]).with_name(f"article-{version}.md")
     path.write_text(body, encoding="utf-8")
     snapshots = [{**copy.deepcopy(s), "span": spans[s["section_id"]]} for s in progress["sections"]]
-    metadata["articles"][version] = {"record_schema_version": 3, "file": path.name, "outline_version": "v001",
+    metadata["articles"][version] = {"record_schema_version": 3, "file": path.relative_to(root / "article").as_posix(), "outline_version": "v001",
         "title": "测试文章", "based_on": metadata["latest_article_version"], "created_at": AT, "change_summary": "测试版本",
         "content_sha256": state.digest(path.read_bytes()), "chapter_confirmations": snapshots,
         "sources": copy.deepcopy(progress["sources"]), "media": copy.deepcopy(progress["media"]),
@@ -159,6 +161,22 @@ class ArticleTests(unittest.TestCase):
         self.progress["sources"][0]["path"] = str(Path(self.temp.name))
         self.flush()
         self.assert_valid()
+
+    def test_outline_shared_sample_links_are_read_only(self):
+        samples = Path(self.temp.name).resolve() / "shared-samples"
+        samples.mkdir()
+        sample = samples / "article.md"
+        sample.write_text("# 样文\n", encoding="utf-8")
+        outline = self.root / "outline/outline-v001.md"
+        target = Path(os.path.relpath(sample, outline.parent)).as_posix()
+        outline.write_text(f"# 测试文章\n\n[样文]({target})\n", encoding="utf-8")
+        self.metadata["outlines"]["v001"]["content_sha256"] = state.digest(outline.read_bytes())
+        self.flush()
+        with patch.object(state, "SHARED_SAMPLES", samples):
+            self.assert_valid()
+            self.assertNotIn(sample, state.protected_files(self.root.resolve(), self.metadata, self.progress))
+            with self.assertRaisesRegex(state.StateError, "Path escapes article directory"):
+                state.local_reference(self.root.resolve(), outline, target)
 
     def test_no_source_is_rejected(self):
         self.progress["sources"] = []
@@ -254,6 +272,32 @@ class ArticleTests(unittest.TestCase):
         self.progress.update(phase="finalized", finalized_article_version=version, completion_basis=evidence("测试最终任务完成", "task_completion"))
         self.flush()
         self.assert_invalid("not approved as a final placeholder")
+
+    def test_numbered_caption_can_replace_confirmed_legacy_video_placeholder(self):
+        video = add_pending_video(self.progress, self.units)
+        section = self.progress["sections"][1]
+        legacy = "【视频占位 VID-01｜任务演示｜演示原任务】"
+        original = self.units["main-01"].replace("【视频占位 VID-01：任务演示；待提供】", legacy)
+        section["confirmation"]["content_sha256"] = state.text_digest(original)
+        section["confirmation"]["media"].remove(state.proof(video))
+        filename = "VID-01_任务演示_v001.mp4"
+        video.update(caption={"number": 1, "title": "任务怎么做", "description": "演示任务步骤。"},
+                     revision="v001", url=f"https://example.test/{filename}", status="approved",
+                     adoption=evidence("测试：使用已有录屏，更新显示编号。"),
+                     filename_verified=True, verified_at=AT, canonical_name=filename)
+        rendered = f"[视频1：任务怎么做](<{video['url']}>)\n\n演示任务步骤。"
+        self.units["main-01"] = updated = original.replace(legacy, rendered)
+        section["media_updates"].append({
+            "kind": "adopt", "before_sha256": state.text_digest(original), "after_sha256": state.text_digest(updated),
+            "media": state.proof(video), "basis": video["adoption"],
+            "replacements": [{"before": legacy, "after": rendered, "after_start": updated.index(rendered)}],
+        })
+        self.progress["pending_media"] = []
+        self.flush()
+        self.assert_valid()
+        extra_prose = rendered + "\n\n未经授权的正文。"
+        with self.assertRaisesRegex(state.StateError, "changes ordinary prose"):
+            state.valid_replacement(section["media_updates"][0], {"before": legacy, "after": extra_prose}, None)
 
     def test_add_video_after_archive_creates_new_body_and_keeps_old_bytes(self):
         video = add_pending_video(self.progress, self.units)
@@ -443,6 +487,581 @@ class ArticleTests(unittest.TestCase):
         with self.assertRaisesRegex(state.StateError, "Another authoring session"):
             workflow.save_work(self.root, work_file, progress_file, apply=True)
 
+    def test_export_selects_archived_body_and_follows_reachable_assets(self):
+        article = self.root / "article"
+        (article / "v001").mkdir()
+        self.progress["working_file"] = "v001/article-working.md"
+        assets = article / "assets"
+        diagram = assets / "流程.svg"
+        diagram.write_text('<svg xmlns="http://www.w3.org/2000/svg"><image href="节点.png"/></svg>', encoding="utf-8")
+        (assets / "节点.png").write_bytes(png())
+        (assets / "录屏.mp4").write_bytes(b"video fixture")
+        (assets / "视频 封面.png").write_bytes(png())
+        self.units["main-01"] = ('## 整体介绍\n\n[流程][diagram]\n\n[diagram]: ../assets/流程.svg\n\n'
+                                 '<video src="../assets/录屏.mp4" poster="../assets/视频 封面.png"></video>\n\n'
+                                 '[外部资料](https://example.com)')
+        archive(self.root, self.metadata, self.progress, self.units)
+        expected_body = (article / "v001/article-v001.md").read_bytes()
+        self.units["main-01"] = "## 整体介绍\n\n第二版的正文。"
+        self.progress["working_file"] = "article-working.md"
+        archive(self.root, self.metadata, self.progress, self.units)
+        (article / "v001/article-working.md").unlink()
+
+        args = [sys.executable, "-B", "-X", "utf8", str(SCRIPTS / "article_workflow.py"),
+                "export", str(self.root), "--version", "v001"]
+        preview = json.loads(subprocess.check_output(args, encoding="utf-8"))
+        target = self.root / "exports/test-articlev001.zip"
+        self.assertTrue(preview["read_only"])
+        self.assertEqual("archived", preview["source_type"])
+        self.assertEqual(str(target), preview["zip"])
+        self.assertFalse(target.parent.exists())
+        result = json.loads(subprocess.check_output(args + ["--apply"], encoding="utf-8"))
+        self.assertEqual(str(target), result["zip"])
+        with ZipFile(target) as package:
+            self.assertEqual({"v001/article-v001.md", "assets/流程.svg", "assets/节点.png", "assets/录屏.mp4",
+                              "assets/视频 封面.png"}, set(package.namelist()))
+            self.assertEqual(expected_body, package.read(result["body"]))
+
+    def test_export_working_draft_keeps_only_reader_body_and_preserves_source(self):
+        article = self.root / "article"
+        (article / "v001").mkdir()
+        self.progress["working_file"] = "v001/article-working.md"
+        self.units["main-01"] = self.units["main-01"].replace("(assets/", "(../assets/")
+        self.flush()
+        working = article / self.progress["working_file"]
+        before = working.read_bytes()
+
+        result = workflow.export_article(self.root, "v001", output_dir=Path(self.temp.name), apply=True)
+        self.assertEqual("working_draft", result["source_type"])
+        with ZipFile(result["zip"]) as package:
+            self.assertEqual({result["body"], "assets/IMG-01_整体架构_v001.png"}, set(package.namelist()))
+            self.assertNotIn(b"<!-- section:", package.read(result["body"]))
+        self.assertEqual(before, working.read_bytes())
+        with self.assertRaisesRegex(state.StateError, "v002"):
+            workflow.export_article(self.root, "v002", apply=True)
+
+    def test_export_failure_keeps_existing_zip_and_excludes_unrelated_files(self):
+        version = archive(self.root, self.metadata, self.progress, self.units)
+        result = workflow.export_article(self.root, version, apply=True)
+        target = Path(result["zip"])
+        original = target.read_bytes()
+        asset = self.root / "article" / self.progress["media"][0]["file"]
+        asset.write_bytes(png(b"\x01\x02\x03"))
+        with self.assertRaisesRegex(state.StateError, "does not match the selected version"):
+            workflow.export_article(self.root, version, apply=True)
+        self.assertEqual(original, target.read_bytes())
+        asset.unlink()
+        with self.assertRaisesRegex(state.StateError, "Missing file"):
+            workflow.export_article(self.root, version, apply=True)
+        self.assertEqual(original, target.read_bytes())
+        self.assertEqual([target], list(target.parent.glob("*.zip")))
+        self.assertEqual([], list(target.parent.glob("*.tmp")))
+
+    def test_revision_records_paragraph_decisions_and_preserves_pending_conclusion(self):
+        last = {**self.progress["sections"][1], "section_id": "main-02", "title": "结语",
+                "status": "awaiting_confirmation", "confirmation": None}
+        self.progress["sections"].append(last)
+        self.progress["phase"] = "waiting_section"
+        self.units["main-02"] = "## 结语\n\n等待确认的原文。"
+        outline = self.root / "article/v001/outline-v001.md"
+        outline.parent.mkdir()
+        (self.root / "outline/outline-v001.md").replace(outline)
+        self.metadata["outlines"]["v001"]["file"] = "v001/outline-v001.md"
+        self.flush()
+        mirror = outline.with_name("outline-working.md")
+        mirror.write_bytes(outline.read_bytes())
+        working = self.root / "article/article-working.md"
+        original = working.read_bytes()
+        plan = {"mode": "review", "basis": "逐段让我确认", "body": [
+            {"section": "lead", "before": "这是一份离线测试导语。", "after": "修改导语。", "decision": "keep"},
+            {"section": "main-01", "before": "根据测试源码说明任务。", "after": "解释任务的运行方式。"},
+        ]}
+        result = workflow.revise(self.root, plan, at=AT)
+        self.assertEqual("pending", result["decisions"][1]["decision"])
+        self.assertEqual(original, working.read_bytes())
+        with self.assertRaisesRegex(state.StateError, "pending"):
+            workflow.revise(self.root, plan, at=AT, apply=True)
+        plan["body"][1].update(decision="accepted", reply="可以")
+        plan["outline"] = [{"before": "导语与整体介绍。", "after": "介绍任务的运行方式。",
+                            "decision": "accepted", "reply": "大纲也可以"}]
+        result = workflow.revise(self.root, plan, at=AT, apply=True)
+        self.assertEqual(["main-01"], result["sections"])
+        self.assertIn("+解释任务的运行方式。", result["diff"])
+        _, after = state.extract_sections(working.read_text(encoding="utf-8"))
+        self.assertEqual(self.units["lead"], after["lead"])
+        self.assertEqual(self.units["main-02"], after["main-02"])
+        saved = state.read_json(self.root / "article/progress.json")
+        self.assertEqual(last, saved["sections"][-1])
+        self.assertEqual(outline.read_bytes(), mirror.read_bytes())
+        self.assert_valid()
+
+    def test_revision_recovers_caption_renumber_and_syncs_png_svg_and_outline(self):
+        item = self.progress["media"][0]
+        item["caption"] = {"number": 2, "title": "整体架构", "description": "三个组件的关系。"}
+        self.units["main-01"] = ("## 整体介绍\n\n具体关系见图2。样例命令是 `echo 图2`。\n\n图2：整体架构｜三个组件的关系。\n\n"
+                                 "![图2：整体架构](assets/IMG-01_整体架构_v001.png)")
+        self.progress["sections"][1]["confirmation"].update(
+            media=[state.proof(item)], content_sha256=state.text_digest(self.units["main-01"]))
+        outline = self.root / "outline/outline-v001.md"
+        outline.write_text("# 测试文章\n\n【图片占位 图2：整体架构｜三个组件的关系。】\n\n见图2。\n", encoding="utf-8")
+        self.metadata["outlines"]["v001"]["content_sha256"] = state.digest(outline.read_bytes())
+        self.flush()
+        plan = {"mode": "direct", "basis": "图片重新编号，图注放在下面", "media": [{"id": "IMG-01", "number": 1}]}
+        article = self.root / "article"
+        self.assertFalse((article / "assets/图1_整体架构_v001.png").exists())
+        original_replace = os.replace
+        calls = 0
+
+        def interrupted(src, dst):
+            nonlocal calls
+            calls += 1
+            if calls == 2:
+                raise OSError("simulated interruption")
+            original_replace(src, dst)
+
+        with patch("article_revision.os.replace", side_effect=interrupted):
+            with self.assertRaisesRegex(OSError, "interruption"):
+                workflow.revise(self.root, plan, at=AT, apply=True)
+        self.assertTrue((article / "transaction.json").is_file())
+        workflow.recover(self.root, apply=True)
+        self.assertFalse((article / "transaction.json").exists())
+        for ext in (".png", ".svg"):
+            self.assertTrue((article / f"assets/图1_整体架构_v001{ext}").is_file())
+            self.assertFalse((article / f"assets/IMG-01_整体架构_v001{ext}").exists())
+        body = (article / "article-working.md").read_text(encoding="utf-8")
+        self.assertIn("见图1。", body)
+        self.assertIn("`echo 图2`", body)
+        self.assertIn("![图1：整体架构](<assets/图1_整体架构_v001.png>)\n\n图1：整体架构｜", body)
+        self.assertIn("【图片占位 图1：整体架构｜", outline.read_text(encoding="utf-8"))
+        self.assertEqual("IMG-01", state.read_json(article / "progress.json")["media"][0]["id"])
+        self.assert_valid()
+
+    def test_revision_removes_registered_figure_and_its_files(self):
+        article = self.root / "article"
+        item = self.progress["media"][0]
+        item["caption"] = {"number": 1, "title": "整体架构", "description": "组件关系。"}
+        self.units["main-01"] = ("## 整体介绍\n\n组件关系见图1。\n\n"
+                                 "![图1：整体架构](assets/IMG-01_整体架构_v001.png)\n\n图1：整体架构｜组件关系。")
+        self.progress["sections"][1]["confirmation"].update(
+            media=[state.proof(item)], content_sha256=state.text_digest(self.units["main-01"]))
+        self.flush()
+        plan = {"mode": "direct", "basis": "删除图1及文件", "media": [{"id": "IMG-01", "remove": True, "delete_files": True}]}
+        with self.assertRaisesRegex(state.StateError, "still mentioned"):
+            workflow.revise(self.root, plan, at=AT, apply=True)
+        plan["body"] = [{"section": "main-01", "before": "组件关系见图1。", "after": "以下是组件关系。"}]
+        workflow.revise(self.root, plan, at=AT, apply=True)
+        self.assertFalse((article / item["file"]).exists())
+        self.assertFalse((article / item["source_files"][0]["file"]).exists())
+        saved = state.read_json(article / "progress.json")["media"][0]
+        self.assertEqual(("IMG-01", "retired"), (saved["id"], saved["status"]))
+        self.assert_valid()
+
+    def test_revision_matches_outline_media_id_and_preserves_short_image_names(self):
+        article = self.root / "article"
+        item = self.progress["media"][0]
+        item["caption"] = {"number": 2, "title": "整体架构", "description": "组件关系。"}
+        for file in [item, *item["source_files"]]:
+            old = article / file["file"]
+            new = old.with_name(f"图2_整体架构{old.suffix}")
+            old.replace(new)
+            file["file"] = new.relative_to(article).as_posix()
+        self.units["main-01"] = ("## 整体介绍\n\n![图2：整体架构](assets/图2_整体架构.png)\n\n"
+                                 "图2：整体架构｜组件关系。")
+        self.progress["sections"][1]["confirmation"].update(
+            media=[state.proof(item)], content_sha256=state.text_digest(self.units["main-01"]))
+        outline = self.root / "outline/outline-v001.md"
+        outline.write_text("# 测试文章\n\n【图片占位 图2：旧标题｜旧说明。】\n", encoding="utf-8")
+        mirror = outline.with_name("outline-working.md")
+        mirror.write_text("# 测试文章\n\n【图片占位 图8：另一标题｜旧说明。】 <!-- media-id: IMG-01 -->\n", encoding="utf-8")
+        self.metadata["outlines"]["v001"]["content_sha256"] = state.digest(outline.read_bytes())
+        self.flush()
+        plan = {"mode": "direct", "basis": "统一编号和图名", "media": [{"id": "IMG-01", "number": 1, "title": "系统架构"}]}
+        preview = workflow.revise(self.root, plan, at=AT)
+        self.assertEqual(["different_title", "different_title"], [entry["status"] for entry in preview["outline_media"]])
+        workflow.revise(self.root, plan, at=AT, apply=True)
+        for ext in (".png", ".svg"):
+            self.assertTrue((article / f"assets/图1_系统架构{ext}").is_file())
+        for path in (outline, mirror):
+            self.assertIn("【图片占位 图1：系统架构｜组件关系。】 <!-- media-id: IMG-01 -->", path.read_text(encoding="utf-8"))
+        self.assert_valid()
+
+    def test_reconcile_reports_diff_and_updates_only_the_reviewed_section(self):
+        article = self.root / "article"
+        self.progress["working_file"] = "v001/article-working.md"
+        (article / "v001").mkdir()
+        old_text = self.units["lead"]
+        self.units["lead"] = "这是用户手动修改后的导语。"
+        old_body = self.units["main-01"]
+        self.units["main-01"] = old_body.replace("(assets/", "(../assets/")
+        self.flush()
+        write_json(article / "v001/.drafts/previous.json", {"working_file": self.progress["working_file"],
+                   "sections": [{"section_id": "lead", "text": old_text}]})
+        original_work = (article / self.progress["working_file"]).read_bytes()
+        preview = workflow.reconcile(self.root, section_id="lead", at=AT)["changed_sections"][0]
+        self.assertTrue(preview["baseline_available"])
+        self.assertIn(f"-{old_text}", preview["diff"])
+        self.assertEqual(["lead", "main-01"], [item["section_id"] for item in workflow.export_article(self.root, "v001")["changed_sections"]])
+        with self.assertRaisesRegex(state.StateError, "preview it again"):
+            workflow.reconcile(self.root, section_id="lead", expected_sha256="0" * 64, basis="采用现稿", at=AT, apply=True)
+        result = workflow.reconcile(self.root, section_id="lead", expected_sha256=preview["current_sha256"],
+                                    basis="采用现稿", at=AT, apply=True)
+        self.assertEqual(["main-01"], result["remaining_sections"])
+        self.assertEqual(original_work, (article / self.progress["working_file"]).read_bytes())
+        saved = state.read_json(article / "progress.json")
+        self.assertEqual(self.progress["sections"][1], saved["sections"][1])
+        self.assertEqual("采用现稿", saved["sections"][0]["confirmation"]["user_message"])
+
+    def test_adopt_media_uses_display_number_and_replaces_without_losing_confirmation(self):
+        item = add_pending_video(self.progress, self.units)
+        item.update(id="VID-08", caption={"number": 6, "title": "任务演示", "description": "待完成。计划演示执行任务。"})
+        self.progress["pending_media"][0]["media_id"] = item["id"]
+        self.units["main-01"] = self.units["main-01"].replace(
+            "【视频占位 VID-01：任务演示；待提供】", state.numbered_placeholder(item))
+        confirmation = self.progress["sections"][1]["confirmation"]
+        confirmation["media"].pop()
+        confirmation["content_sha256"] = state.text_digest(self.units["main-01"])
+        self.flush()
+        source = Path(self.temp.name) / "录屏.mp4"
+        source.write_bytes(b"first recording")
+        options = {"basis": "采用用户指定的视频6录屏", "at": AT}
+        preview = workflow.adopt_media(self.root, "视频6", source, **options)
+        article = self.root / "article"
+        first = article / preview["file"]
+        self.assertTrue(preview["read_only"])
+        self.assertFalse(first.exists())
+        adopted = workflow.adopt_media(self.root, "视频6", source, apply=True, **options)
+        self.assertEqual("VID-08", adopted["media_id"])
+        self.assertEqual("视频6_任务演示_v001.mp4", first.name)
+        progress = state.read_json(article / "progress.json")
+        self.assertEqual([], progress["pending_media"])
+        self.assertEqual(confirmation, progress["sections"][1]["confirmation"])
+        self.assertFalse(workflow.adopt_media(self.root, "视频6", source, apply=True, **options)["changed"])
+
+        outline = self.root / "outline/outline-v001.md"
+        outline.write_text(f"# 测试文章\n\n[录屏](<../article/{adopted['file']}>)\n", encoding="utf-8")
+        self.metadata["outlines"]["v001"]["content_sha256"] = state.digest(outline.read_bytes())
+        write_json(article / "metadata.json", self.metadata)
+        source.write_bytes(b"second recording")
+        replaced = workflow.adopt_media(self.root, "视频6", source, apply=True, **options)
+        second = article / replaced["file"]
+        self.assertEqual("视频6_任务演示_v002.mp4", second.name)
+        self.assertEqual(b"first recording", first.read_bytes())
+        self.assertEqual(source.read_bytes(), second.read_bytes())
+        self.assertIn(second.name, outline.read_text(encoding="utf-8"))
+        body = (article / "article-working.md").read_text(encoding="utf-8")
+        self.assertIn(second.name, body)
+        self.assertNotIn("待完成。计划演示", body)
+        self.assert_valid()
+
+        original = second.with_name("原始录屏.mp4")
+        original.write_bytes(b"third recording")
+        delete_options = {**options, "delete_previous": True, "delete_source": True}
+        preview = workflow.adopt_media(self.root, "视频6", original, **delete_options)
+        third = article / preview["file"]
+        self.assertCountEqual([str(second), str(original)], preview["planned_deletions"])
+        self.assertEqual([], preview["deleted"])
+        self.assertFalse(third.exists())
+
+        with patch("article_revision.shutil.copyfileobj", side_effect=lambda _, output: output.write(b"bad copy")):
+            with self.assertRaisesRegex(state.StateError, "Media digest differs"):
+                workflow.adopt_media(self.root, "视频6", original, apply=True, **delete_options)
+        self.assertTrue(second.exists() and original.exists())
+        self.assertFalse(third.exists())
+
+        result = workflow.adopt_media(self.root, "视频6", original, apply=True, **delete_options)
+        self.assertCountEqual([str(second), str(original)], result["deleted"])
+        self.assertFalse(second.exists() or original.exists())
+        self.assertEqual(b"third recording", third.read_bytes())
+        self.assertTrue(first.exists())
+        self.assertIn(third.name, outline.read_text(encoding="utf-8"))
+        self.assert_valid()
+
+    def test_adopt_media_rejects_deletion_when_another_draft_references_the_previous_file(self):
+        video = add_pending_video(self.progress, self.units)
+        video["caption"] = {"number": 6, "title": "任务演示"}
+        self.flush()
+        source = Path(self.temp.name) / "录屏.mp4"
+        source.write_bytes(b"first recording")
+        options = {"basis": "用户指定视频6", "at": AT, "apply": True}
+        first = workflow.adopt_media(self.root, "视频6", source, **options)
+        article = self.root / "article"
+        other = article / "v002/article-working.md"
+        other.parent.mkdir()
+        other.write_text(f"[其他稿件采用](<../{first['file']}>)\n", encoding="utf-8")
+        before = (article / "article-working.md").read_bytes()
+        source.write_bytes(b"new recording")
+        with self.assertRaisesRegex(state.StateError, "still referenced by .*article-working.md"):
+            workflow.adopt_media(self.root, "视频6", source, delete_previous=True, delete_source=True, **options)
+        self.assertEqual(before, (article / "article-working.md").read_bytes())
+        self.assertTrue((article / first["file"]).exists() and source.exists())
+        self.assert_valid()
+
+    def test_adopt_media_replaces_a_numbered_png(self):
+        item = self.progress["media"][0]
+        item["caption"] = {"number": 1, "title": "整体架构", "description": "架构说明。"}
+        self.units["main-01"] = self.units["main-01"].replace(
+            "![IMG-01 整体架构](assets/IMG-01_整体架构_v001.png)\n\n图 IMG-01：整体架构",
+            "![图1：整体架构](<assets/IMG-01_整体架构_v001.png>)\n\n图1：整体架构｜架构说明。")
+        self.progress["sections"][1]["confirmation"].update(
+            content_sha256=state.text_digest(self.units["main-01"]), media=[state.proof(item)])
+        self.flush()
+        source = Path(self.temp.name) / "新图.png"
+        source.write_bytes(png(b"\x30\x50\x70"))
+        svg = source.with_suffix(".svg")
+        svg.write_text('<svg xmlns="http://www.w3.org/2000/svg"><circle r="1"/></svg>', encoding="utf-8")
+        options = {"svg": svg, "basis": "换图1及配套 SVG", "at": AT, "apply": True}
+        result = workflow.adopt_media(self.root, "图1", source, **options)
+        self.assertEqual("assets/images/图1_整体架构_v002.png", result["file"])
+        self.assertEqual(source.read_bytes(), (self.root / "article" / result["file"]).read_bytes())
+        editable = self.root / "article" / result["source_files"][0]["file"]
+        self.assertEqual(svg.read_bytes(), editable.read_bytes())
+        self.assertEqual(Path(result["file"]).stem, editable.stem)
+        self.assertFalse(workflow.adopt_media(self.root, "图1", source, **options)["changed"])
+        svg.write_text('<svg xmlns="http://www.w3.org/2000/svg"><circle r="2"/></svg>', encoding="utf-8")
+        self.assertEqual("v003", workflow.adopt_media(self.root, "图1", source, **options)["revision"])
+        self.assert_valid()
+
+    def test_adopt_media_reuses_ready_file_when_its_placeholder_is_still_in_the_body(self):
+        item = add_pending_video(self.progress, self.units)
+        article = self.root / "article"
+        source = article / "assets/视频6_任务演示_v001.mp4"
+        source.write_bytes(b"ready recording")
+        item.update(caption={"number": 6, "title": "任务演示"}, revision="v001", status="ready",
+                    file=source.relative_to(article).as_posix(), sha256=state.digest(source.read_bytes()))
+        self.flush()
+        result = workflow.adopt_media(self.root, "视频6", source, basis="采用准备好的视频6", at=AT, apply=True)
+        self.assertEqual(item["file"], result["file"])
+        self.assertEqual("v001", result["revision"])
+        self.assertIn(source.name, (article / "article-working.md").read_text(encoding="utf-8"))
+        self.assert_valid()
+        with self.assertRaisesRegex(state.StateError, "it is the retained media file"):
+            workflow.adopt_media(self.root, "视频6", source, basis="删除原始录屏", at=AT,
+                                 apply=True, delete_source=True)
+        duplicate = Path(self.temp.name) / "原始录屏.mp4"
+        duplicate.write_bytes(source.read_bytes())
+        removed = workflow.adopt_media(self.root, "视频6", duplicate, basis="删除原始录屏", at=AT,
+                                       apply=True, delete_source=True)
+        self.assertEqual([str(duplicate)], removed["deleted"])
+        self.assertTrue(source.exists())
+        self.assertFalse(duplicate.exists())
+
+    def test_finalize_approves_current_draft_and_retries_same_zip_after_draft_cleanup(self):
+        article = self.root / "article"
+        scratch = self.root / ".tmp/outline-review/draft.json"
+        scratch.parent.mkdir(parents=True)
+        scratch.write_text("{}", encoding="utf-8")
+        old_snapshot = article / ".drafts/old-lead.json"
+        old_snapshot.parent.mkdir()
+        write_json(old_snapshot, {"working_file": self.progress["working_file"], "section_id": "lead", "text": self.units["lead"]})
+        self.units["lead"] += " 这是用户编辑过的导语。"
+        self.progress["sections"][1].update(status="awaiting_confirmation", confirmation=None)
+        self.progress["phase"] = "waiting_section"
+        self.flush()
+        zip_path = self.root / "exports" / f"{self.root.name}v001.zip"
+        zip_path.parent.mkdir()
+        zip_path.write_bytes(b"old zip")
+        options = {"basis": "v001 可以完稿了", "at": AT}
+        preview = workflow.finalize_article(self.root, "v001", **options)
+        self.assertEqual(["lead", "main-01"], preview["confirmed_sections"])
+        lead, conclusion = preview["review_sections"]
+        self.assertIn("这是用户编辑过的导语", lead["diff"])
+        self.assertFalse(conclusion["baseline_available"])
+        self.assertEqual(self.units["main-01"], conclusion["current_text"])
+        self.assertEqual(state.text_digest(self.units["main-01"]), conclusion["current_sha256"])
+        self.assertEqual(b"old zip", zip_path.read_bytes())
+        self.assertFalse((article / "article-v001.md").exists())
+
+        result = workflow.finalize_article(self.root, "v001", apply=True, **options)
+        self.assertEqual(str(zip_path), result["export"]["zip"])
+        self.assertTrue(result["export"]["release"])
+        self.assertTrue(scratch.exists())
+        progress = state.read_json(article / "progress.json")
+        self.assertEqual("finalized", progress["phase"])
+        self.assertEqual(options["basis"], progress["completion_basis"]["message"])
+        metadata = (article / "metadata.json").read_bytes()
+        (article / progress["working_file"]).unlink()
+        zip_path.write_bytes(b"stale zip")
+        workflow.finalize_article(self.root, "v001", apply=True, **options)
+        self.assertEqual(metadata, (article / "metadata.json").read_bytes())
+        with ZipFile(zip_path) as package:
+            self.assertIsNone(package.testzip())
+            self.assertEqual((article / "article-v001.md").read_bytes(), package.read("article-v001.md"))
+        self.assert_valid()
+
+    def test_finalize_with_unapproved_placeholder_leaves_archive_and_zip_untouched(self):
+        add_pending_video(self.progress, self.units)
+        self.flush()
+        zip_path = self.root / "exports" / f"{self.root.name}v001.zip"
+        zip_path.parent.mkdir()
+        zip_path.write_bytes(b"old zip")
+        with self.assertRaisesRegex(state.StateError, "final placeholder"):
+            workflow.finalize_article(self.root, "v001", basis="v001 可以完稿了", at=AT, apply=True)
+        self.assertFalse((self.root / "article/article-v001.md").exists())
+        self.assertEqual(b"old zip", zip_path.read_bytes())
+
+    def test_finalize_preserves_existing_zip_on_io_failure_and_can_be_retried(self):
+        zip_path = self.root / "exports" / f"{self.root.name}v001.zip"
+        zip_path.parent.mkdir()
+        zip_path.write_bytes(b"old zip")
+        draft = self.root / "article/.drafts/draft.json"
+        draft.parent.mkdir()
+        draft.write_text("{}", encoding="utf-8")
+        options = {"basis": "v001 可以完稿了", "at": AT, "apply": True, "cleanup": True}
+        with patch("article_lifecycle.export_article", side_effect=PermissionError("ZIP is open")):
+            with self.assertRaisesRegex(state.StateError, "Retry finalize"):
+                workflow.finalize_article(self.root, "v001", **options)
+        self.assertEqual(b"old zip", zip_path.read_bytes())
+        self.assertEqual("finalized", state.read_json(self.root / "article/progress.json")["phase"])
+        self.assertTrue(draft.exists())
+        self.assertTrue((self.root / "article/article-working.md").exists())
+        workflow.finalize_article(self.root, "v001", **options)
+        with ZipFile(zip_path) as package:
+            self.assertIsNone(package.testzip())
+        self.assertFalse(draft.parent.exists())
+        self.assertFalse((self.root / "article/article-working.md").exists())
+        self.assert_valid()
+
+    def test_finalize_cleanup_removes_drafts_and_unused_temp_and_preserves_release_inputs(self):
+        article = self.root / "article"
+        official_outline = self.root / "outline/outline-v001.md"
+        working_outline = official_outline.with_name("outline-working.md")
+        working_outline.write_bytes(official_outline.read_bytes())
+        draft = article / ".drafts/nested/notes.json"
+        draft.parent.mkdir(parents=True)
+        draft.write_text("{}", encoding="utf-8")
+        other_draft = article / "v002/.drafts/notes.json"
+        other_draft.parent.mkdir(parents=True)
+        other_draft.write_text("{}", encoding="utf-8")
+
+        temp = self.root / ".tmp"
+        candidate = temp / "candidates/unselected.png"
+        candidate.parent.mkdir(parents=True)
+        candidate.write_bytes(png())
+        self.progress["candidates"] = [{"file": "../.tmp/candidates/unselected.png",
+                                        "sha256": state.digest(candidate.read_bytes()), "origin": "测试候选"}]
+        generated = temp / "outline-review/review.json"
+        generated.parent.mkdir()
+        generated.write_text("{}", encoding="utf-8")
+        manual = generated.with_name("manual.json")
+        manual.write_text("{}", encoding="utf-8")
+        newer = generated.with_name("next-version.json")
+        newer.write_text("{}", encoding="utf-8")
+        changed = generated.with_name("edited.json")
+        changed.write_text("{}", encoding="utf-8")
+        workflow.register_temporary(self.root, [generated, changed], origin="测试审阅输出", version="v001", apply=True)
+        workflow.register_temporary(self.root, [newer], origin="测试新稿输出", version="v002", apply=True)
+        changed.write_text('{"edited": true}', encoding="utf-8")
+        receipt, _ = workflow.temporary_receipts(self.root)[generated.resolve()]
+        source_record = generated.with_name("evidence.json")
+        source_record.write_text("{}", encoding="utf-8")
+        self.progress["sources"][0].update(kind="document", path=".tmp/outline-review/evidence.json")
+        unknown = temp / "notes.txt"
+        unknown.write_text("not a known temporary output", encoding="utf-8")
+        video = add_pending_video(self.progress, self.units)
+        video["caption"] = {"number": 6, "title": "任务演示"}
+        self.flush()
+        clip = Path(self.temp.name) / "clip.mp4"
+        clip.write_bytes(b"test video")
+        adopted = workflow.adopt_media(self.root, "视频6", clip, basis="采用指定录屏", at=AT, apply=True)
+
+        options = {"basis": "v001 可以完稿了", "at": AT, "cleanup": True}
+        preview = workflow.finalize_article(self.root, "v001", **options)
+        self.assertTrue(preview["cleanup"]["read_only"])
+        self.assertTrue(draft.exists() and candidate.exists())
+        result = workflow.finalize_article(self.root, "v001", apply=True, **options)
+        expected = [working_outline, article / "article-working.md", draft, candidate, generated, receipt]
+        planned = {entry["path"]: entry for entry in preview["cleanup"]["planned_deletions"]}
+        self.assertCountEqual([p.relative_to(self.root).as_posix() for p in expected], planned)
+        self.assertIn("测试审阅输出", planned[generated.relative_to(self.root).as_posix()]["reason"])
+        self.assertCountEqual([p.relative_to(self.root).as_posix() for p in expected], result["cleanup"]["deleted"])
+        self.assertFalse(any(path.exists() for path in expected))
+        self.assertFalse((article / ".drafts").exists())
+        self.assertTrue(official_outline.exists() and other_draft.exists() and source_record.exists() and unknown.exists())
+        self.assertTrue(manual.exists() and newer.exists() and changed.exists())
+        media = self.progress["media"][0]
+        self.assertTrue((article / media["source_files"][0]["file"]).exists())
+        with ZipFile(result["export"]["zip"]) as package:
+            self.assertIsNone(package.testzip())
+            self.assertEqual({"article-v001.md", media["file"], adopted["file"]}, set(package.namelist()))
+        repeated = workflow.finalize_article(self.root, "v001", apply=True, **options)
+        self.assertEqual([], repeated["cleanup"]["deleted"])
+        self.assert_valid()
+
+    def test_review_media_reports_body_caption_and_independent_outline_text(self):
+        item = add_pending_video(self.progress, self.units)
+        item["caption"] = {"number": 6, "title": "任务演示", "description": "面板显示输入用量。"}
+        outline = self.root / "outline/outline-v001.md"
+        outline.write_text("# 测试文章\n\n【视频占位 视频6：任务演示｜旧大纲描述。】\n", encoding="utf-8")
+        self.metadata["outlines"]["v001"]["content_sha256"] = state.digest(outline.read_bytes())
+        self.units["main-01"] = self.units["main-01"].replace("【视频占位 VID-01", "在面板中查看输入用量。\n\n【视频占位 VID-01")
+        self.progress["sections"][1]["confirmation"]["content_sha256"] = state.text_digest(self.units["main-01"])
+        self.flush()
+        clip = Path(self.temp.name) / "test.mp4"
+        clip.write_bytes(b"recording")
+        workflow.adopt_media(self.root, "视频6", clip, basis="采用录屏", at=AT, apply=True)
+        result = workflow.review_media(self.root, "视频6")
+        self.assertIn("在面板中查看输入用量", result["body"][0]["preceding_text"])
+        self.assertIn("面板显示输入用量", result["body"][0]["media_text"])
+        self.assertIn("旧大纲描述", result["outlines"][0]["matches"][0]["media_text"])
+        workflow.finalize_article(self.root, "v001", basis="v001 可以完稿了", at=AT, apply=True, cleanup=True)
+        archived = workflow.review_media(self.root, "视频6", version="v001")
+        self.assertEqual("archived", archived["source_type"])
+        self.assertEqual(result["body"][0]["media_text"], archived["body"][0]["media_text"])
+
+    def test_archive_previews_and_recovers_body_and_version_record(self):
+        article = self.root / "article"
+        preview = workflow.archive_article(self.root, "v001", at=AT)
+        target = Path(preview["body"])
+        self.assertFalse(target.exists())
+        original_replace = os.replace
+        calls = 0
+
+        def interrupted(src, dst):
+            nonlocal calls
+            calls += 1
+            if calls == 2:
+                raise OSError("simulated archive interruption")
+            original_replace(src, dst)
+
+        with patch("article_revision.os.replace", side_effect=interrupted):
+            with self.assertRaisesRegex(OSError, "archive interruption"):
+                workflow.archive_article(self.root, "v001", at=AT, apply=True)
+        self.assertFalse(target.exists())
+        self.assertTrue((article / "transaction.json").is_file())
+        workflow.recover(self.root, apply=True)
+        self.assertTrue(target.is_file())
+        self.assertEqual("archived", state.read_json(article / "progress.json")["phase"])
+        self.assert_valid()
+        self.assertTrue(workflow.export_article(self.root, "v001", release=True)["release"])
+        preview_html = article / "mobile.html"
+        result = workflow.mobile_preview(target, target.read_text(encoding="utf-8"), preview_html, apply=True)
+        self.assertEqual(430, result["width_px"])
+        rendered = preview_html.read_text(encoding="utf-8")
+        self.assertIn('<base href="' + article.as_uri() + '/">', rendered)
+        self.assertIn('<h1>测试文章</h1>', rendered)
+
+    def test_format_review_detects_rendering_and_skips_fenced_examples(self):
+        settings = workflow.preferences(self.root, "openjiuwen")
+        text = ("# 标题\n\n**这里的句号。**后文。\n\n"
+                "![图2：结构](a.png)\n\n图2：结构\n\n"
+                "[视频1：示例](a.mp4)\n\n使用 /extension install。\n\n"
+                "```text\n【视频占位 视频2：示例】\n```\n\n【视频占位 视频3：示例】\n")
+        issues = workflow.review_markdown(text, settings)
+        self.assertEqual({"literal-bold", "image-description", "video-caption", "inline-command",
+                          "media-number", "media-placeholder"}, {item["code"] for item in issues})
+        self.assertEqual([17], [item["line"] for item in issues if item["code"] == "media-placeholder"])
+
+    def test_release_export_checks_archived_placeholder_approval(self):
+        add_pending_video(self.progress, self.units)
+        version = archive(self.root, self.metadata, self.progress, self.units)
+        draft = workflow.export_article(self.root, version)
+        self.assertEqual(["VID-01"], [item["id"] for item in draft["placeholders"]])
+        with self.assertRaisesRegex(state.StateError, "final placeholder"):
+            workflow.export_article(self.root, version, release=True, apply=True)
+        self.metadata["articles"][version]["pending_media"][0]["allow_in_final"] = True
+        self.flush()
+        self.assertTrue(workflow.export_article(self.root, version, release=True, apply=True)["release"])
+
     def test_cli_check_is_read_only(self):
         before = {p: state.digest(p.read_bytes()) for p in self.root.rglob("*") if p.is_file()}
         result = subprocess.run([sys.executable, "-B", str(SCRIPTS / "article_workflow.py"), "check", str(self.root)], capture_output=True, text=True, encoding="utf-8")
@@ -461,6 +1080,45 @@ class ArticleTests(unittest.TestCase):
         self.assertEqual(previous, (self.root / "article/article-working.md").read_bytes())
         workflow.save_work(self.root, work, progress, apply=True)
         self.assertFalse((self.root / "article/transaction.json").exists())
+        self.assert_valid()
+
+    def test_version_directory_supports_work_archive_and_asset_cleanup(self):
+        article = self.root / "article"
+        assets = article / "v001/assets"
+        assets.mkdir(parents=True)
+        outline = article / "v001/outline-v001.md"
+        (self.root / "outline/outline-v001.md").replace(outline)
+        outline.with_name("outline-working.md").write_bytes(outline.read_bytes())
+        self.metadata["outlines"]["v001"]["file"] = "v001/outline-v001.md"
+        for media in self.progress["media"]:
+            for item in [media, *media["source_files"]]:
+                path = item["file"]
+                (article / path).replace(article / "v001" / path)
+                item["file"] = "v001/" + path
+        for section in self.progress["sections"]:
+            section["confirmation"]["media"] = [state.proof(media) for media in self.progress["media"]
+                                                 if section["section_id"] in media["section_ids"]]
+        self.progress["working_file"] = "v001/article-working.md"
+        write_json(article / "metadata.json", self.metadata)
+        write_json(article / "progress.json", self.progress)
+        work = article / "article-working.md"
+        workflow.save_work(self.root, work, article / "progress.json", apply=True)
+        self.assertEqual(work.read_text(encoding="utf-8"),
+                         (article / self.progress["working_file"]).read_text(encoding="utf-8"))
+        self.assert_valid()
+
+        archive(self.root, self.metadata, self.progress, self.units)
+        self.assertEqual("v001/article-v001.md", self.metadata["articles"]["v001"]["file"])
+        self.assert_valid()
+        result = workflow.export_article(self.root, "v001", apply=True)
+        with ZipFile(result["zip"]) as package:
+            self.assertEqual({"v001/article-v001.md", "v001/assets/IMG-01_整体架构_v001.png"}, set(package.namelist()))
+        unused = assets / "unused.png"
+        unused.write_bytes(png())
+        result = workflow.stage_unused(self.root, apply=True)
+        self.assertEqual(1, len(result["moved"]))
+        self.assertTrue(result["moved"][0].endswith("/v001/assets/unused.png"))
+        self.assertFalse(unused.exists())
         self.assert_valid()
 
     def test_reworking_first_chapter_does_not_force_unchanged_later_chapter_confirmation(self):
@@ -644,6 +1302,19 @@ class ArticleTests(unittest.TestCase):
         archive(self.root, self.metadata, self.progress, self.units)
         self.progress["media"][1]["role"] = "publishing"
         self.flush()
+        self.assert_invalid("media inventory differs")
+
+    def test_finalized_article_can_be_validated_after_working_draft_cleanup(self):
+        version = archive(self.root, self.metadata, self.progress, self.units)
+        self.progress.update(phase="finalized", finalized_article_version=version,
+                             completion_basis=evidence("测试：该版本正式完稿"))
+        self.flush()
+        article = self.root / "article"
+        (article / self.progress["working_file"]).unlink()
+        self.assert_valid()
+
+        self.progress["media"][1]["role"] = "publishing"
+        write_json(article / "progress.json", self.progress)
         self.assert_invalid("media inventory differs")
 
     def test_recovery_rejects_inconsistent_candidate_before_any_replacement(self):
