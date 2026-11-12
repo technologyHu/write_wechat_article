@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1228.8" viewBox="0 0 2048 1228.8" role="img" aria-describedby="desc">
+  <desc id="desc">两边都从各自的包目录按顺序加载代码入口。网关沿用清单中的入口列表。AgentServer 按包内依赖排好入口列表，连同包目录放进加载计划。两侧各自登记处理函数、分发业务事件和调用 Ops，Web Client 接收界面数据并显示扩展界面。</desc>
+  <metadata>视觉参考：JiuwenSwarm架构扩展方案(3).pptx 第5页。实现：jiuwenswarm 06f70e487e2d478febd621e1b5970a06d4c5c920、agent-core d4c02c6c52dda8e027af1a08295c5db7f4297fe4。</metadata>
+  <style>
+    text { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111827; }
+    .section { font-size: 27px; font-weight: 700; }
+    .head { font-size: 24px; font-weight: 700; }
+    .detail { font-size: 19px; fill: #495c75; }
+    .small { font-size: 18px; fill: #334155; }
+    .data-title { font-size: 21px; font-weight: 700; fill: #0f3d5e; }
+    .data-tag { font-size: 16px; font-weight: 700; fill: #fff; }
+    .blue-label { font-size: 17px; font-weight: 700; fill: #1d4ed8; }
+    .call-label { font-size: 17px; font-weight: 700; fill: #9a3412; }
+    .pill { font-size: 18px; font-weight: 700; }
+    .arrow { fill: none; stroke-width: 2.7px; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1e293b" flood-opacity=".09"/>
+    </filter>
+    <marker id="data" viewBox="0 0 16 12" markerWidth="16" markerHeight="12" markerUnits="userSpaceOnUse" refX="15.8" refY="6" orient="auto">
+      <path d="M0 0L16 6L0 12Z" fill="#2563eb"/>
+    </marker>
+    <marker id="call" viewBox="0 0 16 12" markerWidth="16" markerHeight="12" markerUnits="userSpaceOnUse" refX="15.8" refY="6" orient="auto">
+      <path d="M0 0L16 6L0 12Z" fill="#ea580c"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="2048" height="1228.8" rx="0" fill="#fff" stroke="none" stroke-width="1.6"/>
+  <rect x="40" y="42" width="407" height="1071" rx="22" fill="#f8fbff" stroke="#93c5fd" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="63" y="64" width="230" height="51" rx="26" fill="#dbeafe" stroke="none" stroke-width="1.6"/>
+  <text x="83" y="99" class="section" text-anchor="start">① 扩展包管理</text>
+  <rect x="497" y="42" width="394" height="1071" rx="22" fill="#fffaf5" stroke="#fdba74" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="520" y="64" width="268" height="51" rx="26" fill="#ffedd5" stroke="none" stroke-width="1.6"/>
+  <text x="540" y="99" class="section" text-anchor="start">② 确定版本和顺序</text>
+  <rect x="949" y="42" width="660" height="1071" rx="22" fill="#f8fffb" stroke="#86efac" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="972" y="64" width="268" height="51" rx="26" fill="#dcfce7" stroke="none" stroke-width="1.6"/>
+  <text x="992" y="99" class="section" text-anchor="start">③ 加载并运行扩展</text>
+  <rect x="1663" y="42" width="345" height="1071" rx="22" fill="#fbf8ff" stroke="#c4b5fd" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="1686" y="64" width="230" height="51" rx="26" fill="#ede9fe" stroke="none" stroke-width="1.6"/>
+  <text x="1706" y="99" class="section" text-anchor="start">④ 组件与界面</text>
+  <rect x="68" y="153" width="351" height="448" rx="18" fill="#fff" stroke="#2563eb" stroke-width="2.6" filter="url(#shadow)"/>
+  <text x="243.5" y="192" class="head" text-anchor="middle">安装扩展包</text>
+  <text x="243.5" y="223" class="detail" text-anchor="middle">读取并检查扩展包后保存</text>
+  <rect x="90" y="251" width="307" height="79" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.65"/>
+  <text x="243.5" y="286" class="head" text-anchor="middle">读取包清单</text>
+  <text x="243.5" y="312" class="detail" text-anchor="middle">从 manifest.json 获取包信息</text>
+  <path d="M243.5 330V371" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <rect x="90" y="371" width="307" height="79" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.65"/>
+  <text x="243.5" y="406" class="head" text-anchor="middle">检查扩展包</text>
+  <text x="243.5" y="432" class="detail" text-anchor="middle">核对运行组件、入口和版本</text>
+  <path d="M243.5 450V491" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <rect x="90" y="491" width="307" height="79" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.65"/>
+  <text x="243.5" y="526" class="head" text-anchor="middle">保存扩展包</text>
+  <text x="243.5" y="552" class="detail" text-anchor="middle">按包 ID 和版本分别存放</text>
+  <path d="M68 686H395L419 710V1048H68Z" fill="#f0fdfa" stroke="#0f766e" stroke-width="2.1"/>
+  <path d="M395 686V710H419" fill="none" stroke="#0f766e" stroke-width="2.1"/>
+  <rect x="86" y="706" width="64" height="29" rx="15" fill="#0f766e" stroke="none" stroke-width="1.6"/>
+  <text x="118" y="727" class="data-tag" text-anchor="middle">数据</text>
+  <text x="162" y="728" class="data-title" text-anchor="start">已安装的扩展包</text>
+  <path d="M243.5 601V686" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <rect x="258" y="628" width="110" height="28" rx="5" fill="#fff" stroke="none" stroke-width="1.6"/>
+  <text x="267" y="648" class="blue-label" text-anchor="start">存入目录</text>
+  <rect x="91" y="766" width="144" height="50" rx="11" fill="#fff" stroke="#99f6e4" stroke-width="1.3"/>
+  <text x="163" y="798" class="small" text-anchor="middle">包 ID</text>
+  <rect x="252" y="766" width="144" height="50" rx="11" fill="#fff" stroke="#99f6e4" stroke-width="1.3"/>
+  <text x="324" y="798" class="small" text-anchor="middle">版本</text>
+  <rect x="91" y="838" width="144" height="50" rx="11" fill="#fff" stroke="#99f6e4" stroke-width="1.3"/>
+  <text x="163" y="870" class="small" text-anchor="middle">由哪个组件运行</text>
+  <rect x="252" y="838" width="144" height="50" rx="11" fill="#fff" stroke="#99f6e4" stroke-width="1.3"/>
+  <text x="324" y="870" class="small" text-anchor="middle">代码入口</text>
+  <rect x="91" y="910" width="144" height="50" rx="11" fill="#fff" stroke="#99f6e4" stroke-width="1.3"/>
+  <text x="163" y="942" class="small" text-anchor="middle">依赖项</text>
+  <rect x="252" y="910" width="144" height="50" rx="11" fill="#fff" stroke="#99f6e4" stroke-width="1.3"/>
+  <text x="324" y="942" class="small" text-anchor="middle">可选界面位置</text>
+  <text x="243.5" y="1013" class="detail" text-anchor="middle">目录中保留清单和代码</text>
+  <rect x="525" y="153" width="338" height="448" rx="18" fill="#fff" stroke="#ea580c" stroke-width="2.6" filter="url(#shadow)"/>
+  <text x="694" y="192" class="head" text-anchor="middle">启动时读取安装目录</text>
+  <text x="694" y="223" class="small" text-anchor="middle">网关和 AgentServer 各自选择版本</text>
+  <rect x="548" y="257" width="292" height="113" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.65"/>
+  <text x="694.0" y="293" class="head" text-anchor="middle">网关</text>
+  <text x="694.0" y="320" class="detail" text-anchor="middle">每个包取已安装的最高版本</text>
+  <text x="694.0" y="347" class="detail" text-anchor="middle">只选择由网关运行的包</text>
+  <rect x="548" y="426" width="292" height="128" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.65"/>
+  <text x="694.0" y="464" class="head" text-anchor="middle">AgentServer</text>
+  <text x="694.0" y="489" class="detail" text-anchor="middle">选择版本时参考安装记录</text>
+  <text x="694.0" y="514" class="detail" text-anchor="middle">按包之间的依赖安排加载顺序</text>
+  <text x="694.0" y="539" class="detail" text-anchor="middle">按包内依赖排好代码入口</text>
+  <path d="M419 863H472V313H548" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <path d="M472 490H548" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <circle cx="472" cy="490" r="3.2" fill="#2563eb"/>
+  <path d="M525 686H839L863 710V1048H525Z" fill="#f0fdfa" stroke="#0f766e" stroke-width="2.1"/>
+  <path d="M839 686V710H863" fill="none" stroke="#0f766e" stroke-width="2.1"/>
+  <rect x="543" y="706" width="64" height="29" rx="15" fill="#0f766e" stroke="none" stroke-width="1.6"/>
+  <text x="575" y="727" class="data-tag" text-anchor="middle">数据</text>
+  <text x="619" y="728" class="data-title" text-anchor="start">加载所需信息</text>
+  <path d="M694 601V686" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <rect x="709" y="628" width="125" height="28" rx="5" fill="#fff" stroke="none" stroke-width="1.6"/>
+  <text x="718" y="648" class="blue-label" text-anchor="start">确定加载内容</text>
+  <text x="694" y="763" class="detail" text-anchor="middle">两边都用包目录和代码入口列表</text>
+  <rect x="548" y="781" width="292" height="104" rx="14" fill="#fff" stroke="#99f6e4" stroke-width="1.65"/>
+  <text x="694.0" y="812" class="data-title" text-anchor="middle">网关</text>
+  <text x="694.0" y="839" class="detail" text-anchor="middle">从包清单读取入口列表</text>
+  <text x="694.0" y="865" class="detail" text-anchor="middle">沿用清单里的顺序</text>
+  <rect x="548" y="907" width="292" height="104" rx="14" fill="#fff" stroke="#99f6e4" stroke-width="1.65"/>
+  <text x="694.0" y="938" class="data-title" text-anchor="middle">AgentServer</text>
+  <text x="694.0" y="965" class="detail" text-anchor="middle">按依赖排好入口列表</text>
+  <text x="694.0" y="991" class="detail" text-anchor="middle">连同包目录放进加载计划</text>
+  <rect x="977" y="153" width="604" height="895" rx="18" fill="#fff" stroke="#16a34a" stroke-width="2.6" filter="url(#shadow)"/>
+  <text x="1279" y="192" class="head" text-anchor="middle">网关与 AgentServer</text>
+  <text x="1279" y="223" class="detail" text-anchor="middle">各自加载扩展，再登记处理函数</text>
+  <rect x="1001" y="247" width="556" height="159" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="1.7"/>
+  <text x="1279" y="277" class="head" text-anchor="middle">加载扩展代码</text>
+  <text x="1279" y="304" class="detail" text-anchor="middle">从各自的包目录依次加载代码入口</text>
+  <rect x="1023" y="319" width="512" height="32" rx="9" fill="#fff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="1279" y="342" class="data-title" text-anchor="middle">网关</text>
+  <rect x="1023" y="362" width="512" height="32" rx="9" fill="#fff" stroke="#bbf7d0" stroke-width="1.2"/>
+  <text x="1279" y="385" class="data-title" text-anchor="middle">AgentServer</text>
+  <path d="M840 833H905V335H1023" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <path d="M840 959H932V378H1023" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <path d="M1279 406V474" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <rect x="1294" y="424" width="110" height="28" rx="5" fill="#fff" stroke="none" stroke-width="1.6"/>
+  <text x="1303" y="444" class="call-label" text-anchor="start">扩展代码</text>
+  <rect x="1001" y="474" width="556" height="282" rx="16" fill="#ecfdf5" stroke="#22c55e" stroke-width="2.1"/>
+  <text x="1279" y="514" class="head" text-anchor="middle">登记处理函数</text>
+  <text x="1279" y="546" class="detail" text-anchor="middle">网关和 AgentServer 各用自己的事件总线</text>
+  <rect x="1024" y="575" width="228" height="143" rx="14" fill="#fff" stroke="#4ade80" stroke-width="1.65"/>
+  <text x="1138.0" y="614" class="head" text-anchor="middle">收集处理函数</text>
+  <text x="1138.0" y="641" class="detail" text-anchor="middle">创建扩展实例</text>
+  <text x="1138.0" y="666" class="detail" text-anchor="middle">读取扩展要响应的事件</text>
+  <text x="1138.0" y="691" class="detail" text-anchor="middle">收集匹配条件和函数</text>
+  <rect x="1306" y="575" width="228" height="143" rx="14" fill="#fff" stroke="#4ade80" stroke-width="1.65"/>
+  <text x="1420.0" y="614" class="head" text-anchor="middle">按扩展包登记</text>
+  <text x="1420.0" y="643" class="detail" text-anchor="middle">交给对应的事件总线</text>
+  <text x="1420.0" y="672" class="detail" text-anchor="middle">失败时撤回本次登记</text>
+  <path d="M1252 646.5H1306" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <path d="M1279 756V828" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <rect x="1001" y="828" width="556" height="182" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="1.65"/>
+  <text x="1279.0" y="869" class="head" text-anchor="middle">各自响应业务事件</text>
+  <text x="1279.0" y="900" class="detail" text-anchor="middle">组件发出事件，各自的总线调用匹配的处理函数</text>
+  <text x="1279.0" y="931" class="detail" text-anchor="middle">处理函数可参与当前流程，也能通过 Ops 调用组件能力</text>
+  <text x="1279.0" y="962" class="detail" text-anchor="middle">需要更新界面时，可向 Web Client 发送界面数据</text>
+  <rect x="1691" y="153" width="263" height="177" rx="14" fill="#faf5ff" stroke="#a855f7" stroke-width="2.05"/>
+  <text x="1822.5" y="216" class="head" text-anchor="middle">Web Client</text>
+  <text x="1822.5" y="248" class="detail" text-anchor="middle">在预留位置显示扩展界面</text>
+  <text x="1822.5" y="280" class="detail" text-anchor="middle">把点击等操作传回组件</text>
+  <rect x="1691" y="389" width="263" height="200" rx="14" fill="#fff7ed" stroke="#f97316" stroke-width="2.05"/>
+  <text x="1822.5" y="464" class="head" text-anchor="middle">Gateway 网关</text>
+  <text x="1822.5" y="496" class="detail" text-anchor="middle">处理请求的放行与转发</text>
+  <text x="1822.5" y="528" class="detail" text-anchor="middle">支持扩展应用入口界面</text>
+  <rect x="1691" y="648" width="263" height="170" rx="14" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.05"/>
+  <text x="1822.5" y="695" class="head" text-anchor="middle">AgentServer</text>
+  <text x="1822.5" y="727" class="detail" text-anchor="middle">管理会话、触发业务事件</text>
+  <rect x="1726" y="752" width="193" height="39" rx="20" fill="#dcfce7" stroke="#4ade80" stroke-width="1.2"/>
+  <text x="1822.5" y="778" class="pill" text-anchor="middle">多个会话</text>
+  <rect x="1691" y="877" width="263" height="171" rx="14" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2.05"/>
+  <text x="1822.5" y="936" class="head" text-anchor="middle">Swarm / Agent</text>
+  <text x="1822.5" y="967" class="detail" text-anchor="middle">使用 AgentServer 的总线</text>
+  <text x="1822.5" y="998" class="detail" text-anchor="middle">发出执行与协作事件</text>
+  <path d="M1691 489H1637V900H1557" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <path d="M1691 733H1652V942H1557" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <path d="M1557 854H1619V241.5H1691" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <path d="M1954 733H1980V962.5H1954" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <path d="M794 1170H858" class="arrow" stroke="#2563eb" marker-end="url(#data)"/>
+  <text x="876" y="1176" class="detail" text-anchor="start">数据传递</text>
+  <path d="M1074 1170H1138" class="arrow" stroke="#ea580c" marker-end="url(#call)"/>
+  <text x="1156" y="1176" class="detail" text-anchor="start">执行步骤与事件触发</text>
+</svg>

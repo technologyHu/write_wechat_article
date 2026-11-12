@@ -1,0 +1,1260 @@
+{
+  "schema_version": 3,
+  "session_id": "jiuwenswarm-ext-article-v001",
+  "is_active": false,
+  "phase": "finalized",
+  "outline_version": "v001",
+  "based_on_article_version": null,
+  "archived_article_version": "v001",
+  "finalized_article_version": "v001",
+  "completion_basis": {
+    "kind": "user",
+    "message": "V001版本可以完稿了",
+    "at": "2026-11-11T11:16:11+08:00"
+  },
+  "working_file": "v001/article-working.md",
+  "sections": [
+    {
+      "section_id": "lead",
+      "title": "正文导语",
+      "status": "confirmed",
+      "draft_ref": "正文导语第 3 轮（品牌名称同步）（导语定义更新）（导语衔接优化）（WorkSwarm 定位措辞更新）（导语场景调整）（导语开场及产品称呼润色）（导语运行环境衔接调整）（术语简化）（导语 WorkSwarm 衔接调整）（导语整体润色）",
+      "source_refs": [
+        "extension-guide",
+        "swarm-plugin-detail",
+        "core-extension-registry",
+        "swarm-harness"
+      ],
+      "confirmation": {
+        "draft_ref": "正文导语第 3 轮（品牌名称同步）（导语定义更新）（导语衔接优化）（WorkSwarm 定位措辞更新）（导语场景调整）（导语开场及产品称呼润色）（导语运行环境衔接调整）（术语简化）（导语 WorkSwarm 衔接调整）（导语整体润色）",
+        "confirmed_at": "2026-11-10T19:02:42+08:00",
+        "user_message": "导语就用这版。",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "11af2cf74b16a92264f4c4eb4e5e68a62846ad90da0305e32e10c957d19a6441",
+        "media": []
+      },
+      "media_updates": [],
+      "inheritance": null,
+      "outline_revalidation": {
+        "outline_version": "v001",
+        "checked_at": "2026-11-10T05:07:11+08:00",
+        "note": "原确认所用大纲已按用户要求并入 v001。章节正文及原确认内容不变。"
+      }
+    },
+    {
+      "section_id": "main-01",
+      "title": "从 WorkSwarm 把自己变成桌宠说起，看看 RSI 原生 AgentOS 怎么让 Agent 给自己加功能",
+      "status": "confirmed",
+      "draft_ref": "第一节第 6 轮（系统插件术语同步）（品牌名称同步）（第一节标题更新）",
+      "source_refs": [
+        "desktop-pet-demo",
+        "extension-guide",
+        "swarm-plugin-detail",
+        "core-extension-registry"
+      ],
+      "confirmation": {
+        "draft_ref": "第一节第 6 轮（系统插件术语同步）（品牌名称同步）（第一节标题更新）",
+        "confirmed_at": "2026-11-10T19:12:01+08:00",
+        "user_message": "第一节确认，继续写第二节。用第一节移出的那段话作为开头衔接，写完直接在对话里给我确认。\n全文涉及到插件的地方都要叫系统插件，你不要只叫插件\n所有的“JiuwenSwarm”都改成“WorkSwarm”\n“从 WorkSwarm 把自己变成桌宠说起，看看 RSI 原生 AgentOS 怎么让 Agent 给自己加功能”，用这个",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "46911e557267e525e331cdbc600356c24ef86c6f52ee0ae29a2786ada523ebaf",
+        "media": [
+          {
+            "id": "VID-01",
+            "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4",
+            "url": null,
+            "sha256": "b16eb40b6feed4546fa27863493656111ec88e2a55fff0cf87e13fbb8dff92b7",
+            "source_files": [],
+            "caption": {
+              "number": 1,
+              "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+              "description": "启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。"
+            }
+          }
+        ]
+      },
+      "media_updates": [
+        {
+          "kind": "caption",
+          "before_sha256": "46911e557267e525e331cdbc600356c24ef86c6f52ee0ae29a2786ada523ebaf",
+          "after_sha256": "914ce4f23f3c1358a154dd4ba1fbe8e02d9202696c923158253730b38fa0fba8",
+          "media": {
+            "id": "VID-01",
+            "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4",
+            "url": null,
+            "sha256": "b16eb40b6feed4546fa27863493656111ec88e2a55fff0cf87e13fbb8dff92b7",
+            "source_files": [],
+            "caption": {
+              "number": 1,
+              "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+              "description": "启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。"
+            }
+          },
+          "basis": {
+            "kind": "user",
+            "message": "为什么不和标题放在一起？",
+            "at": "2026-11-10T19:55:44+08:00"
+          },
+          "replacements": [
+            {
+              "before": "[视频1：一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换](<assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4>)\n\n启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。",
+              "after": "[视频1：一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换](<assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4>)｜启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。",
+              "after_start": 408
+            }
+          ]
+        },
+        {
+          "kind": "caption",
+          "before_sha256": "914ce4f23f3c1358a154dd4ba1fbe8e02d9202696c923158253730b38fa0fba8",
+          "after_sha256": "6e7440fac2fcc8909feae42015e2d20d0c58dfd9d9bddfd97134b56207a6f37a",
+          "media": {
+            "id": "VID-01",
+            "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4",
+            "url": null,
+            "sha256": "b16eb40b6feed4546fa27863493656111ec88e2a55fff0cf87e13fbb8dff92b7",
+            "source_files": [],
+            "caption": {
+              "number": 1,
+              "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+              "description": "启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。"
+            }
+          },
+          "basis": {
+            "kind": "user",
+            "message": "把链接放在媒体描述后面，把编号、标题和描述放在一起",
+            "at": "2026-11-10T19:59:02+08:00"
+          },
+          "replacements": [
+            {
+              "before": "[视频1：一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换](<assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4>)｜启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。",
+              "after": "视频1：一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换｜启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。\n\n[观看视频](<assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4>)",
+              "after_start": 408
+            }
+          ]
+        },
+        {
+          "kind": "caption",
+          "before_sha256": "6e7440fac2fcc8909feae42015e2d20d0c58dfd9d9bddfd97134b56207a6f37a",
+          "after_sha256": "ab94a8a137c80f723e92ca81d49086cb7f4fed9536e01429b5014ae84421ba0b",
+          "media": {
+            "id": "VID-01",
+            "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4",
+            "url": null,
+            "sha256": "b16eb40b6feed4546fa27863493656111ec88e2a55fff0cf87e13fbb8dff92b7",
+            "source_files": [],
+            "caption": {
+              "number": 1,
+              "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+              "description": "启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。"
+            }
+          },
+          "basis": {
+            "kind": "user",
+            "message": "不要增加观察视频且放到下一行，我的意思是编号、标题和描述本身就是链接的文字说明",
+            "at": "2026-11-10T20:01:24+08:00"
+          },
+          "replacements": [
+            {
+              "before": "视频1：一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换｜启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。\n\n[观看视频](<assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4>)",
+              "after": "[视频1：一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换｜启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。](<assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4>)",
+              "after_start": 408
+            }
+          ]
+        },
+        {
+          "kind": "adopt",
+          "before_sha256": "ab94a8a137c80f723e92ca81d49086cb7f4fed9536e01429b5014ae84421ba0b",
+          "after_sha256": "8b373e239a06c4f76da35918f0b100edc1288c75cbb0f8e4e4cc83543d567b28",
+          "media": {
+            "id": "VID-01",
+            "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+            "revision": "v002",
+            "file": "v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v002.mp4",
+            "url": null,
+            "sha256": "2dc960de0ec792327364a975ad05f7f90ca25f2063d0eb9f1df5e0d94150604b",
+            "source_files": [],
+            "caption": {
+              "number": 1,
+              "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+              "description": "启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。"
+            }
+          },
+          "basis": {
+            "kind": "user",
+            "message": "“D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\article-working.md”中的视频1用\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\20261110-210043.mp4\"替换",
+            "at": "2026-11-10T21:07:45+08:00"
+          },
+          "replacements": [
+            {
+              "before": "assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v001.mp4",
+              "after": "assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v002.mp4",
+              "after_start": 501
+            }
+          ]
+        }
+      ],
+      "inheritance": null,
+      "outline_revalidation": {
+        "outline_version": "v001",
+        "checked_at": "2026-11-10T05:07:11+08:00",
+        "note": "原确认所用大纲已按用户要求并入 v001。章节正文及原确认内容不变。"
+      }
+    },
+    {
+      "section_id": "main-02",
+      "title": "拆解 openJiuwen RSI 原生 AgentOS：扩展包怎样改变界面、网关、服务端与 Agent 行为？",
+      "status": "confirmed",
+      "draft_ref": "第二节第 14 轮（图2标题定向更新）（系统插件术语同步）（品牌名称同步）（第二节标题更新）（术语简化）（统一扩展包与系统插件用语）（删除图1）（整体架构、扩展能力及扩展包生效原理）（取消子章节）（图注下置及图片重新编号）（简化图片描述）（调整扩展事件归属表述）（更新扩展开发文档链接）（格式优化）（采用手动修订）",
+      "source_refs": [
+        "extension-overview",
+        "extension-runtime",
+        "extension-event-bus",
+        "agent-prompt-ops",
+        "agent-prompt-trigger",
+        "team-extension-events",
+        "team-readonly-ops",
+        "swarm-extension-bootstrap",
+        "gateway-extension-runtime",
+        "gateway-http-ops",
+        "extension-quick-reference-sample",
+        "extension-ops-guide"
+      ],
+      "confirmation": {
+        "draft_ref": "第二节第 14 轮（图2标题定向更新）（系统插件术语同步）（品牌名称同步）（第二节标题更新）（术语简化）（统一扩展包与系统插件用语）（删除图1）（整体架构、扩展能力及扩展包生效原理）（取消子章节）（图注下置及图片重新编号）（简化图片描述）（调整扩展事件归属表述）（更新扩展开发文档链接）（格式优化）（采用手动修订）",
+        "confirmed_at": "2026-11-11T03:15:41.729320+00:00",
+        "user_message": "V001版本可以完稿了",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "be048eeb3476d92de30a2bcf5851de795f18b789021f38423cf3cabb0379cf6d",
+        "media": [
+          {
+            "id": "IMG-03",
+            "title": "openJiuwen RSI 原生 AgentOS 架构图",
+            "revision": "v001",
+            "file": "v001/assets/images/图1_openJiuwen RSI 原生 AgentOS 架构图.png",
+            "url": null,
+            "sha256": "4bcb0f5c0457f04b718b9e476fe3b3e744a95552c050d18395c24f9ee265d46e",
+            "source_files": [
+              {
+                "file": "v001/assets/images/图1_openJiuwen RSI 原生 AgentOS 架构图.svg",
+                "sha256": "258c83d1fb876b7d7e84d8a790ebf0eed63a9e1e0a213987aaaec3800d16e0d8"
+              }
+            ],
+            "caption": {
+              "number": 1,
+              "title": "openJiuwen RSI 原生 AgentOS 架构图",
+              "description": "Web 客户端、Gateway 和 Agent 层的职责、连接关系及各自的扩展入口。"
+            }
+          },
+          {
+            "id": "IMG-04",
+            "title": "openJiuwen RSI 原生 AgentOS 扩展能力一览",
+            "revision": "v001",
+            "file": "v001/assets/images/图2_openJiuwen RSI 原生 AgentOS 扩展能力一览.png",
+            "url": null,
+            "sha256": "d5930ebbbe7d5f67808125b6ac2ae73aa3c0e1e170ebb2da940705566767bb4e",
+            "source_files": [
+              {
+                "file": "v001/assets/images/图2_openJiuwen RSI 原生 AgentOS 扩展能力一览.svg",
+                "sha256": "5805e6fb0921a757eb9509bf5f5fbb68754073d8ca747adf00fe427e3ba4a7b3"
+              }
+            ],
+            "caption": {
+              "number": 2,
+              "title": "openJiuwen RSI 原生 AgentOS 扩展能力一览",
+              "description": "左侧是扩展包目录与清单，右侧是 Client、Gateway、AgentServer、Swarm 和 Agent 五个环节的扩展能力。"
+            }
+          },
+          {
+            "id": "IMG-05",
+            "title": "openJiuwen RSI 原生 AgentOS 扩展包生效原理",
+            "revision": "v001",
+            "file": "v001/assets/images/图3_openJiuwen RSI 原生 AgentOS 扩展包生效原理.png",
+            "url": null,
+            "sha256": "c7d9a62d07575c62bfe4736ea5b6a7e8aabede8c514f07ed3c1f795ee60c1ba9",
+            "source_files": [
+              {
+                "file": "v001/assets/images/图3_openJiuwen RSI 原生 AgentOS 扩展包生效原理.svg",
+                "sha256": "739eeb1ffb2f1931a3eb99e558d866fed6e209f3a25ad0b9803461a876e4bbd7"
+              }
+            ],
+            "caption": {
+              "number": 3,
+              "title": "openJiuwen RSI 原生 AgentOS 扩展包生效原理",
+              "description": "扩展包从安装、选择版本到加载代码、注册处理函数，再到响应事件和按需更新界面的流程。"
+            }
+          },
+          {
+            "id": "IMG-02",
+            "title": "扩展事件与 Ops 能力速查表",
+            "revision": "v015",
+            "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.png",
+            "url": null,
+            "sha256": "643560348baf78709e42ce9fac14513726e802c1e588684b82c08e75dd002597",
+            "source_files": [
+              {
+                "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.svg",
+                "sha256": "efffbecc164916f2418511365ed86cee79d4d46ff7c258a44d16e07890feb7e3"
+              }
+            ],
+            "caption": {
+              "number": 4,
+              "title": "扩展事件与 Operator 能力速查表",
+              "description": "左侧是各类扩展事件，右侧是处理函数可调用的 Ops。表中区分已支持和规划中的条目。"
+            }
+          }
+        ]
+      },
+      "media_updates": [],
+      "inheritance": null
+    },
+    {
+      "section_id": "main-03",
+      "title": "WorkSwarm 系统插件实战：从创建、安装到故障回退",
+      "status": "confirmed",
+      "draft_ref": "第三节第 15 轮（系统插件术语同步）（品牌名称同步）（第三节标题更新）（统一扩展包与系统插件用语）（恢复第三节标题）（第三节标题更新）（第三节统一系统插件用语）（第三节导语衔接优化）（第三节导语补充产品与运行环境关系）（精简第三节过渡）（强化故障回退）（格式优化）",
+      "source_refs": [
+        "extension-guide",
+        "extension-first-package",
+        "extension-package-dependencies",
+        "swarm-token-weather",
+        "swarm-extension-startup",
+        "swarm-plugin-detail",
+        "swarm-extension-slash-command",
+        "chapter-03-demo-vid-02",
+        "chapter-03-demo-vid-09",
+        "chapter-03-demo-vid-03"
+      ],
+      "confirmation": {
+        "draft_ref": "第三节第 15 轮（系统插件术语同步）（品牌名称同步）（第三节标题更新）（统一扩展包与系统插件用语）（恢复第三节标题）（第三节标题更新）（第三节统一系统插件用语）（第三节导语衔接优化）（第三节导语补充产品与运行环境关系）（精简第三节过渡）（强化故障回退）（格式优化）",
+        "confirmed_at": "2026-11-10T21:29:40+08:00",
+        "user_message": "第三节导语确认，继续给我看 3.1 节正文，直接在对话里确认。\n确认3.1内容\n扩展开发 Skill改成“扩展包开发skill”\n确认 3.2 内容，继续给我看 3.3 节正文，直接在对话里确认。\n确认 3.3 内容，先帮我替换所有的视频占位，替换成已有的视频（还没有的可以先不替换），并优化和完善视频编号、视频标题和视频描述，视频编号都采用“视频1”类型的格式，图片编号都采用“图1”类似的格式\n全文涉及到插件的地方都要叫系统插件，你不要只叫插件\n所有的“JiuwenSwarm”都改成“WorkSwarm”\n第三节的标题改为“WorkSwarm 扩展包实战：从创建、安装到故障回退”，同步修改大纲。\n图1先不改，其他的点优化一下\n把第三节标题复原\n第三节标题改为“WorkSwarm 系统插件实战：从创建、安装到故障回退”\n第三节统一用系统插件，不要提扩展包\n第三节导语开头从第二节自然地衔接过渡下\n衔接的时候要点一下RSI原生AgentOS和WorkSwarm的关系\n精简一下衔接过渡的语句，类似“基于 RSI 原生 AgentOS 的扩展机制”，再润色下\n回退是重要的差异性能力，要重点强调，有些重点的描述可以加粗\n不要修改引言，修改范围再第三节内，引言中可以适当加粗一些文字\n帮我优化一下这4点",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "01fe3ab9307a5181143184efc14d9ca17935d62b70e3deea2c6c5038340e0ee3",
+        "media": [
+          {
+            "id": "VID-02",
+            "title": "用自然语言创建和迭代 Token Weather 系统插件",
+            "revision": "v002",
+            "file": "v001/assets/videos/视频2_用自然语言创建和迭代 Token Weather 系统插件_v002.mp4",
+            "url": null,
+            "sha256": "0bb838c9742b59cd93196022cf66111dd1b9580a3f101a768c8d261c8a9ea384",
+            "source_files": [],
+            "caption": {
+              "number": 2,
+              "title": "用自然语言创建和迭代 Token Weather 系统插件",
+              "description": "用自然语言告诉 Agent 想做什么，生成 Token Weather 系统插件，在 WorkSwarm 中启用并试用，再按反馈调整。"
+            }
+          },
+          {
+            "id": "VID-09",
+            "title": "WorkSwarm 系统插件的三种安装方式与日常管理",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频3_WorkSwarm 系统插件的三种安装方式与日常管理_v001.mp4",
+            "url": null,
+            "sha256": "1967af3f0c8a4bd31c5b7b6b278c92b77ac4dcb2cdfe914a8035e5fa8a9064b8",
+            "source_files": [],
+            "caption": {
+              "number": 3,
+              "title": "WorkSwarm 系统插件的三种安装方式与日常管理",
+              "description": "可以把解压后的系统插件文件放入安装目录，从「扩展 → 系统插件」页面下载安装，或用 `/extension install` 命令安装。安装后，可以在「我的扩展」里启用或禁用系统插件。"
+            }
+          },
+          {
+            "id": "VID-03",
+            "title": "从存档点恢复 WorkSwarm 的系统插件配置",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频4_从存档点恢复 WorkSwarm 的系统插件配置_v001.mp4",
+            "url": null,
+            "sha256": "26d61125e4a5318f6fbecc8664f748b71fbe8cc41357d9825f3bc0ec54b05841",
+            "source_files": [],
+            "caption": {
+              "number": 4,
+              "title": "从存档点恢复 WorkSwarm 的系统插件配置",
+              "description": "系统插件导致 WorkSwarm 运行异常后，**选择一个存档点，将系统插件配置恢复到当时的状态**。"
+            }
+          }
+        ]
+      },
+      "media_updates": [],
+      "inheritance": null,
+      "outline_revalidation": {
+        "outline_version": "v001",
+        "checked_at": "2026-11-10T05:07:11+08:00",
+        "note": "原确认所用大纲已按用户要求并入 v001。章节正文及原确认内容不变。"
+      }
+    },
+    {
+      "section_id": "main-04",
+      "title": "RSI 原生 AgentOS 的扩展能做什么？从定制自己的 Agent 应用，到支持团队协作和企业接入",
+      "status": "confirmed",
+      "draft_ref": "第四节第 21 轮（系统插件术语同步）（品牌名称同步）（统一扩展包与系统插件用语）（第四节标题更新）（同步指定的第四节标题）（第四节局部润色）（第四节案例衔接润色）（采用选定的第四节小标题）（补充分布式场景）（补充 AgentServer 和沙箱适配）（润色 4.4 Harness 示例）（强化 Swarm 协作和企业接入）（格式优化）（更新上下文监控案例）（明确生成系统插件）（同步视频6说明）",
+      "source_refs": [
+        "extension-overview",
+        "swarm-token-weather",
+        "agent-prompt-trigger",
+        "team-readonly-ops",
+        "gateway-extension-runtime",
+        "swarm-harness",
+        "swarm-webui-slots",
+        "chapter-04-demo-vid-04",
+        "extension-ops-guide",
+        "swarm-context-usage-categories",
+        "dsh-context-demo-reference",
+        "dsh-context-readme",
+        "team-extension-events",
+        "chapter-04-demo-vid-06",
+        "swarm-gateway-login-demo",
+        "swarm-external-harness-settings",
+        "swarm-extension-bootstrap",
+        "swarm-extension-startup",
+        "swarm-agentserver-endpoint",
+        "swarm-sandbox-runtime",
+        "core-sandbox-provider-registry"
+      ],
+      "confirmation": {
+        "draft_ref": "第四节第 21 轮（系统插件术语同步）（品牌名称同步）（统一扩展包与系统插件用语）（第四节标题更新）（同步指定的第四节标题）（第四节局部润色）（第四节案例衔接润色）（采用选定的第四节小标题）（补充分布式场景）（补充 AgentServer 和沙箱适配）（润色 4.4 Harness 示例）（强化 Swarm 协作和企业接入）（格式优化）（更新上下文监控案例）（明确生成系统插件）（同步视频6说明）",
+        "confirmed_at": "2026-11-11T11:12:18+08:00",
+        "user_message": "第四节导语确认，继续给我看 4.1 节正文，直接在对话里确认。\n确认\n确认 4.2 内容，继续给我看 4.3 节正文，直接在对话里确认。\n确认 4.3 内容，继续给我看 4.4 节正文，直接在对话里确认。\n确认 4.4 内容，视频9先保留占位，继续写结语，写完直接在对话里给我确认。\n全文涉及到插件的地方都要叫系统插件，你不要只叫插件\n所有的“JiuwenSwarm”都改成“WorkSwarm”\n图1先不改，其他的点优化一下\n第4节的标题重点体现 RSI 原生 AgentOS，不要提WorkSwarm，工作台换个说法\n第四节标题改为“RSI 原生 AgentOS 的扩展能做什么？从定制自己的 Agent 应用，到支持团队协作和企业接入”，同步修改大纲。\n在第4节中，主要讲RSI原生AgentOS的扩展能力，WorkSwarm的系统插件只作为例子，不要大改现在第四节的内容，只对相关描述做必要的润色和优化，保持语句通顺、逻辑清晰和表述容易被人类理解\n不要用“以WorkSwarm为例”这样的表述方式，可以用“在WorkSwarm中”类似的表述方式\n4.1 用第一个，4.2用第三个，4.3用第一个，4.4用第一个\n企业接入适配里面可以增加一些分布式场景的能力描述，比如Server的扩展等\n就加在4.4节的第一段里\n可以提一下还可以扩展不同的AgentServer、扩展三方沙箱等能力（合理润色下）\n“WorkSwarm 的另一个待演示场景，是在新建单 Agent 会话时通过系统插件提供 Claude Code（CC）、Codex 和 openJiuwen 三种 Harness 选项。选定后，对应的 Harness 负责该会话的任务执行和工具调用，前端也会自动切换到对应界面。”，优化一下这段话，直接描述例子即可，不要说“WorkSwarm 的另一个待演示场景”\nSwarm协作增强、企业接入适配等都是重要的差异化能力，把重要的差异化能力强调下，部分语句可以适当加粗，修改范围限定在第4节和全文的引文，先不要直接改，给出修改让我确认，确认后再改文档\n逐段让我确认\n导语：这段不改了\n第 4 节开头：删除“下面看看这些能力在 WorkSwarm 里是怎么用的。”这一句，其他采纳\n4.3 第一段：可以\n4.3 案例段：这段不改了\n4.4 第一段：可以\n帮我优化一下这4点\n不用写具体系统插件的名字\n用这段替换原来那段\n要强调可以生成一个系统插件做上下文监控\n不用加粗，另外把视频6的说明也同步改一下，强调可以生成系统插件做上下文监控，去掉压缩记录和自定义指令的描述。",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "cf7a231ea56b3dc32cc6ebb6bc82b34e7e2104dc05cbdd208144b7a8369f2d9c",
+        "media": [
+          {
+            "id": "VID-04",
+            "title": "生成主题背景扩展包，在 WorkSwarm 中切换动态主题",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频5_生成主题背景扩展包，在 WorkSwarm 中切换动态主题_v001.mp4",
+            "url": null,
+            "sha256": "d43b47f3d626e3363d59199f45f5f0ea5b63ebb5099e6d5b63d4653134c9e530",
+            "source_files": [],
+            "caption": {
+              "number": 5,
+              "title": "生成主题背景扩展包，在 WorkSwarm 中切换动态主题",
+              "description": "生成主题背景扩展包，装进 WorkSwarm 并启用对应的系统插件，再到设置页切换动态主题。"
+            }
+          },
+          {
+            "id": "VID-05",
+            "title": "用自然语言生成上下文管理扩展包，在 WorkSwarm 中试用",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频6_用自然语言生成上下文管理扩展包，在 WorkSwarm 中试用_v001.mp4",
+            "url": null,
+            "sha256": "2cf82b4975938b3e149bded1e852e57026936017a1d5d4377c28e0e651371599",
+            "source_files": [],
+            "caption": {
+              "number": 6,
+              "title": "用自然语言生成上下文管理扩展包，在 WorkSwarm 中试用",
+              "description": "用自然语言让 Agent 生成用于上下文监控的系统插件。在 WorkSwarm 中启用后，可以查看窗口占用率、各类内容的估算占比和工具调用记录。"
+            }
+          },
+          {
+            "id": "VID-06",
+            "title": "生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频7_生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务_v001.mp4",
+            "url": null,
+            "sha256": "0d42234a2648329103f686d2485a7bf63011dfa69bb7e0e12e0419f7a86013d0",
+            "source_files": [],
+            "caption": {
+              "number": 7,
+              "title": "生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务",
+              "description": "用自然语言生成团队协作可视化扩展包。装进 WorkSwarm 并启用对应的系统插件后，在集群模式下查看团队信息和任务关系。"
+            }
+          },
+          {
+            "id": "VID-07",
+            "title": "通过 Gateway 扩展接入登录和鉴权",
+            "revision": "v002",
+            "file": "v001/assets/videos/视频8_通过 Gateway 扩展接入登录和鉴权_v002.mp4",
+            "url": null,
+            "sha256": "2eb16f3601be94f747d9172acfddb0648090b756940bf928497750813ec1b4e4",
+            "source_files": [],
+            "caption": {
+              "number": 8,
+              "title": "通过 Gateway 扩展接入登录和鉴权",
+              "description": "登录前，Gateway 拦截对受保护资源的请求。登录后，Gateway 校验凭证，通过校验的请求才会放行。"
+            }
+          },
+          {
+            "id": "VID-08",
+            "title": "新建会话时切换三种 Harness",
+            "revision": "v001",
+            "file": "v001/assets/videos/视频9_新建会话时切换三种 Harness_v001.mp4",
+            "url": null,
+            "sha256": "75c5231d9051e202484f09c65bce1573c590707e93b85b59d46fad124a0f5133",
+            "source_files": [],
+            "caption": {
+              "number": 9,
+              "title": "新建会话时切换三种 Harness",
+              "description": "新建单 Agent 会话时，从 Claude Code（CC）、Codex 和 openJiuwen 三种 Harness 中选择，前端随之切换到对应界面。"
+            }
+          }
+        ]
+      },
+      "media_updates": [],
+      "inheritance": null
+    },
+    {
+      "section_id": "main-05",
+      "title": "结语",
+      "status": "confirmed",
+      "draft_ref": "结语第 7 轮（品牌名称同步）（统一扩展包与系统插件用语）（更新扩展开发文档链接）",
+      "source_refs": [
+        "extension-overview",
+        "extension-guide",
+        "swarm-harness",
+        "closing-style-rsi",
+        "closing-style-agentic-hub",
+        "workswarm-official-entry",
+        "jiuwenswarm-public-repo",
+        "openjiuwen-harness-public-doc"
+      ],
+      "confirmation": {
+        "draft_ref": "结语第 7 轮（品牌名称同步）（统一扩展包与系统插件用语）（更新扩展开发文档链接）",
+        "confirmed_at": "2026-11-11T11:16:11+08:00",
+        "user_message": "V001版本可以完稿了",
+        "outline_version_at_confirmation": "v001",
+        "content_sha256": "2bd692287bc256f9e96d0e66ba3ee170b98f7be56ada5f15ee92b9e68f10d88f",
+        "media": []
+      },
+      "media_updates": [],
+      "inheritance": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "extension-guide",
+      "kind": "document",
+      "path": "refs/develop-docs/6.【调测与辅助开发】OpenJiuwen 扩展调测与 AI 辅助开发.md",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T02:43:08+08:00",
+      "note": "核对 AI 辅助开发从需求到独立扩展包、安装与验证的步骤。"
+    },
+    {
+      "id": "swarm-plugin-detail",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/channels/web/frontend/src/components/ConnectorMarket/SystemPluginDetailPage.tsx",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T02:43:08+08:00",
+      "note": "系统插件详情接入安装、卸载与重载。"
+    },
+    {
+      "id": "core-extension-registry",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/extension/registry.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T02:43:08+08:00",
+      "note": "Registry 加载并激活已安装的扩展包。"
+    },
+    {
+      "id": "swarm-harness",
+      "kind": "document",
+      "path": "tmp/jiuwenswarm/docs/zh/Harness.md",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T02:43:08+08:00",
+      "note": "核对运行环境、反馈回路与可组合扩展包的概念边界。"
+    },
+    {
+      "id": "desktop-pet-demo",
+      "kind": "document",
+      "path": "article/v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v002.mp4",
+      "url": null,
+      "revision": "v002",
+      "checked_at": "2026-11-10T21:12:55+08:00",
+      "note": "按用户指定采用 20261110-210043.mp4，核对了本版素材路径和文件散列。"
+    },
+    {
+      "id": "extension-overview",
+      "kind": "document",
+      "path": "refs/develop-docs/1.【概览】OpenJiuwen 扩展性概览.md",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对 manifest、注册、事件总线、平台能力、WebUI 槽位与后续计划。"
+    },
+    {
+      "id": "extension-runtime",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/extension/runtime.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "按声明加载扩展入口、调用 register 并发布 Handler。"
+    },
+    {
+      "id": "extension-event-bus",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/events/bus.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对 trigger、输入校验、上下文绑定、匹配与处理链调度。"
+    },
+    {
+      "id": "agent-prompt-ops",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/events/builtins/handler_ops/prompt_compose.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "确认 ops.prompt.compose 的注册、会话上下文条件与事件触发。"
+    },
+    {
+      "id": "agent-prompt-trigger",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/single_agent/agents/react_agent.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对原生 Agent 系统提示词组装的触发入口。"
+    },
+    {
+      "id": "team-extension-events",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/agent_teams/extensions/events.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "确认 team.build_policy 与 team.monitor_event 的职责。"
+    },
+    {
+      "id": "team-readonly-ops",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/extensions/ops_build_handlers/team.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对只读团队、成员、任务与任务依赖查询。"
+    },
+    {
+      "id": "swarm-extension-bootstrap",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/extensions_v2/bootstrap.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对 AgentServer 的会话、界面、Team 和命令事件及运行环境装配。"
+    },
+    {
+      "id": "swarm-token-weather",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/extensions_v2/examples/token_weather_glass/token_weather_glass/extension.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "用量事件响应、读取会话用量和渲染已挂载的状态栏。"
+    },
+    {
+      "id": "gateway-extension-runtime",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/gateway/extensions_v2/runtime.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对网关请求事件和路由结果的应用范围。"
+    },
+    {
+      "id": "gateway-http-ops",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/gateway/extensions_v2/handler_ops/http_ops.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对受网关策略约束的 ops.http.fetch。"
+    },
+    {
+      "id": "swarm-compaction-boundary",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/server/runtime/agent_adapter/interface_deep.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "核对原生会话扩展压缩绑定仍待接入。"
+    },
+    {
+      "id": "extension-quick-reference-sample",
+      "kind": "document",
+      "path": "refs/competitor_data/Claude-Mods-中文速查表.svg",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T03:20:55+08:00",
+      "note": "仅作为 IMG-02 的版式参考，扩展事件与能力按 openJiuwen 的实现核对。"
+    },
+    {
+      "id": "extension-ops-guide",
+      "kind": "document",
+      "path": "refs/develop-docs/4.【Ops】使用 Ops API.md",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T03:45:42+08:00",
+      "note": "核对 Ops 的组件边界、会话查询、工具登记、界面更新、网关出站请求和受控资源访问。"
+    },
+    {
+      "id": "extension-first-package",
+      "kind": "document",
+      "path": "refs/develop-docs/2.【创建扩展】创建第一个 OpenJiuwen 扩展.md",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T04:02:51+08:00",
+      "note": "核对手动编写、ZIP 打包和 /extension install 使用运行端可读的绝对路径。"
+    },
+    {
+      "id": "extension-package-dependencies",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/extension/manifest.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T04:02:51+08:00",
+      "note": "核对声明支持按包标识和版本声明依赖，加载前的依赖条件见调测指南。"
+    },
+    {
+      "id": "swarm-extension-startup",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/extensions_v2/assembly.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T04:02:51+08:00",
+      "note": "核对启动时激活安装目录中的扩展包。"
+    },
+    {
+      "id": "swarm-extension-slash-command",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/gateway/message_handler/command_parser/slash_command.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T04:02:51+08:00",
+      "note": "核对 /extension install 的注册和命令语法。"
+    },
+    {
+      "id": "chapter-03-demo-vid-02",
+      "kind": "document",
+      "path": "article/v001/assets/videos/视频2_用自然语言创建和迭代 Token Weather 系统插件_v002.mp4",
+      "url": null,
+      "revision": "v002",
+      "checked_at": "2026-11-10T21:16:56+08:00",
+      "note": "按用户指定替换为 边生成边调试的能力展示_剪辑版.mp4，核对了素材路径和文件散列。正文对话为示例措辞。"
+    },
+    {
+      "id": "chapter-03-demo-vid-09",
+      "kind": "document",
+      "path": "article/v001/assets/videos/视频3_WorkSwarm 系统插件的三种安装方式与日常管理_v001.mp4",
+      "url": null,
+      "revision": "v001",
+      "checked_at": "2026-11-10T04:02:51+08:00",
+      "note": "依用户说明核对演示范围，覆盖三种安装方式和在我的扩展中启用或禁用系统插件。"
+    },
+    {
+      "id": "chapter-03-demo-vid-03",
+      "kind": "document",
+      "path": "article/v001/assets/videos/视频4_从存档点恢复 WorkSwarm 的系统插件配置_v001.mp4",
+      "url": null,
+      "revision": "v001",
+      "checked_at": "2026-11-10T04:02:51+08:00",
+      "note": "依用户说明核对回退范围，仅恢复指定存档点保存的系统插件配置。"
+    },
+    {
+      "id": "swarm-webui-slots",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/extensions_v2/webui/constants.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T05:15:24+08:00",
+      "note": "核对对话区、面板、应用菜单及设置等界面的扩展位置。"
+    },
+    {
+      "id": "chapter-04-demo-vid-04",
+      "kind": "document",
+      "path": "article/v001/assets/videos/视频5_生成主题背景扩展包，在 WorkSwarm 中切换动态主题_v001.mp4",
+      "url": null,
+      "revision": "v001",
+      "checked_at": "2026-11-10T05:15:24+08:00",
+      "note": "按用户提供的录屏说明记录主题背景插件生成及设置页动态主题切换。正文中的对话是示例措辞。"
+    },
+    {
+      "id": "swarm-context-usage-categories",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/extensions_v2/examples/token_weather_glass/token_weather_glass/history.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T05:17:40+08:00",
+      "note": "核对已观测上下文的分类，包括系统提示词、工具、技能和消息。正文中的管理插件按计划演示的需求示例表述。"
+    },
+    {
+      "id": "dsh-context-demo-reference",
+      "kind": "document",
+      "path": null,
+      "url": "https://www.xmsumi.com/detail/4254",
+      "revision": null,
+      "checked_at": "2026-11-10T05:25:51+08:00",
+      "note": "用户指定的演示参考。借鉴先看总体用量，再查看组成和逐轮变化的叙述顺序。"
+    },
+    {
+      "id": "dsh-context-readme",
+      "kind": "document",
+      "path": null,
+      "url": "https://github.com/bowenliang123/dsh-context",
+      "revision": null,
+      "checked_at": "2026-11-10T05:25:51+08:00",
+      "note": "核对参考插件的上下文总览、组成和逐请求趋势。正文将其作为演示设计参考，不将第三方能力写成 WorkSwarm 已交付功能。"
+    },
+    {
+      "id": "chapter-04-demo-vid-06",
+      "kind": "document",
+      "path": "article/v001/assets/videos/视频7_生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务_v001.mp4",
+      "url": null,
+      "revision": "v001",
+      "checked_at": "2026-11-10T05:42:04+08:00",
+      "note": "按用户提供的录屏说明记录通过自然语言生成团队协作可视化插件，以及在集群模式下展示团队信息和任务关系。"
+    },
+    {
+      "id": "swarm-gateway-login-demo",
+      "kind": "document",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/extensions_v2/examples/auth_login_demo/README.md",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T05:44:24+08:00",
+      "note": "核对示例的登录页面、凭证注入和受保护请求的校验，范围是演示插件自有认证。"
+    },
+    {
+      "id": "swarm-external-harness-settings",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/channels/web/frontend/src/components/AgentManagementPanel/AgentEditor.tsx",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T05:44:24+08:00",
+      "note": "核对 Claude Code 与 Codex 的外部 Harness 选项。三种 Harness 的单会话选择与界面联动按已确认大纲作为待录演示。"
+    },
+    {
+      "id": "closing-style-rsi",
+      "kind": "document",
+      "path": "D:/code/personal/write_wechat_article/.agents/skills/wechat-article/references/samples/openjiuwen/openJiuwen首发双维度RSI框架，AI自修改，落地办公智能体，算力亲和助力又快又省/article.md",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T06:06:06+08:00",
+      "note": "借鉴以改进过程和后续方向收束，再给读者体验入口的写法。"
+    },
+    {
+      "id": "closing-style-agentic-hub",
+      "kind": "document",
+      "path": "D:/code/personal/write_wechat_article/.agents/skills/wechat-article/references/samples/openjiuwen/Agent版Hugging Face来了，openJiuwen发布首个开源智能体资产平台/article.md",
+      "url": null,
+      "revision": null,
+      "checked_at": "2026-11-10T06:06:06+08:00",
+      "note": "借鉴用结语回扣可复用能力，并在末尾汇总相关资源。"
+    },
+    {
+      "id": "workswarm-official-entry",
+      "kind": "document",
+      "path": null,
+      "url": "https://openjiuwen.com/workswarm",
+      "revision": null,
+      "checked_at": "2026-11-10T06:06:06+08:00",
+      "note": "核对 WorkSwarm 官网体验与安装入口。"
+    },
+    {
+      "id": "jiuwenswarm-public-repo",
+      "kind": "document",
+      "path": null,
+      "url": "https://github.com/openJiuwen-ai/jiuwenswarm",
+      "revision": null,
+      "checked_at": "2026-11-10T06:06:06+08:00",
+      "note": "核对公开源代码及参与社区的入口。"
+    },
+    {
+      "id": "openjiuwen-harness-public-doc",
+      "kind": "document",
+      "path": null,
+      "url": "https://github.com/openJiuwen-ai/jiuwenswarm/blob/develop/docs/zh/Harness.md",
+      "revision": null,
+      "checked_at": "2026-11-10T06:06:06+08:00",
+      "note": "核对 Harness 文档的可访问链接。"
+    },
+    {
+      "id": "swarm-agentserver-endpoint",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/gateway/app_gateway.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T20:43:29+08:00",
+      "note": "核对 Gateway 分开部署时配置 AgentServer 地址的入口。"
+    },
+    {
+      "id": "swarm-sandbox-runtime",
+      "kind": "code",
+      "path": "tmp/jiuwenswarm/jiuwenswarm/server/runtime/agent_adapter/sysop_builder.py",
+      "url": null,
+      "revision": "06f70e487e2d478febd621e1b5970a06d4c5c920",
+      "checked_at": "2026-11-10T20:43:29+08:00",
+      "note": "核对 JiuwenBox、Conch 和 openYuanrong 沙箱后端的接入配置。"
+    },
+    {
+      "id": "core-sandbox-provider-registry",
+      "kind": "code",
+      "path": "tmp/agent-core/openjiuwen/core/sys_operation/sandbox/sandbox_registry.py",
+      "url": null,
+      "revision": "d4c02c6c52dda8e027af1a08295c5db7f4297fe4",
+      "checked_at": "2026-11-10T20:43:29+08:00",
+      "note": "核对按沙箱类型和操作类型登记适配器的接口。"
+    }
+  ],
+  "media": [
+    {
+      "id": "VID-01",
+      "type": "video",
+      "role": "body",
+      "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+      "section_ids": [
+        "main-01"
+      ],
+      "revision": "v002",
+      "file": "v001/assets/videos/视频1_一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换_v002.mp4",
+      "url": null,
+      "sha256": "2dc960de0ec792327364a975ad05f7f90ca25f2063d0eb9f1df5e0d94150604b",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "“D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\article-working.md”中的视频1用\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\20261110-210043.mp4\"替换",
+        "at": "2026-11-10T21:07:45+08:00"
+      },
+      "caption": {
+        "number": 1,
+        "title": "一个系统插件，让 WorkSwarm 在工作台和桌宠形态之间切换",
+        "description": "启用「应用形态」系统插件后，工作台可以切换成蜜蜂或胶囊桌宠。在桌宠里发起的对话，切回工作台后可以接着聊。"
+      }
+    },
+    {
+      "id": "IMG-03",
+      "type": "image",
+      "role": "body",
+      "title": "openJiuwen RSI 原生 AgentOS 架构图",
+      "section_ids": [
+        "main-02"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/images/图1_openJiuwen RSI 原生 AgentOS 架构图.png",
+      "url": null,
+      "sha256": "4bcb0f5c0457f04b718b9e476fe3b3e744a95552c050d18395c24f9ee265d46e",
+      "source_files": [
+        {
+          "file": "v001/assets/images/图1_openJiuwen RSI 原生 AgentOS 架构图.svg",
+          "sha256": "258c83d1fb876b7d7e84d8a790ebf0eed63a9e1e0a213987aaaec3800d16e0d8"
+        }
+      ],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "先介绍整体架构，再介绍扩展能力一览，再介绍扩展包生效原理，最后介绍具体的事件类型和Ops（还使用现在的图和文字描述）。指定图片：openJiuwen RSI 原生 AgentOS 架构图.png。直接改到现在的文章里",
+        "at": "2026-11-10T21:08:41+08:00"
+      },
+      "caption": {
+        "number": 1,
+        "title": "openJiuwen RSI 原生 AgentOS 架构图",
+        "description": "Web 客户端、Gateway 和 Agent 层的职责、连接关系及各自的扩展入口。"
+      }
+    },
+    {
+      "id": "IMG-04",
+      "type": "image",
+      "role": "body",
+      "title": "openJiuwen RSI 原生 AgentOS 扩展能力一览",
+      "section_ids": [
+        "main-02"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/images/图2_openJiuwen RSI 原生 AgentOS 扩展能力一览.png",
+      "url": null,
+      "sha256": "d5930ebbbe7d5f67808125b6ac2ae73aa3c0e1e170ebb2da940705566767bb4e",
+      "source_files": [
+        {
+          "file": "v001/assets/images/图2_openJiuwen RSI 原生 AgentOS 扩展能力一览.svg",
+          "sha256": "5805e6fb0921a757eb9509bf5f5fbb68754073d8ca747adf00fe427e3ba4a7b3"
+        }
+      ],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "先介绍整体架构，再介绍扩展能力一览，再介绍扩展包生效原理，最后介绍具体的事件类型和Ops（还使用现在的图和文字描述）。指定图片：openJIuwen RSI 原生 AgentOS 扩展能力一览图.png。直接改到现在的文章里",
+        "at": "2026-11-10T21:08:41+08:00"
+      },
+      "caption": {
+        "number": 2,
+        "title": "openJiuwen RSI 原生 AgentOS 扩展能力一览",
+        "description": "左侧是扩展包目录与清单，右侧是 Client、Gateway、AgentServer、Swarm 和 Agent 五个环节的扩展能力。"
+      }
+    },
+    {
+      "id": "IMG-05",
+      "type": "image",
+      "role": "body",
+      "title": "openJiuwen RSI 原生 AgentOS 扩展包生效原理",
+      "section_ids": [
+        "main-02"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/images/图3_openJiuwen RSI 原生 AgentOS 扩展包生效原理.png",
+      "url": null,
+      "sha256": "c7d9a62d07575c62bfe4736ea5b6a7e8aabede8c514f07ed3c1f795ee60c1ba9",
+      "source_files": [
+        {
+          "file": "v001/assets/images/图3_openJiuwen RSI 原生 AgentOS 扩展包生效原理.svg",
+          "sha256": "739eeb1ffb2f1931a3eb99e558d866fed6e209f3a25ad0b9803461a876e4bbd7"
+        }
+      ],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "先介绍整体架构，再介绍扩展能力一览，再介绍扩展包生效原理，最后介绍具体的事件类型和Ops（还使用现在的图和文字描述）。指定图片：openJiuwen RSI 原生 AgentOS 扩展包生效原理图.png。直接改到现在的文章里",
+        "at": "2026-11-10T21:08:41+08:00"
+      },
+      "caption": {
+        "number": 3,
+        "title": "openJiuwen RSI 原生 AgentOS 扩展包生效原理",
+        "description": "扩展包从安装、选择版本到加载代码、注册处理函数，再到响应事件和按需更新界面的流程。"
+      }
+    },
+    {
+      "id": "IMG-02",
+      "type": "image",
+      "role": "body",
+      "title": "扩展事件与 Ops 能力速查表",
+      "section_ids": [
+        "main-02"
+      ],
+      "revision": "v015",
+      "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.png",
+      "url": null,
+      "sha256": "643560348baf78709e42ce9fac14513726e802c1e588684b82c08e75dd002597",
+      "source_files": [
+        {
+          "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.svg",
+          "sha256": "efffbecc164916f2418511365ed86cee79d4d46ff7c258a44d16e07890feb7e3"
+        }
+      ],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "将指定的 article-working.md 中图4换成浅色背景，标题里的Ops能力改成Operator能力",
+        "at": "2026-11-10T23:03:13+08:00"
+      },
+      "caption": {
+        "number": 4,
+        "title": "扩展事件与 Operator 能力速查表",
+        "description": "左侧是各类扩展事件，右侧是处理函数可调用的 Ops。表中区分已支持和规划中的条目。"
+      }
+    },
+    {
+      "id": "VID-02",
+      "type": "video",
+      "role": "body",
+      "title": "用自然语言创建和迭代 Token Weather 系统插件",
+      "section_ids": [
+        "main-03"
+      ],
+      "revision": "v002",
+      "file": "v001/assets/videos/视频2_用自然语言创建和迭代 Token Weather 系统插件_v002.mp4",
+      "url": null,
+      "sha256": "0bb838c9742b59cd93196022cf66111dd1b9580a3f101a768c8d261c8a9ea384",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "用\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\边生成边调试的能力展示_剪辑版.mp4\"替换视频2",
+        "at": "2026-11-10T21:16:56+08:00"
+      },
+      "caption": {
+        "number": 2,
+        "title": "用自然语言创建和迭代 Token Weather 系统插件",
+        "description": "用自然语言告诉 Agent 想做什么，生成 Token Weather 系统插件，在 WorkSwarm 中启用并试用，再按反馈调整。"
+      }
+    },
+    {
+      "id": "VID-09",
+      "type": "video",
+      "role": "body",
+      "title": "WorkSwarm 系统插件的三种安装方式与日常管理",
+      "section_ids": [
+        "main-03"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/videos/视频3_WorkSwarm 系统插件的三种安装方式与日常管理_v001.mp4",
+      "url": null,
+      "sha256": "1967af3f0c8a4bd31c5b7b6b278c92b77ac4dcb2cdfe914a8035e5fa8a9064b8",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "确认 3.3 内容，先帮我替换所有的视频占位，替换成已有的视频（还没有的可以先不替换），并优化和完善视频编号、视频标题和视频描述，视频编号都采用“视频1”类型的格式，图片编号都采用“图1”类似的格式",
+        "at": "2026-11-10T04:58:27+08:00"
+      },
+      "caption": {
+        "number": 3,
+        "title": "WorkSwarm 系统插件的三种安装方式与日常管理",
+        "description": "可以把解压后的系统插件文件放入安装目录，从「扩展 → 系统插件」页面下载安装，或用 `/extension install` 命令安装。安装后，可以在「我的扩展」里启用或禁用系统插件。"
+      }
+    },
+    {
+      "id": "VID-03",
+      "type": "video",
+      "role": "body",
+      "title": "从存档点恢复 WorkSwarm 的系统插件配置",
+      "section_ids": [
+        "main-03"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/videos/视频4_从存档点恢复 WorkSwarm 的系统插件配置_v001.mp4",
+      "url": null,
+      "sha256": "26d61125e4a5318f6fbecc8664f748b71fbe8cc41357d9825f3bc0ec54b05841",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "确认 3.3 内容，先帮我替换所有的视频占位，替换成已有的视频（还没有的可以先不替换），并优化和完善视频编号、视频标题和视频描述，视频编号都采用“视频1”类型的格式，图片编号都采用“图1”类似的格式",
+        "at": "2026-11-10T04:58:27+08:00"
+      },
+      "caption": {
+        "number": 4,
+        "title": "从存档点恢复 WorkSwarm 的系统插件配置",
+        "description": "系统插件导致 WorkSwarm 运行异常后，**选择一个存档点，将系统插件配置恢复到当时的状态**。"
+      }
+    },
+    {
+      "id": "VID-04",
+      "type": "video",
+      "role": "body",
+      "title": "生成主题背景扩展包，在 WorkSwarm 中切换动态主题",
+      "section_ids": [
+        "main-04"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/videos/视频5_生成主题背景扩展包，在 WorkSwarm 中切换动态主题_v001.mp4",
+      "url": null,
+      "sha256": "d43b47f3d626e3363d59199f45f5f0ea5b63ebb5099e6d5b63d4653134c9e530",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "演示视频用这个：\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\飞书20261110-014702.mp4\"，该视频演示了怎么生成主题背景插件，并使用主题背景插件的能力实现动态主题切换（在设置里切换）",
+        "at": "2026-11-10T05:15:24+08:00"
+      },
+      "caption": {
+        "number": 5,
+        "title": "生成主题背景扩展包，在 WorkSwarm 中切换动态主题",
+        "description": "生成主题背景扩展包，装进 WorkSwarm 并启用对应的系统插件，再到设置页切换动态主题。"
+      }
+    },
+    {
+      "id": "VID-05",
+      "type": "video",
+      "role": "body",
+      "title": "用自然语言生成上下文管理扩展包，在 WorkSwarm 中试用",
+      "section_ids": [
+        "main-04"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/videos/视频6_用自然语言生成上下文管理扩展包，在 WorkSwarm 中试用_v001.mp4",
+      "url": null,
+      "sha256": "2cf82b4975938b3e149bded1e852e57026936017a1d5d4377c28e0e651371599",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "用\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\20261111-105712.mp4\"替换视频6",
+        "at": "2026-11-11T10:59:51+08:00"
+      },
+      "caption": {
+        "number": 6,
+        "title": "用自然语言生成上下文管理扩展包，在 WorkSwarm 中试用",
+        "description": "用自然语言让 Agent 生成用于上下文监控的系统插件。在 WorkSwarm 中启用后，可以查看窗口占用率、各类内容的估算占比和工具调用记录。"
+      }
+    },
+    {
+      "id": "VID-06",
+      "type": "video",
+      "role": "body",
+      "title": "生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务",
+      "section_ids": [
+        "main-04"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/videos/视频7_生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务_v001.mp4",
+      "url": null,
+      "sha256": "0d42234a2648329103f686d2485a7bf63011dfa69bb7e0e12e0419f7a86013d0",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "演示视频使用：\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\飞书20261110-015518.mp4\"，该视频演示了通过自然语言交互生成团队协作可视化系统插件，在集群模式下实现团队信息和任务关系可视化",
+        "at": "2026-11-10T05:42:04+08:00"
+      },
+      "caption": {
+        "number": 7,
+        "title": "生成团队协作可视化扩展包，在 WorkSwarm 中查看团队和任务",
+        "description": "用自然语言生成团队协作可视化扩展包。装进 WorkSwarm 并启用对应的系统插件后，在集群模式下查看团队信息和任务关系。"
+      }
+    },
+    {
+      "id": "VID-07",
+      "type": "video",
+      "role": "body",
+      "title": "通过 Gateway 扩展接入登录和鉴权",
+      "section_ids": [
+        "main-04"
+      ],
+      "revision": "v002",
+      "file": "v001/assets/videos/视频8_通过 Gateway 扩展接入登录和鉴权_v002.mp4",
+      "url": null,
+      "sha256": "2eb16f3601be94f747d9172acfddb0648090b756940bf928497750813ec1b4e4",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "用\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\登录认证插件案例_剪辑版_v2.mp4\"替换视频8",
+        "at": "2026-11-10T21:23:34+08:00"
+      },
+      "caption": {
+        "number": 8,
+        "title": "通过 Gateway 扩展接入登录和鉴权",
+        "description": "登录前，Gateway 拦截对受保护资源的请求。登录后，Gateway 校验凭证，通过校验的请求才会放行。"
+      }
+    },
+    {
+      "id": "VID-08",
+      "type": "video",
+      "role": "body",
+      "title": "新建会话时切换三种 Harness",
+      "section_ids": [
+        "main-04"
+      ],
+      "revision": "v001",
+      "file": "v001/assets/videos/视频9_新建会话时切换三种 Harness_v001.mp4",
+      "url": null,
+      "sha256": "75c5231d9051e202484f09c65bce1573c590707e93b85b59d46fad124a0f5133",
+      "source_files": [],
+      "status": "approved",
+      "adoption": {
+        "kind": "user",
+        "message": "用\"D:\\code\\personal\\write_wechat_article\\openjiuwen\\扩展性特性宣发软文\\article\\v001\\assets\\videos\\20261110-215951.mp4\"替换视频9",
+        "at": "2026-11-10T22:33:46+08:00"
+      },
+      "caption": {
+        "number": 9,
+        "title": "新建会话时切换三种 Harness",
+        "description": "新建单 Agent 会话时，从 Claude Code（CC）、Codex 和 openJiuwen 三种 Harness 中选择，前端随之切换到对应界面。"
+      }
+    }
+  ],
+  "pending_media": [],
+  "candidates": []
+}

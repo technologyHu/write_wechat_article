@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="32 4 1216 684" role="img" aria-label="Client、Gateway 与 Agent 三层架构，浅蓝表示缺省，浅绿表示扩展">
+  <style>
+    text { font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; }
+    .layer-label { font-size: 23px; font-weight: 700; fill: #142F4D; }
+    .default-label { font-size: 24px; font-weight: 650; fill: #214971; }
+    .extension-label { font-size: 22px; font-weight: 650; fill: #174F45; }
+    .leaf-default { font-size: 21px; font-weight: 650; fill: #214971; }
+    .leaf-extension { font-size: 21px; font-weight: 650; fill: #174F45; }
+    .capability, .leaf-detail { font-size: 20.5px; font-weight: 450; fill: #23486B; }
+    .leaf-detail { fill: #214D47; }
+    #label-25 .extension-detail { font-size: 20.8px; }
+    .extension-detail { font-size: 21px; font-weight: 450; fill: #214D47; }
+    .layer { fill: #F5F8FC; }
+    .default, .default-leaf { fill: #E5EFFA; stroke: #A8C2DF; stroke-width: 1.4; }
+    .default-nested { fill: #EFF5FD; stroke: #A8C2DF; stroke-width: 1.4; }
+    .default-inner { fill: #F9FBFF; stroke: #A8C2DF; stroke-width: 1.4; }
+    .extension { fill: #E4F3EF; stroke: #A6CCBF; stroke-width: 1.4; }
+    .flow { fill: none; stroke: #566C8A; stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 5 5; marker-end: url(#arrow); }
+    .port { fill: #566C8A; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 12 5 L 0 10 Z" fill="#566C8A" />
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#FFFFFF" />
+  <g id="client-layer">
+    <rect id="client-frame" x="36" y="28" width="1208" height="138" rx="13" class="layer" />
+    <text id="label-23" data-owner="client-frame" x="127" y="65" class="layer-label" text-anchor="start">
+      <tspan x="127" y="65" class="layer-label">Client层（Web）</tspan>
+    </text>
+    <rect id="default-client" x="52" y="79" width="858" height="70" rx="9" class="default" />
+    <text id="label-24" data-owner="default-client" x="481" y="122" class="default-label" text-anchor="middle">
+      <tspan x="481" y="122" class="default-label">缺省Client （Web）</tspan>
+    </text>
+    <rect id="client-plugin" x="962" y="79" width="266" height="70" rx="9" class="extension" />
+    <text id="label-25" data-owner="client-plugin" x="1095" y="109" class="extension-label" text-anchor="middle">
+      <tspan x="1095" y="109" class="extension-label">扩展：Client UI插件</tspan>
+      <tspan x="1095" y="131" class="extension-detail">（皮肤、功能页、cmd等）</tspan>
+    </text>
+    <path id="client-extension-flow" class="flow" d="M 910 114 H 962" />
+    <circle cx="910" cy="114" r="3.3" class="port" />
+  </g>
+  <g id="gateway-layer">
+    <rect id="gateway-frame" x="36" y="184" width="1208" height="144" rx="13" class="layer" />
+    <text id="label-20" data-owner="gateway-frame" x="127" y="220" class="layer-label" text-anchor="start">
+      <tspan x="127" y="220" class="layer-label">Gateway层</tspan>
+    </text>
+    <rect id="default-gateway" x="52" y="233" width="858" height="78" rx="9" class="default" />
+    <text id="label-15" data-owner="default-gateway" x="481" y="280" class="default-label" text-anchor="middle">
+      <tspan x="481" y="280" class="default-label">缺省Gateway</tspan>
+    </text>
+    <rect id="gateway-plugin" x="962" y="233" width="266" height="78" rx="9" class="extension" />
+    <text id="label-18" data-owner="gateway-plugin" x="1095" y="259" class="extension-label" text-anchor="middle">
+      <tspan x="1095" y="259" class="extension-label">扩展：请求路由逻辑插件</tspan>
+      <tspan x="1095" y="279" class="extension-detail">（Channel、路由策略、</tspan>
+      <tspan x="1095" y="299" class="extension-detail">Hook等）</tspan>
+    </text>
+    <path id="gateway-extension-flow" class="flow" d="M 910 272 H 962" />
+    <circle cx="910" cy="272" r="3.3" class="port" />
+  </g>
+  <g id="agent-layer">
+    <rect id="agent-frame" x="36" y="346" width="1208" height="318" rx="13" class="layer" />
+    <text id="label-19" data-owner="agent-frame" x="127" y="380" class="layer-label" text-anchor="start">
+      <tspan x="127" y="380" class="layer-label">Agent 层</tspan>
+    </text>
+    <g id="agent-server-default">
+      <rect id="default-agent-server" x="52" y="393" width="858" height="254" rx="11" class="default" />
+      <text id="label-16" data-owner="default-agent-server" x="481" y="422" class="default-label" text-anchor="middle">
+        <tspan x="481" y="422" class="default-label">缺省Agent Server实例</tspan>
+      </text>
+      <g id="swarm-backend-default">
+        <rect id="default-swarm-backend" x="64" y="436" width="633" height="199" rx="10" class="default-nested" />
+        <text id="label-12" data-owner="default-swarm-backend" x="381" y="465" class="default-label" text-anchor="middle">
+          <tspan x="381" y="465" class="default-label">缺省Swarm后端接口</tspan>
+        </text>
+        <g id="harness-default">
+          <rect id="default-harness" x="76" y="475" width="416" height="149" rx="9" class="default-inner" />
+          <text id="label-5" data-owner="default-harness" x="284" y="506" class="default-label" text-anchor="middle">
+            <tspan x="284" y="506" class="default-label">缺省Harness</tspan>
+          </text>
+          <rect id="default-capabilities" x="88" y="515" width="196" height="100" rx="7" class="default-leaf" />
+          <text id="label-6" data-owner="default-capabilities" x="113" y="544" class="default-label" text-anchor="start">
+            <tspan x="113" y="544" class="leaf-default">缺省</tspan>
+            <tspan x="113" y="564.5" class="capability">prompts、rails、</tspan>
+            <tspan x="113" y="585" class="capability">subagents、</tspan>
+            <tspan x="113" y="605.5" class="capability">skills、tools</tspan>
+          </text>
+          <rect id="extension-capabilities" x="295" y="515" width="185" height="100" rx="7" class="extension" />
+          <text id="label-7" data-owner="extension-capabilities" x="307" y="544" class="extension-label" text-anchor="start">
+            <tspan x="307" y="544" class="leaf-extension">扩展：</tspan>
+            <tspan x="307" y="564.5" class="leaf-detail">prompts、rails、</tspan>
+            <tspan x="307" y="585" class="leaf-detail">subagents、</tspan>
+            <tspan x="307" y="605.5" class="leaf-detail">skills、tools</tspan>
+          </text>
+        </g>
+        <rect id="third-party-harness" x="504" y="475" width="181" height="149" rx="9" class="extension" />
+        <text id="label-11" data-owner="third-party-harness" x="594.5" y="516" class="extension-label" text-anchor="middle">
+          <tspan x="594.5" y="516" class="extension-label">扩展：三方</tspan>
+          <tspan x="594.5" y="539" class="extension-label">Harness</tspan>
+          <tspan x="594.5" y="562" class="extension-detail">（如cc/codex/</tspan>
+          <tspan x="594.5" y="585" class="extension-detail">dsh等）</tspan>
+        </text>
+      </g>
+      <rect id="extension-backend" x="707" y="436" width="193" height="199" rx="9" class="extension" />
+      <text id="label-13" data-owner="extension-backend" x="803.5" y="495" class="extension-label" text-anchor="middle">
+        <tspan x="803.5" y="495" class="extension-label">扩展：后端接口</tspan>
+        <tspan x="803.5" y="519" class="extension-detail">（与前端UI插件</tspan>
+        <tspan x="803.5" y="543" class="extension-detail">相对应，如桌宠、</tspan>
+        <tspan x="803.5" y="567" class="extension-detail">数据可视化等）</tspan>
+      </text>
+    </g>
+    <rect id="third-party-agent-server" x="962" y="393" width="266" height="254" rx="11" class="extension" />
+    <text id="label-17" data-owner="third-party-agent-server" x="1095" y="502" class="extension-label" text-anchor="middle">
+      <tspan x="1095" y="502" class="extension-label">扩展：三方Agent</tspan>
+      <tspan x="1095" y="528" class="extension-label">Server实例</tspan>
+      <tspan x="1095" y="554" class="extension-detail">（web、ssh服务）</tspan>
+    </text>
+    <path id="agent-extension-flow" class="flow" d="M 910 416 H 962" />
+    <circle cx="910" cy="416" r="3.3" class="port" />
+  </g>
+  <path id="default-flow-via-gateway" class="flow" d="M 100 149 V 233" style="marker-end: none" />
+  <circle cx="100" cy="149" r="3.3" class="port" />
+  <path id="default-flow" class="flow" d="M 100 311 V 393" />
+</svg>

@@ -1,0 +1,17 @@
+{
+  "global_notes": [
+    "读者可见的产品名用 WorkSwarm。仓库名、URL、源码标识和素材原始标注按实际来源保留。",
+    "扩展包是 RSI 原生 AgentOS 加载的单元，系统插件是扩展包在 WorkSwarm 中的叫法。"
+  ],
+  "sections": {
+    "lead": ["保留已确认的全文导语。需要举例时仅说使用 WorkSwarm 时想加新功能。"],
+    "main-02": ["按整体架构、扩展能力、生效原理、事件与 Ops 的顺序连续叙述，不分子章节。"],
+    "main-03": ["讨论 WorkSwarm 的创建、安装与故障回退，统一用系统插件。"],
+    "main-04": ["以 RSI 原生 AgentOS 的扩展能力为主，WorkSwarm 的系统插件用作案例。重点突出 Swarm 协作和企业接入。"]
+  },
+  "terms": [
+    {"avoid": "JiuwenSwarm", "prefer": "WorkSwarm"},
+    {"avoid": "宿主", "prefer": "运行环境", "sections": ["lead"]},
+    {"avoid": "扩展包", "prefer": "系统插件", "sections": ["main-03"]}
+  ]
+}
