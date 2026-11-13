@@ -1,6 +1,6 @@
 # write_wechat_article
 
-这个仓库用于撰写和归档 openJiuwen、WorkSwarm 的微信公众号技术文章。它包含文章正文、配图、演示视频和参考资料，也提供抓取参考文章、核对源码、评审大纲和导出稿件的技能。
+这是一个微信公众号文章工作区，可以按不同主题和受众准备资料、写稿、评审大纲和导出稿件。技术选题还可以用仓库里的技能抓取参考文章、核对源码。`openjiuwen/` 收录了现有的 openJiuwen 和 WorkSwarm 文章及其素材。
 
 ## 快速开始
 
@@ -11,7 +11,7 @@ git clone https://github.com/technologyHu/write_wechat_article.git
 cd write_wechat_article
 ```
 
-在 Codex 等支持 `.agents/skills/` 的客户端中打开仓库根目录，按手头的任务选择技能。已有文章可以直接在 `openjiuwen/` 下阅读，演示视频按需下载。
+在 Codex 等支持 `.agents/skills/` 的客户端中打开仓库根目录，按手头的任务选择技能。
 
 | 要做什么 | 从哪里开始 |
 | --- | --- |
@@ -20,7 +20,7 @@ cd write_wechat_article
 | 理解源码、追踪调用链或建立图谱 | [`code-understanding`](.agents/skills/code-understanding/SKILL.md) · [准备图谱后端](#代码理解和知识图谱) |
 | 下载文章配套视频 | [Git LFS 下载命令](#下载文章视频) |
 
-使用写作技能时，可以从一条具体请求开始，例如「用 `wechat-article` 写一篇面向开发者的 WorkSwarm 扩展机制介绍，先根据参考资料拟标题和大纲」。如果需要核对源码，可以附上目标仓库和版本。
+使用 `wechat-article` 时，可以直接给出主题、读者和写作目的。例如「写一篇给团队新成员看的 Git LFS 使用指南，先拟标题和大纲」。需要核对具体实现时，可以附上源码仓库和版本。已有专用场景时按该场景写作，其余主题沿用通用流程。
 
 ## 安装技能依赖
 
@@ -82,7 +82,7 @@ node .agents/skills/gitnexus-cli/scripts/gitnexus.mjs analyze '<目标源码目�
 
 ## 下载文章视频
 
-文章视频由 Git LFS 管理。普通 `git clone` 默认只检出视频的指针文件。需要播放视频或打包包含视频的稿件时，先安装 Git LFS，再运行以下命令下载当前版本的全部视频。
+当前 Git LFS 规则覆盖 `openjiuwen/` 下各篇文章 `assets/videos/` 中的 MP4。普通 `git clone` 默认只检出这些视频的指针文件。需要播放视频或打包包含视频的稿件时，先安装 Git LFS，再运行以下命令下载当前版本中的 LFS 文件。
 
 ```powershell
 git lfs install
@@ -100,6 +100,8 @@ git lfs pull --exclude= --include='openjiuwen/扩展性特性宣发软文/articl
 | 路径 | 内容 |
 | --- | --- |
 | [`.agents/skills/`](.agents/skills/) | 技能说明、脚本和安装配置 |
-| [`openjiuwen/`](openjiuwen/) | 按主题保存的文章与素材 |
-| `openjiuwen/<主题>/article/` | 正文、元数据和引用的图片、视频。版本化稿件放在 `v001/` 等版本目录下。 |
-| `openjiuwen/<主题>/refs/` | 有独立参考资料时，存放开发指南、源码分析和参考文章。 |
+| [`openjiuwen/`](openjiuwen/) | openJiuwen 写作场景下的文章和素材，包括 WorkSwarm 相关主题 |
+| `<场景>/<主题>/article/` | 正文、元数据和引用的图片、视频。版本化稿件放在 `v001/` 等版本目录下。 |
+| `<场景>/<主题>/refs/` | 开发指南、源码分析、参考文章等资料，按需建立。 |
+
+保存新稿时可以指定目录。继续修改现有稿件时，沿用原目录和版本布局。 [目录与版本管理](.agents/skills/wechat-article/references/versioning.md#目录)

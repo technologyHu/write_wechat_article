@@ -1,6 +1,6 @@
 # 仓库协作说明
 
-本仓库维护 openJiuwen 和 WorkSwarm 的微信公众号技术文章、参考资料和写作技能。文章按主题存放在 `openjiuwen/<主题>/`，技能及其脚本位于 `.agents/skills/`。安装命令、版本要求和自检步骤见 [README](README.md)。
+本仓库用于撰写、审校和归档微信公众号文章。技能及其脚本位于 `.agents/skills/`。安装命令、版本要求和自检步骤见 [README](README.md)。
 
 ## 按任务选择入口
 
@@ -15,7 +15,8 @@
 
 ## 文章与素材
 
-- 接续工作前，确认目标主题、稿次和修改范围。版本化文章的正文、大纲与素材按该主题现有布局管理，修改局部内容时保留已确认的其他段落。
+- 根据用户给出的主题、受众和用途选择写作场景。为 openJiuwen 公众号写作，或以 openJiuwen／WorkSwarm 的能力为传播主体时，使用 `openjiuwen` 场景。没有适用的专用场景时，使用通用写作流程。 [openJiuwen 场景约定](.agents/skills/wechat-article/references/scenarios/openjiuwen.md)
+- `openjiuwen/` 是现有场景的归档目录。新稿优先使用用户指定的位置，也可按实际场景和主题归档。接续已有稿件时，沿用原目录和版本布局，按本次修改范围保留其他已确认段落。 [目录与版本管理](.agents/skills/wechat-article/references/versioning.md#目录)
 - 落盘修改后，核对受影响的正文、大纲、元数据和相对媒体链接。技术主张应对应可核对的资料或目标版本源码。 [版本管理](.agents/skills/wechat-article/references/versioning.md) · [状态契约](.agents/skills/wechat-article/references/state-contract.md)
 - `openjiuwen/**/article/**/assets/videos/*.mp4` 由 Git LFS 跟踪。默认克隆只检出指针。需要播放、校验或导出时，在仓库根目录按文章路径下载对应视频。 [视频下载命令](README.md#下载文章视频)
 - 运行缓存、依赖安装目录、临时源码 checkout 和生成的导出 ZIP 保留在本机。提交时检查暂存范围。
