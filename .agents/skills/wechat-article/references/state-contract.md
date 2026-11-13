@@ -6,6 +6,8 @@
 
 新进度和元数据使用[契约 3 JSON Schema](../assets/contracts/state.schema.json)。字段以 Schema 为准；[进度示例](../assets/examples/progress.example.json)和[元数据示例](../assets/examples/metadata.example.json)展示完整结构，其中确认、文件和散列均为合成测试数据，不可复制为真实批准。新单元从 `pending`、`confirmation: null` 开始。
 
+新稿的元数据 `scenario` 记录实际采用的场景 ID。没有明确适用的专用场景时填 `general`。接续稿件沿用原记录，除非本次用途变更需要切换场景。
+
 版本目录布局见[版本规范](versioning.md#目录)。`working_file` 使用相对于 `article/` 的路径，如 `v001/article-working.md`。媒体和编辑源文件的 `file` 也相对于 `article/`，正文里的媒体链接相对于实际 Markdown 文件。续写已有进度时使用其登记的路径。
 
 | 对象 | 职责 |
