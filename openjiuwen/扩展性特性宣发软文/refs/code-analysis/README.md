@@ -4,10 +4,10 @@
 
 ## 版本与分析范围
 
-| 仓库 | 本地位置 | 分支 | 本次分析提交 |
+| 仓库 | 固定提交的源码 | 分支 | 本次分析提交 |
 | --- | --- | --- | --- |
-| agent-core | `D:/code/personal/write_wechat_article/openjiuwen/扩展性特性宣发软文/tmp/agent-core` | `release/v0.1.20.post3` | `d4c02c6c52dda8e027af1a08295c5db7f4297fe4` |
-| jiuwenswarm | `D:/code/personal/write_wechat_article/openjiuwen/扩展性特性宣发软文/tmp/jiuwenswarm` | `releases/0.2.9.beta3` | `06f70e487e2d478febd621e1b5970a06d4c5c920` |
+| agent-core | [agent-core 文件树](https://gitcode.com/openJiuwen/agent-core/tree/d4c02c6c52dda8e027af1a08295c5db7f4297fe4) | `release/v0.1.20.post3` | `d4c02c6c52dda8e027af1a08295c5db7f4297fe4` |
+| jiuwenswarm | [jiuwenswarm 文件树](https://gitcode.com/openJiuwen/jiuwenswarm/tree/06f70e487e2d478febd621e1b5970a06d4c5c920) | `releases/0.2.9.beta3` | `06f70e487e2d478febd621e1b5970a06d4c5c920` |
 
 两个 checkout 在分析前均无未提交变更。jiuwenswarm 的依赖配置确实指向上述 agent-core 分支，见 [J01]。报告基于这两个固定提交，后续分支更新须重新核对。
 
@@ -21,7 +21,7 @@ agent-core 重点分析 `core/events`、`core/extension`，并追踪真实 Agent
 2. [agent-core 扩展机制](agent-core.md)：看事件链、Ops、包生命周期，以及其他层次的扩展入口。
 3. [jiuwenswarm Extensions V2](jiuwenswarm-extensions-v2.md)：看宿主装配、业务接入、WebUI 闭环和 Gateway 差异。
 
-各报告使用 `[Cxx]`、`[Jxx]` 链接定位源码文件及行号。链接指向当前本地 checkout；临时目录移走后需用本页的提交和文件路径重新定位。设计文档仅用来寻找入口，关键结论以实际实现和调用方为依据。
+各报告使用 `[Cxx]`、`[Jxx]` 链接定位源码文件及行号。链接固定到本页记录的提交，可直接打开对应源码行。设计文档仅用来寻找入口，关键结论以实际实现和调用方为依据。
 
 ## 最重要的结论
 
@@ -38,4 +38,4 @@ agent-core 重点分析 `core/events`、`core/extension`，并追踪真实 Agent
 实际完成了源码预检、Git 版本与工作区核对、关键实现和调用方阅读、相关测试源码阅读，以及产物链接和行号检查。本次没有安装依赖、启动服务、执行仓库测试或进行浏览器联调。仓库中的测试是后续验证入口，不代表本次测试通过，也不能单凭这些代码承诺性能、跨端兼容性或生产可靠性。
 
 <!-- source-links -->
-[J01]: <D:/code/personal/write_wechat_article/openjiuwen/扩展性特性宣发软文/tmp/jiuwenswarm/pyproject.toml:21> "pyproject.toml:21 — openjiuwen @ git+https://gitcode.com/openJiuwen/agent-core.git@release/v0.1.20.post3"
+[J01]: <https://gitcode.com/openJiuwen/jiuwenswarm/blob/06f70e487e2d478febd621e1b5970a06d4c5c920/pyproject.toml#L21> "pyproject.toml:21 — openjiuwen @ git+https://gitcode.com/openJiuwen/agent-core.git@release/v0.1.20.post3"
