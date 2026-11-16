@@ -18,7 +18,7 @@
       "section_id": "lead",
       "title": "正文导语",
       "status": "confirmed",
-      "draft_ref": "正文导语第 3 轮（品牌名称同步）（导语定义更新）（导语衔接优化）（WorkSwarm 定位措辞更新）（导语场景调整）（导语开场及产品称呼润色）（导语运行环境衔接调整）（术语简化）（导语 WorkSwarm 衔接调整）（导语整体润色）",
+      "draft_ref": "正文导语第 3 轮（品牌名称同步）（导语定义更新）（导语衔接优化）（WorkSwarm 定位措辞更新）（导语场景调整）（导语开场及产品称呼润色）（导语运行环境衔接调整）（术语简化）（导语 WorkSwarm 衔接调整）（导语整体润色）（对齐现有 v001 正文）",
       "source_refs": [
         "extension-guide",
         "swarm-plugin-detail",
@@ -26,20 +26,15 @@
         "swarm-harness"
       ],
       "confirmation": {
-        "draft_ref": "正文导语第 3 轮（品牌名称同步）（导语定义更新）（导语衔接优化）（WorkSwarm 定位措辞更新）（导语场景调整）（导语开场及产品称呼润色）（导语运行环境衔接调整）（术语简化）（导语 WorkSwarm 衔接调整）（导语整体润色）",
-        "confirmed_at": "2026-11-10T19:02:42+08:00",
-        "user_message": "导语就用这版。",
+        "draft_ref": "正文导语第 3 轮（品牌名称同步）（导语定义更新）（导语衔接优化）（WorkSwarm 定位措辞更新）（导语场景调整）（导语开场及产品称呼润色）（导语运行环境衔接调整）（术语简化）（导语 WorkSwarm 衔接调整）（导语整体润色）（对齐现有 v001 正文）",
+        "confirmed_at": "2026-11-16T11:26:46+08:00",
+        "user_message": "帮我保留《扩展性特性宣发软文》v001 现在的正文，同步修复元数据里的全文和章节校验值，再验证能否正常导出 ZIP。",
         "outline_version_at_confirmation": "v001",
-        "content_sha256": "11af2cf74b16a92264f4c4eb4e5e68a62846ad90da0305e32e10c957d19a6441",
+        "content_sha256": "a2513d0b8a01d86f6b664d2ea6782adfde7d47805db2071a33fed3a9be7806d6",
         "media": []
       },
       "media_updates": [],
-      "inheritance": null,
-      "outline_revalidation": {
-        "outline_version": "v001",
-        "checked_at": "2026-11-10T05:07:11+08:00",
-        "note": "原确认所用大纲已按用户要求并入 v001。章节正文及原确认内容不变。"
-      }
+      "inheritance": null
     },
     {
       "section_id": "main-01",
@@ -212,7 +207,7 @@
       "section_id": "main-02",
       "title": "拆解 openJiuwen RSI 原生 AgentOS：扩展包怎样改变界面、网关、服务端与 Agent 行为？",
       "status": "confirmed",
-      "draft_ref": "第二节第 14 轮（图2标题定向更新）（系统插件术语同步）（品牌名称同步）（第二节标题更新）（术语简化）（统一扩展包与系统插件用语）（删除图1）（整体架构、扩展能力及扩展包生效原理）（取消子章节）（图注下置及图片重新编号）（简化图片描述）（调整扩展事件归属表述）（更新扩展开发文档链接）（格式优化）（采用手动修订）",
+      "draft_ref": "第二节第 14 轮（图2标题定向更新）（系统插件术语同步）（品牌名称同步）（第二节标题更新）（术语简化）（统一扩展包与系统插件用语）（删除图1）（整体架构、扩展能力及扩展包生效原理）（取消子章节）（图注下置及图片重新编号）（简化图片描述）（调整扩展事件归属表述）（更新扩展开发文档链接）（格式优化）（采用手动修订）（对齐现有 v001 正文）",
       "source_refs": [
         "extension-overview",
         "extension-runtime",
@@ -228,11 +223,11 @@
         "extension-ops-guide"
       ],
       "confirmation": {
-        "draft_ref": "第二节第 14 轮（图2标题定向更新）（系统插件术语同步）（品牌名称同步）（第二节标题更新）（术语简化）（统一扩展包与系统插件用语）（删除图1）（整体架构、扩展能力及扩展包生效原理）（取消子章节）（图注下置及图片重新编号）（简化图片描述）（调整扩展事件归属表述）（更新扩展开发文档链接）（格式优化）（采用手动修订）",
-        "confirmed_at": "2026-11-11T03:15:41.729320+00:00",
-        "user_message": "V001版本可以完稿了",
+        "draft_ref": "第二节第 14 轮（图2标题定向更新）（系统插件术语同步）（品牌名称同步）（第二节标题更新）（术语简化）（统一扩展包与系统插件用语）（删除图1）（整体架构、扩展能力及扩展包生效原理）（取消子章节）（图注下置及图片重新编号）（简化图片描述）（调整扩展事件归属表述）（更新扩展开发文档链接）（格式优化）（采用手动修订）（对齐现有 v001 正文）",
+        "confirmed_at": "2026-11-16T11:26:46+08:00",
+        "user_message": "帮我保留《扩展性特性宣发软文》v001 现在的正文，同步修复元数据里的全文和章节校验值，再验证能否正常导出 ZIP。",
         "outline_version_at_confirmation": "v001",
-        "content_sha256": "be048eeb3476d92de30a2bcf5851de795f18b789021f38423cf3cabb0379cf6d",
+        "content_sha256": "d8741cfd8bde25b3ab7addb9f3ad4ab268d66e5d3776cf9fbd2845dffe8d2e91",
         "media": [
           {
             "id": "IMG-03",
@@ -295,19 +290,19 @@
             "id": "IMG-02",
             "title": "扩展事件与 Ops 能力速查表",
             "revision": "v015",
-            "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.png",
+            "file": "v001/assets/images/图4_扩展事件与 Operation 能力速查表.png",
             "url": null,
-            "sha256": "643560348baf78709e42ce9fac14513726e802c1e588684b82c08e75dd002597",
+            "sha256": "bcd6704c46fe212013b113bb89a39724703317ec36b7a17d9e683d0133a10b04",
             "source_files": [
               {
-                "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.svg",
-                "sha256": "efffbecc164916f2418511365ed86cee79d4d46ff7c258a44d16e07890feb7e3"
+                "file": "v001/assets/images/图4_扩展事件与 Operation 能力速查表.svg",
+                "sha256": "9d09325eaefe2b6169d390dd84030c8386fd46d64c4a2b368cd79e13d27e8442"
               }
             ],
             "caption": {
               "number": 4,
-              "title": "扩展事件与 Operator 能力速查表",
-              "description": "左侧是各类扩展事件，右侧是处理函数可调用的 Ops。表中区分已支持和规划中的条目。"
+              "title": "扩展事件与 Operation 能力速查表",
+              "description": "左侧是各类扩展事件，右侧是处理函数可调用的 Operation 能力（Ops）。表中区分已支持和规划中的条目。"
             }
           }
         ]
@@ -1033,25 +1028,25 @@
         "main-02"
       ],
       "revision": "v015",
-      "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.png",
+      "file": "v001/assets/images/图4_扩展事件与 Operation 能力速查表.png",
       "url": null,
-      "sha256": "643560348baf78709e42ce9fac14513726e802c1e588684b82c08e75dd002597",
+      "sha256": "bcd6704c46fe212013b113bb89a39724703317ec36b7a17d9e683d0133a10b04",
       "source_files": [
         {
-          "file": "v001/assets/images/图4_扩展事件与 Operator 能力速查表.svg",
-          "sha256": "efffbecc164916f2418511365ed86cee79d4d46ff7c258a44d16e07890feb7e3"
+          "file": "v001/assets/images/图4_扩展事件与 Operation 能力速查表.svg",
+          "sha256": "9d09325eaefe2b6169d390dd84030c8386fd46d64c4a2b368cd79e13d27e8442"
         }
       ],
       "status": "approved",
       "adoption": {
         "kind": "user",
-        "message": "将指定的 article-working.md 中图4换成浅色背景，标题里的Ops能力改成Operator能力",
-        "at": "2026-11-10T23:03:13+08:00"
+        "message": "帮我保留《扩展性特性宣发软文》v001 现在的正文，同步修复元数据里的全文和章节校验值，再验证能否正常导出 ZIP。",
+        "at": "2026-11-16T11:26:46+08:00"
       },
       "caption": {
         "number": 4,
-        "title": "扩展事件与 Operator 能力速查表",
-        "description": "左侧是各类扩展事件，右侧是处理函数可调用的 Ops。表中区分已支持和规划中的条目。"
+        "title": "扩展事件与 Operation 能力速查表",
+        "description": "左侧是各类扩展事件，右侧是处理函数可调用的 Operation 能力（Ops）。表中区分已支持和规划中的条目。"
       }
     },
     {
