@@ -26,8 +26,9 @@ cd write_wechat_article
 
 1. **交代写作任务。** 在对话中指定 `$wechat-article`，给出主题、目标读者、写作目的和已有资料。涉及具体实现时，可附上源码仓库、分支或提交。技能会按文章用途选择场景，通用主题走 `general`，符合 openJiuwen 场景条件的稿件走 `openjiuwen`。
 2. **确认大纲。** 在 HTML 向导中依次选定文章和各级标题，核对导语、各节概述及配图或视频安排，最后确认完整大纲。使用独立 HTML 页面时，可以将生成的反馈复制回原对话，也可以直接在对话里确认。 [大纲评审说明](.agents/skills/wechat-article/references/outline-review-ui.md)
-3. **逐章写作。** 大纲确认后，从导语开始逐章看稿。每次确认当前单元后再继续。已有图片或视频可以在对应章节提供。接着写旧稿时，直接给出主题目录和当前稿次。
-4. **保存与导出。** 需要落盘时，在对话中指定保存位置，或沿用已有主题目录。确认完成后，可以指定版本导出 ZIP，包内包含该版本的正文及其引用的本地素材。默认输出到主题目录的 `exports/`。 [目录与版本管理](.agents/skills/wechat-article/references/versioning.md#目录) · [版本导出](.agents/skills/wechat-article/references/versioning.md#导出指定版本)
+3. **逐章写作。** 大纲确认后，从导语开始逐章写作和确认。图片、视频可以先保留占位，写清编号、标题、插入位置和计划呈现的内容。想先把正文写完，可以在对话里说明「图片和视频先留占位，正文写完后再单独替换」。接续旧稿时，给出主题目录和当前稿次即可。 [逐章写作说明](.agents/skills/wechat-article/references/chapter-workflow.md)
+4. **单独补齐素材。** 正文写完后，按占位编号提供图片、视频，或指定要补画的图。例如「用这张图替换图 2，用这段录屏替换视频 1」。技能会核对素材、图注和链接。已有合适的素材，也可以在写到对应章节时直接提供。 [图片与视频处理](.agents/skills/wechat-article/references/media-workflow.md)
+5. **保存与导出。** 需要落盘时，在对话中指定保存位置，或沿用已有主题目录。稿件确认后，可以指定版本导出 ZIP，包内包含该版本的正文及其引用的本地素材。默认输出到主题目录的 `exports/`。 [目录与版本管理](.agents/skills/wechat-article/references/versioning.md#目录) · [版本导出](.agents/skills/wechat-article/references/versioning.md#导出指定版本)
 
 ### 示例请求
 
