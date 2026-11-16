@@ -845,6 +845,109 @@ class ArticleTests(unittest.TestCase):
         self.assertTrue(source.exists())
         self.assertFalse(duplicate.exists())
 
+    def test_deferred_image_and_video_are_adopted_separately_before_release_export(self):
+        inputs = Path(self.temp.name)
+        picture = inputs / "配图.png"
+        picture.write_bytes(png())
+        recording = inputs / "录屏.mp4"
+        # The export workflow transports the video bytes without decoding them.
+        recording.write_bytes(b"offline recording fixture")
+
+        for scenario in ("general", "openjiuwen"):
+            with self.subTest(scenario=scenario):
+                root = inputs / scenario / "deferred-media"
+                metadata, progress, units = make_article(root)
+                article = root / "article"
+                version = article / "v001"
+                version.mkdir()
+                working = version / "article-working.md"
+                metadata["scenario"] = scenario
+                common = {"role": "body", "revision": None, "file": None, "url": None,
+                          "sha256": None, "source_files": [], "status": "planned", "adoption": None}
+                figure = {**common, "id": "IMG-01", "type": "image", "title": "任务流程",
+                          "section_ids": ["main-01"],
+                          "caption": {"number": 1, "title": "任务流程", "description": "显示两个处理步骤。"}}
+                video = {**common, "id": "VID-01", "type": "video", "title": "操作演示",
+                         "section_ids": ["main-02"],
+                         "caption": {"number": 1, "title": "操作演示", "description": "核对任务完成后的结果。"}}
+                media = (figure, video)
+                placeholders = [state.numbered_placeholder(item) for item in media]
+                progress.update(working_file="v001/article-working.md", phase="drafting", media=list(media),
+                                pending_media=[{"media_id": item["id"], "disposition": "deferred",
+                                                "allow_in_final": False, "basis": None} for item in media])
+                progress["sections"].append({**progress["sections"][1], "section_id": "main-02",
+                                             "title": "核对结果", "draft_ref": "main-02测试第1轮"})
+                for section in progress["sections"][1:]:
+                    units[section["section_id"]] = f"## {section['title']}"
+                    section.update(status="pending", source_refs=[], confirmation=None)
+                save(root, metadata, progress, units)
+
+                candidate_body = inputs / "candidate.md"
+                candidate_state = inputs / "candidate-progress.json"
+                prose = ("先读取任务，再执行处理步骤。", "检查任务输出是否包含预期结果。")
+                for index, (section, paragraph, placeholder, item) in enumerate(
+                        zip(progress["sections"][1:], prose, placeholders, media)):
+                    content = f"{units[section['section_id']]}\n\n{paragraph}\n\n{placeholder}"
+                    units[section["section_id"]] = content
+                    candidate_body.write_text(render(units), encoding="utf-8")
+                    section.update(status="awaiting_confirmation", source_refs=["code-1"])
+                    progress["phase"] = "waiting_section"
+                    write_json(candidate_state, progress)
+                    workflow.save_work(root, candidate_body, candidate_state, apply=True)
+                    reply = "测试：本章正文确认，素材先留占位，全文写完再替换。"
+                    section.update(status="confirmed", confirmation={
+                        "draft_ref": section["draft_ref"], "confirmed_at": AT, "user_message": reply,
+                        "outline_version_at_confirmation": "v001", "content_sha256": state.text_digest(content),
+                        "media": [state.proof(item)],
+                    })
+                    progress["phase"] = "drafting" if index == 0 else "waiting_media"
+                    if index == 0:
+                        write_json(candidate_state, progress)
+                        with self.assertRaisesRegex(state.StateError, "Unresolved media choice: IMG-01"):
+                            workflow.save_work(root, candidate_body, candidate_state, apply=True)
+                    progress["pending_media"][index]["basis"] = evidence(reply)
+                    write_json(candidate_state, progress)
+                    workflow.save_work(root, candidate_body, candidate_state, apply=True)
+
+                confirmed = [row["confirmation"] for row in progress["sections"]]
+                original_body = working.read_text(encoding="utf-8")
+                for placeholder in placeholders:
+                    self.assertIn(placeholder, original_body)
+                release = {"basis": "测试：正式完稿并导出", "at": AT, "apply": True}
+                with self.assertRaisesRegex(state.StateError, "not approved as a final placeholder"):
+                    workflow.finalize_article(root, "v001", **release)
+                self.assertEqual(original_body, working.read_text(encoding="utf-8"))
+                self.assertFalse((root / "exports").exists())
+
+                adoption = {"basis": "测试：替换指定素材占位", "at": AT, "apply": True}
+                image_result = workflow.adopt_media(root, "图1", picture, **adoption)
+                draft = working.read_text(encoding="utf-8")
+                self.assertNotIn(placeholders[0], draft)
+                self.assertIn(placeholders[1], draft)
+                pending = state.read_json(article / "progress.json")["pending_media"]
+                self.assertEqual(["VID-01"], [entry["media_id"] for entry in pending])
+                video_result = workflow.adopt_media(root, "视频1", recording, **adoption)
+                on_disk = state.read_json(article / "progress.json")
+                self.assertEqual([], on_disk["pending_media"])
+                self.assertEqual(confirmed, [row["confirmation"] for row in on_disk["sections"]])
+
+                result = workflow.finalize_article(root, "v001", **release)
+                exported = result["export"]
+                self.assertTrue(exported["release"])
+                self.assertEqual([], exported["placeholders"])
+                self.assertEqual({"errors": [], "warnings": []}, state.inspect(root))
+                body_name = "v001/article-v001.md"
+                image_name, video_name = image_result["file"], video_result["file"]
+                with ZipFile(exported["zip"]) as package:
+                    self.assertIsNone(package.testzip())
+                    self.assertCountEqual([body_name, image_name, video_name], package.namelist())
+                    body = package.read(body_name)
+                    self.assertEqual((article / body_name).read_bytes(), body)
+                    for paragraph in prose:
+                        self.assertIn(paragraph, body.decode("utf-8"))
+                    self.assertEqual(picture.read_bytes(), package.read(image_name))
+                    self.assertEqual(recording.read_bytes(), package.read(video_name))
+
     def test_finalize_approves_current_draft_and_retries_same_zip_after_draft_cleanup(self):
         article = self.root / "article"
         scratch = self.root / ".tmp/outline-review/draft.json"
